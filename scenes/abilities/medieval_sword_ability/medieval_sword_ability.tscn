@@ -1,6 +1,50 @@
-[gd_scene load_steps=5 format=3 uid="uid://ce3a461x3m7ul"]
+[gd_scene load_steps=8 format=3 uid="uid://ce3a461x3m7ul"]
 
 [ext_resource type="Texture2D" uid="uid://c2cvg6ykfpy60" path="res://scenes/abilities/medieval_sword_ability/assets/medieval_sword_image.png" id="1_m7l0i"]
+[ext_resource type="Script" path="res://scenes/abilities/medieval_sword_ability/medieval_sword_ability.gd" id="1_mtaiu"]
+[ext_resource type="PackedScene" uid="uid://dkecupku8ffq2" path="res://scenes/components/hitbox_component.tscn" id="2_miljn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b085j"]
+size = Vector2(99.571, 130.667)
+
+[sub_resource type="Animation" id="Animation_agipk"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("HitboxComponent/CollisionShape2D:disabled")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="Animation" id="Animation_bv35l"]
 resource_name = "swing"
@@ -44,32 +88,17 @@ tracks/2/keys = {
 "method": &"queue_free"
 }]
 }
-
-[sub_resource type="Animation" id="Animation_agipk"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:rotation")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("Sprite2D:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1, 1)]
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("HitboxComponent/CollisionShape2D:disabled")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.345),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, false, true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_4mwdd"]
@@ -80,9 +109,16 @@ _data = {
 
 [node name="MedievalSwordAbility" type="Node2D"]
 scale = Vector2(1.049, 0.75)
+script = ExtResource("1_mtaiu")
+
+[node name="HitboxComponent" parent="." instance=ExtResource("2_miljn")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+position = Vector2(49.3565, -20)
+shape = SubResource("RectangleShape2D_b085j")
+disabled = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(179, 117)
 texture = ExtResource("1_m7l0i")
 offset = Vector2(0, -22)
 

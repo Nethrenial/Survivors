@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dgqyl15dn51co"]
+
+[ext_resource type="Texture2D" uid="uid://c27sdm2y3ho2w" path="res://scenes/game_objects/experience_orb/assets/exp-orb-32x32.png" id="1_st5cm"]
+[ext_resource type="Script" path="res://scenes/game_objects/experience_orb/experience_orb.gd" id="1_ts2yr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_q0eqb"]
+radius = 24.0
+
+[node name="ExperienceOrb" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_ts2yr")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_q0eqb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_st5cm")

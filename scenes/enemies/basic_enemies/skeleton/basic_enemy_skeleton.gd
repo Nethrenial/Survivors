@@ -1,16 +1,18 @@
-extends CharacterBody2D
+extends BaseEnemy
+class_name BasicEnemySkeleton
 
-@onready var _animated_sprite = $AnimatedSprite2D
 
-const MAX_SPEED = 75
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	# Setup initial values
+	max_health = 1.25
+	max_speed = 75
+	current_health = max_health
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(delta):	
+	# If dead or hurt, let the death or hurt animation play out
+	if is_dead || is_hurt:
+		return
 	var direction = get_direction_to_player()
 	
 	if(direction.x > 0):
@@ -28,7 +30,7 @@ func _process(delta):
 	if(direction.x == 0 && direction.y == 0):
 		_animated_sprite.play("idle")
 	
-	velocity = direction * MAX_SPEED
+	velocity = direction * max_speed
 	move_and_slide()
 
 

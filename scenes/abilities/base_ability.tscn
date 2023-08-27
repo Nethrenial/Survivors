@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://exgalboo3xn8"]
+
+[ext_resource type="Script" path="res://scenes/abilities/base_ability.gd" id="1_ffe47"]
+
+[node name="BaseAbility" type="Node2D"]
+script = ExtResource("1_ffe47")

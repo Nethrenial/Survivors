@@ -1,12 +1,18 @@
-[gd_scene load_steps=43 format=3 uid="uid://dx0g3mpcdxx63"]
+[gd_scene load_steps=47 format=3 uid="uid://dx0g3mpcdxx63"]
 
 [ext_resource type="Texture2D" uid="uid://bd75qn35026h1" path="res://scenes/enemies/basic_enemies/skeleton/assets/animations/basic_enemy_skeleton-attack_1.png" id="1_l76qk"]
 [ext_resource type="Texture2D" uid="uid://mnsyiltx1g64" path="res://scenes/enemies/basic_enemies/skeleton/assets/animations/basic_enemy_skeleton-idle.png" id="1_vm2nx"]
 [ext_resource type="Script" path="res://scenes/enemies/basic_enemies/skeleton/basic_enemy_skeleton.gd" id="1_wipmv"]
+[ext_resource type="PackedScene" uid="uid://ccmmkgbkxgne2" path="res://scenes/components/health_component.tscn" id="2_3aax7"]
 [ext_resource type="Texture2D" uid="uid://db4668vd723j0" path="res://scenes/enemies/basic_enemies/skeleton/assets/animations/basic_enemy_skeleton-dead.png" id="2_78ruq"]
 [ext_resource type="Texture2D" uid="uid://cx57i3jq8ci4v" path="res://scenes/enemies/basic_enemies/skeleton/assets/animations/basic_enemy_skeleton-run.png" id="2_b0pyd"]
 [ext_resource type="Texture2D" uid="uid://d166pacm2uxaj" path="res://scenes/enemies/basic_enemies/skeleton/assets/animations/basic_enemy_skeleton-walk.png" id="2_gpco3"]
 [ext_resource type="Texture2D" uid="uid://heighb4jhml2" path="res://scenes/enemies/basic_enemies/skeleton/assets/animations/basic_enemy_skeleton-hurt.png" id="3_115u2"]
+[ext_resource type="PackedScene" uid="uid://va1hn2sykhi2" path="res://scenes/components/experience_orb_drop_component.tscn" id="3_ighi6"]
+[ext_resource type="PackedScene" uid="uid://nr3n0b22ime8" path="res://scenes/components/hurt_box_component.tscn" id="4_eab4b"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_acjdx"]
+radius = 35.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_22ivf"]
 radius = 24.0
@@ -162,7 +168,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_4ibpe")
 }],
-"loop": true,
+"loop": false,
 "name": &"attack1",
 "speed": 10.0
 }, {
@@ -179,7 +185,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ulx7j")
 }],
-"loop": true,
+"loop": false,
 "name": &"dead",
 "speed": 5.0
 }, {
@@ -190,7 +196,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ynkil")
 }],
-"loop": true,
+"loop": false,
 "name": &"hurt",
 "speed": 7.0
 }, {
@@ -216,7 +222,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ax0br")
 }],
-"loop": true,
+"loop": false,
 "name": &"idle",
 "speed": 8.0
 }, {
@@ -245,7 +251,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_scdmf")
 }],
-"loop": true,
+"loop": false,
 "name": &"run",
 "speed": 10.0
 }, {
@@ -271,15 +277,29 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_k8f2m")
 }],
-"loop": true,
+"loop": false,
 "name": &"walk",
 "speed": 8.0
 }]
 
 [node name="BasicEnemySkeleton" type="CharacterBody2D" groups=["Enemies Group"]]
 scale = Vector2(1.25, 1.25)
-collision_layer = 0
+collision_layer = 8
+collision_mask = 9
+motion_mode = 1
 script = ExtResource("1_wipmv")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_3aax7")]
+
+[node name="ExperienceOrbDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_ighi6")]
+health_component = NodePath("../HealthComponent")
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_eab4b")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(4, 2.4)
+shape = SubResource("CircleShape2D_acjdx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CapsuleShape2D_22ivf")
@@ -287,5 +307,4 @@ shape = SubResource("CapsuleShape2D_22ivf")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(9, -34)
 sprite_frames = SubResource("SpriteFrames_b4iof")
-animation = &"run"
-frame_progress = 0.706192
+animation = &"walk"
