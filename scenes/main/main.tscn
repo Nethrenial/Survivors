@@ -14,7 +14,8 @@
 [node name="LevelTimeIndicator" parent="." node_paths=PackedStringArray("level_time_manager") instance=ExtResource("1_3ymwx")]
 level_time_manager = NodePath("../LevelTimeManager")
 
-[node name="ExperienceBar" parent="." instance=ExtResource("2_r4ujr")]
+[node name="ExperienceBar" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("2_r4ujr")]
+experience_manager = NodePath("../ExperienceManager")
 
 [node name="LevelTimeManager" parent="." instance=ExtResource("2_vctn5")]
 
