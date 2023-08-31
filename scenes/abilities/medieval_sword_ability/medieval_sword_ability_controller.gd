@@ -3,9 +3,13 @@ extends Node
 const MAX_RANGE = 150
 @export var medieval_sword_ability: PackedScene
 
+var base_wait_time : float
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	base_wait_time = $Timer.wait_time
 	$Timer.timeout.connect(on_timeout)
+	GameEvents.ability_upgrades_added.connect(on_ability_upgrade_added)
 
 
 func on_timeout():
@@ -29,7 +33,8 @@ func on_timeout():
 	)
 
 	var medieval_sword_ability_instance = medieval_sword_ability.instantiate() as Node2D
-	player.get_parent().add_child(medieval_sword_ability_instance)	
+	var foreground_layer = get_tree().get_first_node_in_group("foreground_layer") as Node2D
+	foreground_layer.add_child(medieval_sword_ability_instance)	
 	
 	medieval_sword_ability_instance.global_position = (enemies[0] as CharacterBody2D).global_position	
 	var random_position_vector = Vector2.RIGHT.rotated(randf_range(0, TAU)) * 8
@@ -39,4 +44,18 @@ func on_timeout():
 	medieval_sword_ability_instance.global_position = new_position_vector
 	var enemy_direction = (enemies[0] as CharacterBody2D).global_position - medieval_sword_ability_instance.global_position
 	medieval_sword_ability_instance.rotation = enemy_direction.angle()
+	
+
+
+func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades:  Dictionary):
+	if upgrade.id != "medieval_sword_ability_rate":
+		return
+	
+	var percent_reduction = current_upgrades["medieval_sword_ability_rate"]["quantity"] * 0.1
+#	print("Current wait time ", $Timer.wait_time, " Percent reduction ", percent_reduction)
+#	print("Next percentage of 1.5s => ", (1 - percent_reduction), "%")
+	$Timer.wait_time = max(base_wait_time * (1 - percent_reduction), 0.1)
+	print("New wait time is ", $Timer.wait_time)
+	$Timer.start()
+#	print($Timer.wait_time)
 	

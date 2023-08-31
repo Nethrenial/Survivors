@@ -1,0 +1,770 @@
+[gd_scene load_steps=160 format=3 uid="uid://c66g12mdorck3"]
+
+[ext_resource type="Script" path="res://scenes/entities/enemies/basic_enemies/skeleton/basic_enemy_skeleton.gd" id="1_4itx6"]
+[ext_resource type="PackedScene" uid="uid://ccmmkgbkxgne2" path="res://scenes/components/health_component.tscn" id="2_wt78d"]
+[ext_resource type="PackedScene" uid="uid://va1hn2sykhi2" path="res://scenes/components/experience_orb_drop_component.tscn" id="3_3pl03"]
+[ext_resource type="PackedScene" uid="uid://nr3n0b22ime8" path="res://scenes/components/hurt_box_component.tscn" id="4_1gl38"]
+[ext_resource type="Texture2D" uid="uid://ch61va05223of" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile000.png" id="5_fpibr"]
+[ext_resource type="Texture2D" uid="uid://gamp41vkujb6" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile305.png" id="5_t8bk1"]
+[ext_resource type="Texture2D" uid="uid://cg0720soqnwgj" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile001.png" id="6_dxk5j"]
+[ext_resource type="Texture2D" uid="uid://qcdlldidfjhq" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile306.png" id="6_l7ore"]
+[ext_resource type="Texture2D" uid="uid://dtfbp4qhn1pd" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile307.png" id="7_fnyyw"]
+[ext_resource type="Texture2D" uid="uid://dpv8yi566haim" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile002.png" id="7_q1lo3"]
+[ext_resource type="Texture2D" uid="uid://3d7n1gguv6sl" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile317.png" id="8_prv8v"]
+[ext_resource type="Texture2D" uid="uid://c2mbr0jjr8t41" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile003.png" id="8_yrcdy"]
+[ext_resource type="Texture2D" uid="uid://kfcdr2hw77xf" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile004.png" id="9_1y33r"]
+[ext_resource type="Texture2D" uid="uid://chwb11gralpkm" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile318.png" id="9_vhudn"]
+[ext_resource type="Texture2D" uid="uid://cnnrevghrij2o" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile319.png" id="10_1lrqj"]
+[ext_resource type="Texture2D" uid="uid://ku0p7sam528d" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile005.png" id="10_luxxn"]
+[ext_resource type="Texture2D" uid="uid://cvtdame5vga8k" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile006.png" id="11_2yb41"]
+[ext_resource type="Texture2D" uid="uid://0qq0617vilp5" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile302.png" id="11_7u2p0"]
+[ext_resource type="Texture2D" uid="uid://fnfmr7wr7hby" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile303.png" id="12_oiht5"]
+[ext_resource type="Texture2D" uid="uid://ccx5n8ly2glr2" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile007.png" id="12_u4wwh"]
+[ext_resource type="Texture2D" uid="uid://b7kd7dbmsg8gu" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile304.png" id="13_4bx0r"]
+[ext_resource type="Texture2D" uid="uid://bbk8a4edaad17" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile008.png" id="13_15hyt"]
+[ext_resource type="Texture2D" uid="uid://cufubliw1t5q1" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile072.png" id="13_4560t"]
+[ext_resource type="Texture2D" uid="uid://dd8kg1e3vrhrh" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile009.png" id="14_2lks8"]
+[ext_resource type="Texture2D" uid="uid://kbpwhgi46uos" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile073.png" id="14_b0ur8"]
+[ext_resource type="Texture2D" uid="uid://bsox4pnxt7jtb" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile314.png" id="14_qvj8b"]
+[ext_resource type="Texture2D" uid="uid://bobww4tjx72vw" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile010.png" id="15_38dy7"]
+[ext_resource type="Texture2D" uid="uid://cunt3gefswebi" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile315.png" id="15_hbam3"]
+[ext_resource type="Texture2D" uid="uid://c272sc0ibt8pg" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile074.png" id="15_v8jnf"]
+[ext_resource type="Texture2D" uid="uid://clwu30i4sukms" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile011.png" id="16_7aype"]
+[ext_resource type="Texture2D" uid="uid://gsjs07nboxee" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile316.png" id="16_awghq"]
+[ext_resource type="Texture2D" uid="uid://uslfm2mkv6sf" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile075.png" id="16_cl7nq"]
+[ext_resource type="Texture2D" uid="uid://dhj3pc0feohlh" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile296.png" id="17_2e5hg"]
+[ext_resource type="Texture2D" uid="uid://d1wv28k2wy771" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile012.png" id="17_grdgj"]
+[ext_resource type="Texture2D" uid="uid://ci52i7sy4vcig" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile076.png" id="17_uwok1"]
+[ext_resource type="Texture2D" uid="uid://cg6olrh7fkogs" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile297.png" id="18_e2l3l"]
+[ext_resource type="Texture2D" uid="uid://bp6qxpvwcvelk" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile077.png" id="18_p8k4o"]
+[ext_resource type="Texture2D" uid="uid://6320ejgvj2x8" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile013.png" id="18_uokjh"]
+[ext_resource type="Texture2D" uid="uid://c0mjm7185x5pe" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile014.png" id="19_0q64a"]
+[ext_resource type="Texture2D" uid="uid://cmpigofl8sc1i" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile298.png" id="19_4ne5c"]
+[ext_resource type="Texture2D" uid="uid://beujqj5f5sca2" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile078.png" id="19_n2ffh"]
+[ext_resource type="Texture2D" uid="uid://bpv7hlgxb8ptn" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile079.png" id="20_cgy2c"]
+[ext_resource type="Texture2D" uid="uid://c4ve8w5kck8ns" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile015.png" id="20_h1jsa"]
+[ext_resource type="Texture2D" uid="uid://7dllre0ggs3f" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile308.png" id="20_riys5"]
+[ext_resource type="Texture2D" uid="uid://lut0pbtf3cfh" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile016.png" id="21_cu527"]
+[ext_resource type="Texture2D" uid="uid://dx31qdfg7rkmg" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile309.png" id="21_hq3s0"]
+[ext_resource type="Texture2D" uid="uid://c7qowx8elsnq4" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile080.png" id="21_rmkrn"]
+[ext_resource type="Texture2D" uid="uid://cdm6gsifekhsl" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile017.png" id="22_0ko52"]
+[ext_resource type="Texture2D" uid="uid://cgv51x2yetscp" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile081.png" id="22_cghcp"]
+[ext_resource type="Texture2D" uid="uid://jfa304teh14a" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile310.png" id="22_fnnwb"]
+[ext_resource type="Texture2D" uid="uid://hgw4ety1283c" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile018.png" id="23_4rfqu"]
+[ext_resource type="Texture2D" uid="uid://ciofwyvklbhcj" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile082.png" id="23_1718u"]
+[ext_resource type="Texture2D" uid="uid://nyovaprx1q8" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile299.png" id="23_j5gr1"]
+[ext_resource type="Texture2D" uid="uid://cqh0hr55f712s" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile083.png" id="24_b1ly7"]
+[ext_resource type="Texture2D" uid="uid://db73f61ue6ith" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile300.png" id="24_ca4ka"]
+[ext_resource type="Texture2D" uid="uid://bbr1du207wure" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile019.png" id="24_hj5e1"]
+[ext_resource type="Texture2D" uid="uid://cf13sksvstcdu" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile084.png" id="25_3vy6w"]
+[ext_resource type="Texture2D" uid="uid://elqfxr35nuke" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile020.png" id="25_ak67a"]
+[ext_resource type="Texture2D" uid="uid://bi47xoir7eraf" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile301.png" id="25_qib6o"]
+[ext_resource type="Texture2D" uid="uid://cfyii211pwisy" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile311.png" id="26_3lvxf"]
+[ext_resource type="Texture2D" uid="uid://dqwmh6dfhnsu5" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile021.png" id="26_fx18m"]
+[ext_resource type="Texture2D" uid="uid://du4qet4fvu8sv" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile085.png" id="26_l6vq8"]
+[ext_resource type="Texture2D" uid="uid://bywmdpfs56f5w" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile022.png" id="27_bjm68"]
+[ext_resource type="Texture2D" uid="uid://b18olxfwppu60" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile086.png" id="27_qiwax"]
+[ext_resource type="Texture2D" uid="uid://cf0ugkprbfemg" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile312.png" id="27_xe0ec"]
+[ext_resource type="Texture2D" uid="uid://8i6iunvm71og" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile313.png" id="28_af5xo"]
+[ext_resource type="Texture2D" uid="uid://dswf0o56pr2ol" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile023.png" id="28_ita71"]
+[ext_resource type="Texture2D" uid="uid://ci4hms05fm3we" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile087.png" id="28_whrwh"]
+[ext_resource type="Texture2D" uid="uid://dcnk76v65m3e" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile088.png" id="29_ve2qv"]
+[ext_resource type="Texture2D" uid="uid://d2wgvxt3tq6q" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile024.png" id="29_y0x6q"]
+[ext_resource type="Texture2D" uid="uid://c3jancywe188g" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile025.png" id="30_jnps6"]
+[ext_resource type="Texture2D" uid="uid://d0vl0k5qy7gey" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile089.png" id="30_rtgf3"]
+[ext_resource type="Texture2D" uid="uid://bhap84g8lkb30" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile026.png" id="31_fsvex"]
+[ext_resource type="Texture2D" uid="uid://d2sjnuncyavbq" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile090.png" id="31_kjdmj"]
+[ext_resource type="Texture2D" uid="uid://vakgscstum8s" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile091.png" id="32_2rvnj"]
+[ext_resource type="Texture2D" uid="uid://44i4sgg8jtug" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile027.png" id="32_v5plp"]
+[ext_resource type="Texture2D" uid="uid://dki03j6qs85df" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile028.png" id="33_3mk6l"]
+[ext_resource type="Texture2D" uid="uid://bytb76ywm7g86" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile092.png" id="33_84owc"]
+[ext_resource type="Texture2D" uid="uid://b5ytwpdy7f72o" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile029.png" id="34_m0jw6"]
+[ext_resource type="Texture2D" uid="uid://bb8hjqok7lfas" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile093.png" id="34_n363x"]
+[ext_resource type="Texture2D" uid="uid://vgn0ickoy4b4" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile094.png" id="35_ghdci"]
+[ext_resource type="Texture2D" uid="uid://bqucpl2bs0kxa" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile030.png" id="35_o7p6m"]
+[ext_resource type="Texture2D" uid="uid://c45l44q81hvhc" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile095.png" id="36_21sjq"]
+[ext_resource type="Texture2D" uid="uid://cmartqovp28ru" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile031.png" id="36_hh8oj"]
+[ext_resource type="Texture2D" uid="uid://c5xymmr7cvdpo" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile096.png" id="37_nplif"]
+[ext_resource type="Texture2D" uid="uid://deqb31s35fe06" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile032.png" id="37_oll6m"]
+[ext_resource type="Texture2D" uid="uid://gwbggjl88kbf" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile033.png" id="38_aljc1"]
+[ext_resource type="Texture2D" uid="uid://bjdhqe4i1tkbq" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile097.png" id="38_ba0jb"]
+[ext_resource type="Texture2D" uid="uid://btdnjvhjxuirs" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile034.png" id="39_6vays"]
+[ext_resource type="Texture2D" uid="uid://44iuyra21rae" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile098.png" id="39_q4gsn"]
+[ext_resource type="Texture2D" uid="uid://dn5ogbtf1wwld" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile099.png" id="40_g58f6"]
+[ext_resource type="Texture2D" uid="uid://tms25ka1qs41" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile035.png" id="40_l1m83"]
+[ext_resource type="Texture2D" uid="uid://oaynl7lbth1u" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile036.png" id="41_phla5"]
+[ext_resource type="Texture2D" uid="uid://c0yy021003b15" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile100.png" id="41_s0pnn"]
+[ext_resource type="Texture2D" uid="uid://bwar73f8r2vm1" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile101.png" id="42_dwudx"]
+[ext_resource type="Texture2D" uid="uid://7ga2b7jx7bdr" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile037.png" id="42_j8y3m"]
+[ext_resource type="Texture2D" uid="uid://du00j1e3rvaj1" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile102.png" id="43_444p7"]
+[ext_resource type="Texture2D" uid="uid://b31xplvmoyvw7" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile038.png" id="43_ylv1k"]
+[ext_resource type="Texture2D" uid="uid://cpqj8g7i5pnhs" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile103.png" id="44_2xe73"]
+[ext_resource type="Texture2D" uid="uid://8yc8r7kkbuan" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile039.png" id="44_lsk16"]
+[ext_resource type="Texture2D" uid="uid://creasw4nt5on5" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile040.png" id="45_2ghd5"]
+[ext_resource type="Texture2D" uid="uid://bqvljv7h7un3w" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile104.png" id="45_hhhca"]
+[ext_resource type="Texture2D" uid="uid://cjrg42it7s4e" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile041.png" id="46_i47iv"]
+[ext_resource type="Texture2D" uid="uid://cpkj7h3dvnnph" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile105.png" id="46_jragf"]
+[ext_resource type="Texture2D" uid="uid://m5odwpfk0prs" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile042.png" id="47_7k8ug"]
+[ext_resource type="Texture2D" uid="uid://ckft6o78kn7ne" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile106.png" id="47_wy8l5"]
+[ext_resource type="Texture2D" uid="uid://dt64vmnx4xltc" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile043.png" id="48_de1om"]
+[ext_resource type="Texture2D" uid="uid://b1nm33aw0qj4t" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile107.png" id="48_xt0sc"]
+[ext_resource type="Texture2D" uid="uid://lrk2c81s2gkp" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile108.png" id="49_4qsuy"]
+[ext_resource type="Texture2D" uid="uid://dxffkj7u6v8kv" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile044.png" id="49_5trqq"]
+[ext_resource type="Texture2D" uid="uid://b3iiks0e8ml1j" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile045.png" id="50_73c1e"]
+[ext_resource type="Texture2D" uid="uid://dmtb331v1gn3l" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile109.png" id="50_k6abf"]
+[ext_resource type="Texture2D" uid="uid://c1o5bibvrjusp" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile046.png" id="51_4v8ms"]
+[ext_resource type="Texture2D" uid="uid://bn0rjk1lkjbfc" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile110.png" id="51_dd7pp"]
+[ext_resource type="Texture2D" uid="uid://2q08vjskx3mv" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile047.png" id="52_00rqq"]
+[ext_resource type="Texture2D" uid="uid://c68ar78rgw7qn" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile111.png" id="52_sjf8m"]
+[ext_resource type="Texture2D" uid="uid://b1xbi448halei" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile048.png" id="53_42n5o"]
+[ext_resource type="Texture2D" uid="uid://c1cmiu8nlvegg" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile112.png" id="53_lu1s8"]
+[ext_resource type="Texture2D" uid="uid://clt46mbjbmijr" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile049.png" id="54_13hbn"]
+[ext_resource type="Texture2D" uid="uid://swprp7280k8" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile113.png" id="54_t35a1"]
+[ext_resource type="Texture2D" uid="uid://d4io2kwafvp1m" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile050.png" id="55_goey0"]
+[ext_resource type="Texture2D" uid="uid://drmh0h53b83cp" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile114.png" id="55_k1k62"]
+[ext_resource type="Texture2D" uid="uid://dknh6rh4ycb4t" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile115.png" id="56_7l11e"]
+[ext_resource type="Texture2D" uid="uid://v2704wbgs5h6" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile051.png" id="56_t4jdf"]
+[ext_resource type="Texture2D" uid="uid://bm8w5cde5h46f" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile116.png" id="57_lg5hx"]
+[ext_resource type="Texture2D" uid="uid://fpnk00jpne6j" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile052.png" id="57_vqqbd"]
+[ext_resource type="Texture2D" uid="uid://b6eu8bgmaapgd" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile117.png" id="58_nxnqp"]
+[ext_resource type="Texture2D" uid="uid://ba1lnglxj56q4" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile053.png" id="58_olb71"]
+[ext_resource type="Texture2D" uid="uid://bgj7pnyoacrpq" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile054.png" id="59_ja8lb"]
+[ext_resource type="Texture2D" uid="uid://c2ck6a8w043ku" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile118.png" id="59_q72in"]
+[ext_resource type="Texture2D" uid="uid://caiyfaruda0ww" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile055.png" id="60_ppt76"]
+[ext_resource type="Texture2D" uid="uid://dxdu3qur6ethf" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile119.png" id="60_vo7jf"]
+[ext_resource type="Texture2D" uid="uid://b7pkx5032ci8d" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile120.png" id="61_6i6u7"]
+[ext_resource type="Texture2D" uid="uid://cbvtsb738mtpo" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile056.png" id="61_hrngh"]
+[ext_resource type="Texture2D" uid="uid://tifhjyl4rsi2" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile121.png" id="62_712lm"]
+[ext_resource type="Texture2D" uid="uid://bcjk7u76gicsf" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile057.png" id="62_d1idt"]
+[ext_resource type="Texture2D" uid="uid://c1yolbrw5ssre" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile058.png" id="63_n4tdc"]
+[ext_resource type="Texture2D" uid="uid://dtcetjt5i1eio" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile122.png" id="63_pvrwh"]
+[ext_resource type="Texture2D" uid="uid://b7ffg8pk2x3fw" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile123.png" id="64_3l1em"]
+[ext_resource type="Texture2D" uid="uid://x4r5pb2b2vje" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile059.png" id="64_8wjys"]
+[ext_resource type="Texture2D" uid="uid://dpwod6rrfgaq0" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile060.png" id="65_6m6sd"]
+[ext_resource type="Texture2D" uid="uid://ugwppvnh57kc" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile124.png" id="65_gepr2"]
+[ext_resource type="Texture2D" uid="uid://dhlqe23haa1u0" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile061.png" id="66_e52ns"]
+[ext_resource type="Texture2D" uid="uid://b8b2l83muraa3" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile125.png" id="66_kei6s"]
+[ext_resource type="Texture2D" uid="uid://bxonovnwt0yyy" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile062.png" id="67_8ppgj"]
+[ext_resource type="Texture2D" uid="uid://c6u2cby8741jj" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile126.png" id="67_gigun"]
+[ext_resource type="Texture2D" uid="uid://1k4jib5jlegh" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile127.png" id="68_q7m6y"]
+[ext_resource type="Texture2D" uid="uid://b13chv66ny02o" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile063.png" id="68_wphfi"]
+[ext_resource type="Texture2D" uid="uid://dotu6w87gkija" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile064.png" id="69_0xsxt"]
+[ext_resource type="Texture2D" uid="uid://cvqblc6bfesf1" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile065.png" id="70_nkb6u"]
+[ext_resource type="Texture2D" uid="uid://bbefw8sory70g" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile066.png" id="71_g0x2s"]
+[ext_resource type="Texture2D" uid="uid://dgahanefxmy3r" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile067.png" id="72_rqdf5"]
+[ext_resource type="Texture2D" uid="uid://dva3jqye75a44" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile068.png" id="73_wt02g"]
+[ext_resource type="Texture2D" uid="uid://dqm40xofhsggf" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile069.png" id="74_07j1g"]
+[ext_resource type="Texture2D" uid="uid://ot2unwpv8bcv" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile070.png" id="75_mcows"]
+[ext_resource type="Texture2D" uid="uid://40umj4weds2a" path="res://scenes/entities/enemies/basic_enemies/skeleton/assets/animations/Idle/tile071.png" id="76_4jruq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_acjdx"]
+radius = 48.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vfblx"]
+radius = 48.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b4iof"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_t8bk1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_l7ore")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_fnyyw")
+}],
+"loop": false,
+"name": &"hurt_0",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_prv8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_vhudn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_1lrqj")
+}],
+"loop": false,
+"name": &"hurt_1",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_7u2p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_oiht5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_4bx0r")
+}],
+"loop": false,
+"name": &"hurt_2",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_qvj8b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_hbam3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_awghq")
+}],
+"loop": false,
+"name": &"hurt_3",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_2e5hg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_e2l3l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_4ne5c")
+}],
+"loop": false,
+"name": &"hurt_4",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("20_riys5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_hq3s0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_fnnwb")
+}],
+"loop": false,
+"name": &"hurt_5",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("23_j5gr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ca4ka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_qib6o")
+}],
+"loop": false,
+"name": &"hurt_6",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_3lvxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_xe0ec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_af5xo")
+}],
+"loop": false,
+"name": &"hurt_7",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_ve2qv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_rtgf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_kjdmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_2rvnj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_84owc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_n363x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_ghdci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_21sjq")
+}],
+"loop": true,
+"name": &"run_0",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("61_6i6u7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_712lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_pvrwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_3l1em")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_gepr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_kei6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_gigun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_q7m6y")
+}],
+"loop": true,
+"name": &"run_1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_rmkrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_cghcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_1718u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_b1ly7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_3vy6w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_l6vq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_qiwax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_whrwh")
+}],
+"loop": true,
+"name": &"run_2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_lu1s8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_t35a1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_k1k62")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_7l11e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_lg5hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_nxnqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_q72in")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_vo7jf")
+}],
+"loop": true,
+"name": &"run_3",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("69_0xsxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_nkb6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_g0x2s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_rqdf5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_wt02g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_07j1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_mcows")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_4jruq")
+}],
+"loop": true,
+"name": &"run_4",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_nplif")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ba0jb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_q4gsn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_g58f6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_s0pnn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_dwudx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_444p7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_2xe73")
+}],
+"loop": true,
+"name": &"run_5",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_4560t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_b0ur8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_v8jnf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_cl7nq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_uwok1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_p8k4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_n2ffh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cgy2c")
+}],
+"loop": true,
+"name": &"run_6",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_hhhca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_jragf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_wy8l5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_xt0sc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_4qsuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_k6abf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_dd7pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_sjf8m")
+}],
+"loop": true,
+"name": &"run_7",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("29_y0x6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_jnps6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_fsvex")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_v5plp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_3mk6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_m0jw6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_o7p6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_hh8oj")
+}],
+"loop": true,
+"name": &"walk_0",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("61_hrngh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_d1idt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_n4tdc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_8wjys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_6m6sd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_e52ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_8ppgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_wphfi")
+}],
+"loop": true,
+"name": &"walk_1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("21_cu527")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_0ko52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_4rfqu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_hj5e1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_ak67a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_fx18m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_bjm68")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_ita71")
+}],
+"loop": true,
+"name": &"walk_2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_42n5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_13hbn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_goey0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_t4jdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_vqqbd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_olb71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_ja8lb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_ppt76")
+}],
+"loop": true,
+"name": &"walk_3",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_fpibr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_dxk5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q1lo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_yrcdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_1y33r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_luxxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_2yb41")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_u4wwh")
+}],
+"loop": true,
+"name": &"walk_4",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_oll6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_aljc1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_6vays")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_l1m83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_phla5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_j8y3m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_ylv1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_lsk16")
+}],
+"loop": true,
+"name": &"walk_5",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_15hyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2lks8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_38dy7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_7aype")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_grdgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_uokjh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_0q64a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_h1jsa")
+}],
+"loop": true,
+"name": &"walk_6",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_2ghd5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_i47iv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_7k8ug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_de1om")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_5trqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_73c1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_4v8ms")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_00rqq")
+}],
+"loop": true,
+"name": &"walk_7",
+"speed": 10.0
+}]
+
+[node name="BasicEnemySkeleton" type="CharacterBody2D" groups=["Enemies Group"]]
+scale = Vector2(0.75, 0.75)
+collision_layer = 8
+collision_mask = 9
+motion_mode = 1
+script = ExtResource("1_4itx6")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_wt78d")]
+
+[node name="ExperienceOrbDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_3pl03")]
+health_component = NodePath("../HealthComponent")
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_1gl38")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(1.33333, 0)
+shape = SubResource("CircleShape2D_acjdx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vfblx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(9, -32.6667)
+sprite_frames = SubResource("SpriteFrames_b4iof")
+animation = &"walk_7"

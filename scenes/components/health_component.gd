@@ -3,21 +3,22 @@ class_name  HealthComponent
 
 signal died
 
-var enemy: BaseEnemy
+var entity: BaseEntity
 
 func _ready():
-	enemy = owner as BaseEnemy
+	entity = owner as BaseEntity
 
 func damage(dmg: float):
-	enemy.current_health = enemy.current_health - dmg
+	entity.current_health = entity.current_health - dmg
 	
-	if enemy.current_health <= 0:
-		enemy.is_dead = true
-		enemy._animated_sprite.play("dead")
-		await enemy._animated_sprite.animation_finished
+	if entity.current_health <= 0:
+		entity.is_dead = true
+		entity._animated_sprite.play("dead")
+		await entity._animated_sprite.animation_finished
 		died.emit()
 	else:
-		enemy.is_hurt = true
-		enemy._animated_sprite.play("hurt")
-		await enemy._animated_sprite.animation_finished
-		enemy.is_hurt = false
+		entity.is_hurt = true
+		var current_animation = entity._animated_sprite.animation.split("_")
+		entity._animated_sprite.play("hurt_" + str(current_animation[1]))
+		await entity._animated_sprite.animation_finished
+		entity.is_hurt = false
