@@ -1,0 +1,842 @@
+[gd_scene load_steps=168 format=3 uid="uid://c66g12mdorck3"]
+
+[ext_resource type="Script" path="res://scenes/entities/enemies/basic/basic_krampus/basic_krampus.gd" id="1_njl0c"]
+[ext_resource type="PackedScene" uid="uid://ccmmkgbkxgne2" path="res://scenes/components/health_component.tscn" id="2_114f0"]
+[ext_resource type="PackedScene" uid="uid://va1hn2sykhi2" path="res://scenes/components/experience_orb_drop_component.tscn" id="3_y3v8b"]
+[ext_resource type="PackedScene" uid="uid://nr3n0b22ime8" path="res://scenes/components/hurt_box_component.tscn" id="4_jfo2x"]
+[ext_resource type="Texture2D" uid="uid://cxxj3ceem18n" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Dead/tile392.png" id="5_mqikt"]
+[ext_resource type="Texture2D" uid="uid://bgclbriisyqu4" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Dead/tile396.png" id="6_vfigi"]
+[ext_resource type="Texture2D" uid="uid://daw8lbche4yy" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Dead/tile393.png" id="7_qgad6"]
+[ext_resource type="Texture2D" uid="uid://4h5jkkajkpwn" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Dead/tile397.png" id="8_02od6"]
+[ext_resource type="Texture2D" uid="uid://bwasy6elnm8xq" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Dead/tile395.png" id="9_4awtq"]
+[ext_resource type="Texture2D" uid="uid://cj8hj6lntte63" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Dead/tile399.png" id="10_dg3rp"]
+[ext_resource type="Texture2D" uid="uid://cj2yos5imseum" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Dead/tile394.png" id="11_nk5pp"]
+[ext_resource type="Texture2D" uid="uid://um2y1c6yqfey" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Dead/tile398.png" id="12_b1k26"]
+[ext_resource type="Texture2D" uid="uid://gamp41vkujb6" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile305.png" id="13_br5yh"]
+[ext_resource type="Texture2D" uid="uid://qcdlldidfjhq" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile306.png" id="14_x1q83"]
+[ext_resource type="Texture2D" uid="uid://dtfbp4qhn1pd" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile307.png" id="15_khrnj"]
+[ext_resource type="Texture2D" uid="uid://3d7n1gguv6sl" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile317.png" id="16_306sf"]
+[ext_resource type="Texture2D" uid="uid://chwb11gralpkm" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile318.png" id="17_gs3f7"]
+[ext_resource type="Texture2D" uid="uid://cnnrevghrij2o" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile319.png" id="18_xupox"]
+[ext_resource type="Texture2D" uid="uid://0qq0617vilp5" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile302.png" id="19_s60x1"]
+[ext_resource type="Texture2D" uid="uid://fnfmr7wr7hby" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile303.png" id="20_ea1sr"]
+[ext_resource type="Texture2D" uid="uid://b7kd7dbmsg8gu" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile304.png" id="21_q2qog"]
+[ext_resource type="Texture2D" uid="uid://bsox4pnxt7jtb" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile314.png" id="22_e3lwa"]
+[ext_resource type="Texture2D" uid="uid://cunt3gefswebi" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile315.png" id="23_8llqk"]
+[ext_resource type="Texture2D" uid="uid://gsjs07nboxee" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile316.png" id="24_2r2gc"]
+[ext_resource type="Texture2D" uid="uid://dhj3pc0feohlh" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile296.png" id="25_a7o17"]
+[ext_resource type="Texture2D" uid="uid://cg6olrh7fkogs" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile297.png" id="26_jmh1x"]
+[ext_resource type="Texture2D" uid="uid://cmpigofl8sc1i" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile298.png" id="27_slji1"]
+[ext_resource type="Texture2D" uid="uid://7dllre0ggs3f" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile308.png" id="28_dl5qo"]
+[ext_resource type="Texture2D" uid="uid://dx31qdfg7rkmg" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile309.png" id="29_xf1rp"]
+[ext_resource type="Texture2D" uid="uid://jfa304teh14a" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile310.png" id="30_fn3tl"]
+[ext_resource type="Texture2D" uid="uid://nyovaprx1q8" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile299.png" id="31_6s0ur"]
+[ext_resource type="Texture2D" uid="uid://db73f61ue6ith" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile300.png" id="32_o0k06"]
+[ext_resource type="Texture2D" uid="uid://bi47xoir7eraf" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile301.png" id="33_n682d"]
+[ext_resource type="Texture2D" uid="uid://cfyii211pwisy" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile311.png" id="34_gmjhm"]
+[ext_resource type="Texture2D" uid="uid://cf0ugkprbfemg" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile312.png" id="35_e0aha"]
+[ext_resource type="Texture2D" uid="uid://8i6iunvm71og" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Hurt/tile313.png" id="36_8w6ab"]
+[ext_resource type="Texture2D" uid="uid://dcnk76v65m3e" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile088.png" id="37_nfqhy"]
+[ext_resource type="Texture2D" uid="uid://d0vl0k5qy7gey" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile089.png" id="38_ux5pi"]
+[ext_resource type="Texture2D" uid="uid://d2sjnuncyavbq" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile090.png" id="39_mojqe"]
+[ext_resource type="Texture2D" uid="uid://vakgscstum8s" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile091.png" id="40_pntne"]
+[ext_resource type="Texture2D" uid="uid://bytb76ywm7g86" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile092.png" id="41_7ofwh"]
+[ext_resource type="Texture2D" uid="uid://bb8hjqok7lfas" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile093.png" id="42_c1pwj"]
+[ext_resource type="Texture2D" uid="uid://vgn0ickoy4b4" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile094.png" id="43_o77pv"]
+[ext_resource type="Texture2D" uid="uid://c45l44q81hvhc" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile095.png" id="44_vqtrb"]
+[ext_resource type="Texture2D" uid="uid://b7pkx5032ci8d" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile120.png" id="45_qi14l"]
+[ext_resource type="Texture2D" uid="uid://tifhjyl4rsi2" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile121.png" id="46_mua7w"]
+[ext_resource type="Texture2D" uid="uid://dtcetjt5i1eio" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile122.png" id="47_umxd1"]
+[ext_resource type="Texture2D" uid="uid://b7ffg8pk2x3fw" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile123.png" id="48_cw3cj"]
+[ext_resource type="Texture2D" uid="uid://ugwppvnh57kc" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile124.png" id="49_m8dxn"]
+[ext_resource type="Texture2D" uid="uid://b8b2l83muraa3" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile125.png" id="50_5yam7"]
+[ext_resource type="Texture2D" uid="uid://c6u2cby8741jj" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile126.png" id="51_j46ut"]
+[ext_resource type="Texture2D" uid="uid://1k4jib5jlegh" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile127.png" id="52_gdk88"]
+[ext_resource type="Texture2D" uid="uid://c7qowx8elsnq4" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile080.png" id="53_kxjtm"]
+[ext_resource type="Texture2D" uid="uid://cgv51x2yetscp" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile081.png" id="54_pxs2q"]
+[ext_resource type="Texture2D" uid="uid://ciofwyvklbhcj" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile082.png" id="55_l01ei"]
+[ext_resource type="Texture2D" uid="uid://cqh0hr55f712s" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile083.png" id="56_h5552"]
+[ext_resource type="Texture2D" uid="uid://cf13sksvstcdu" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile084.png" id="57_ldvvv"]
+[ext_resource type="Texture2D" uid="uid://du4qet4fvu8sv" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile085.png" id="58_3pp8f"]
+[ext_resource type="Texture2D" uid="uid://b18olxfwppu60" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile086.png" id="59_tlwt2"]
+[ext_resource type="Texture2D" uid="uid://ci4hms05fm3we" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile087.png" id="60_s8fo5"]
+[ext_resource type="Texture2D" uid="uid://c1cmiu8nlvegg" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile112.png" id="61_1twen"]
+[ext_resource type="Texture2D" uid="uid://swprp7280k8" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile113.png" id="62_0stya"]
+[ext_resource type="Texture2D" uid="uid://drmh0h53b83cp" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile114.png" id="63_2irkb"]
+[ext_resource type="Texture2D" uid="uid://dknh6rh4ycb4t" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile115.png" id="64_thqt5"]
+[ext_resource type="Texture2D" uid="uid://bm8w5cde5h46f" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile116.png" id="65_ndo73"]
+[ext_resource type="Texture2D" uid="uid://b6eu8bgmaapgd" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile117.png" id="66_t6tqb"]
+[ext_resource type="Texture2D" uid="uid://c2ck6a8w043ku" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile118.png" id="67_u4snb"]
+[ext_resource type="Texture2D" uid="uid://dxdu3qur6ethf" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile119.png" id="68_i3cms"]
+[ext_resource type="Texture2D" uid="uid://dotu6w87gkija" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile064.png" id="69_kcq4u"]
+[ext_resource type="Texture2D" uid="uid://cvqblc6bfesf1" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile065.png" id="70_ibvcp"]
+[ext_resource type="Texture2D" uid="uid://bbefw8sory70g" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile066.png" id="71_ndcvr"]
+[ext_resource type="Texture2D" uid="uid://dgahanefxmy3r" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile067.png" id="72_yrnrq"]
+[ext_resource type="Texture2D" uid="uid://dva3jqye75a44" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile068.png" id="73_a58ra"]
+[ext_resource type="Texture2D" uid="uid://dqm40xofhsggf" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile069.png" id="74_om2rs"]
+[ext_resource type="Texture2D" uid="uid://ot2unwpv8bcv" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile070.png" id="75_5juig"]
+[ext_resource type="Texture2D" uid="uid://40umj4weds2a" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile071.png" id="76_3ydyv"]
+[ext_resource type="Texture2D" uid="uid://c5xymmr7cvdpo" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile096.png" id="77_m5pgo"]
+[ext_resource type="Texture2D" uid="uid://bjdhqe4i1tkbq" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile097.png" id="78_hlfmy"]
+[ext_resource type="Texture2D" uid="uid://44iuyra21rae" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile098.png" id="79_fmdjk"]
+[ext_resource type="Texture2D" uid="uid://dn5ogbtf1wwld" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile099.png" id="80_p5ceg"]
+[ext_resource type="Texture2D" uid="uid://c0yy021003b15" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile100.png" id="81_gebk7"]
+[ext_resource type="Texture2D" uid="uid://bwar73f8r2vm1" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile101.png" id="82_n6iu0"]
+[ext_resource type="Texture2D" uid="uid://du00j1e3rvaj1" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile102.png" id="83_i68os"]
+[ext_resource type="Texture2D" uid="uid://cpqj8g7i5pnhs" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile103.png" id="84_a2l0l"]
+[ext_resource type="Texture2D" uid="uid://cufubliw1t5q1" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile072.png" id="85_kl22h"]
+[ext_resource type="Texture2D" uid="uid://kbpwhgi46uos" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile073.png" id="86_50stp"]
+[ext_resource type="Texture2D" uid="uid://c272sc0ibt8pg" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile074.png" id="87_haj0w"]
+[ext_resource type="Texture2D" uid="uid://uslfm2mkv6sf" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile075.png" id="88_c4ecb"]
+[ext_resource type="Texture2D" uid="uid://ci52i7sy4vcig" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile076.png" id="89_osll7"]
+[ext_resource type="Texture2D" uid="uid://bp6qxpvwcvelk" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile077.png" id="90_4png6"]
+[ext_resource type="Texture2D" uid="uid://beujqj5f5sca2" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile078.png" id="91_qfrdd"]
+[ext_resource type="Texture2D" uid="uid://bpv7hlgxb8ptn" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile079.png" id="92_kcpf6"]
+[ext_resource type="Texture2D" uid="uid://bqvljv7h7un3w" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile104.png" id="93_qgimn"]
+[ext_resource type="Texture2D" uid="uid://cpkj7h3dvnnph" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile105.png" id="94_yklus"]
+[ext_resource type="Texture2D" uid="uid://ckft6o78kn7ne" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile106.png" id="95_3w5py"]
+[ext_resource type="Texture2D" uid="uid://b1nm33aw0qj4t" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile107.png" id="96_oxpjf"]
+[ext_resource type="Texture2D" uid="uid://lrk2c81s2gkp" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile108.png" id="97_n7803"]
+[ext_resource type="Texture2D" uid="uid://dmtb331v1gn3l" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile109.png" id="98_3bbro"]
+[ext_resource type="Texture2D" uid="uid://bn0rjk1lkjbfc" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile110.png" id="99_viqis"]
+[ext_resource type="Texture2D" uid="uid://c68ar78rgw7qn" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Run/tile111.png" id="100_0okt1"]
+[ext_resource type="Texture2D" uid="uid://d2wgvxt3tq6q" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile024.png" id="101_le8x3"]
+[ext_resource type="Texture2D" uid="uid://c3jancywe188g" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile025.png" id="102_kr72b"]
+[ext_resource type="Texture2D" uid="uid://bhap84g8lkb30" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile026.png" id="103_0517k"]
+[ext_resource type="Texture2D" uid="uid://44i4sgg8jtug" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile027.png" id="104_avvo1"]
+[ext_resource type="Texture2D" uid="uid://dki03j6qs85df" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile028.png" id="105_7mas4"]
+[ext_resource type="Texture2D" uid="uid://b5ytwpdy7f72o" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile029.png" id="106_32nyt"]
+[ext_resource type="Texture2D" uid="uid://bqucpl2bs0kxa" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile030.png" id="107_idkjx"]
+[ext_resource type="Texture2D" uid="uid://cmartqovp28ru" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile031.png" id="108_wvl4v"]
+[ext_resource type="Texture2D" uid="uid://cbvtsb738mtpo" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile056.png" id="109_sor7w"]
+[ext_resource type="Texture2D" uid="uid://bcjk7u76gicsf" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile057.png" id="110_au1sx"]
+[ext_resource type="Texture2D" uid="uid://c1yolbrw5ssre" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile058.png" id="111_lqmkn"]
+[ext_resource type="Texture2D" uid="uid://x4r5pb2b2vje" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile059.png" id="112_7521t"]
+[ext_resource type="Texture2D" uid="uid://dpwod6rrfgaq0" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile060.png" id="113_5gqs6"]
+[ext_resource type="Texture2D" uid="uid://dhlqe23haa1u0" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile061.png" id="114_eq7jh"]
+[ext_resource type="Texture2D" uid="uid://bxonovnwt0yyy" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile062.png" id="115_mpwf0"]
+[ext_resource type="Texture2D" uid="uid://b13chv66ny02o" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile063.png" id="116_7oshi"]
+[ext_resource type="Texture2D" uid="uid://lut0pbtf3cfh" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile016.png" id="117_227kt"]
+[ext_resource type="Texture2D" uid="uid://cdm6gsifekhsl" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile017.png" id="118_u2d67"]
+[ext_resource type="Texture2D" uid="uid://hgw4ety1283c" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile018.png" id="119_4olsf"]
+[ext_resource type="Texture2D" uid="uid://bbr1du207wure" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile019.png" id="120_bsbht"]
+[ext_resource type="Texture2D" uid="uid://elqfxr35nuke" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile020.png" id="121_l2x6p"]
+[ext_resource type="Texture2D" uid="uid://dqwmh6dfhnsu5" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile021.png" id="122_oonop"]
+[ext_resource type="Texture2D" uid="uid://bywmdpfs56f5w" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile022.png" id="123_k4agt"]
+[ext_resource type="Texture2D" uid="uid://dswf0o56pr2ol" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile023.png" id="124_yy76h"]
+[ext_resource type="Texture2D" uid="uid://b1xbi448halei" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile048.png" id="125_xawcr"]
+[ext_resource type="Texture2D" uid="uid://clt46mbjbmijr" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile049.png" id="126_u0jyo"]
+[ext_resource type="Texture2D" uid="uid://d4io2kwafvp1m" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile050.png" id="127_0ta0w"]
+[ext_resource type="Texture2D" uid="uid://v2704wbgs5h6" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile051.png" id="128_8hplv"]
+[ext_resource type="Texture2D" uid="uid://fpnk00jpne6j" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile052.png" id="129_qv4h6"]
+[ext_resource type="Texture2D" uid="uid://ba1lnglxj56q4" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile053.png" id="130_q4sqr"]
+[ext_resource type="Texture2D" uid="uid://bgj7pnyoacrpq" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile054.png" id="131_b3jvb"]
+[ext_resource type="Texture2D" uid="uid://caiyfaruda0ww" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile055.png" id="132_jtaec"]
+[ext_resource type="Texture2D" uid="uid://ch61va05223of" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile000.png" id="133_jmj8u"]
+[ext_resource type="Texture2D" uid="uid://cg0720soqnwgj" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile001.png" id="134_05htk"]
+[ext_resource type="Texture2D" uid="uid://dpv8yi566haim" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile002.png" id="135_4paa7"]
+[ext_resource type="Texture2D" uid="uid://c2mbr0jjr8t41" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile003.png" id="136_1y5yn"]
+[ext_resource type="Texture2D" uid="uid://kfcdr2hw77xf" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile004.png" id="137_jepwc"]
+[ext_resource type="Texture2D" uid="uid://ku0p7sam528d" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile005.png" id="138_v1vcm"]
+[ext_resource type="Texture2D" uid="uid://cvtdame5vga8k" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile006.png" id="139_0odmq"]
+[ext_resource type="Texture2D" uid="uid://ccx5n8ly2glr2" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile007.png" id="140_sp3g8"]
+[ext_resource type="Texture2D" uid="uid://deqb31s35fe06" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile032.png" id="141_q2oug"]
+[ext_resource type="Texture2D" uid="uid://gwbggjl88kbf" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile033.png" id="142_pk7po"]
+[ext_resource type="Texture2D" uid="uid://btdnjvhjxuirs" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile034.png" id="143_hx2hd"]
+[ext_resource type="Texture2D" uid="uid://tms25ka1qs41" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile035.png" id="144_bovnp"]
+[ext_resource type="Texture2D" uid="uid://oaynl7lbth1u" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile036.png" id="145_w1g50"]
+[ext_resource type="Texture2D" uid="uid://7ga2b7jx7bdr" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile037.png" id="146_3ukyg"]
+[ext_resource type="Texture2D" uid="uid://b31xplvmoyvw7" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile038.png" id="147_jk6rd"]
+[ext_resource type="Texture2D" uid="uid://8yc8r7kkbuan" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile039.png" id="148_gtgel"]
+[ext_resource type="Texture2D" uid="uid://bbk8a4edaad17" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile008.png" id="149_t5bmb"]
+[ext_resource type="Texture2D" uid="uid://dd8kg1e3vrhrh" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile009.png" id="150_x0lvq"]
+[ext_resource type="Texture2D" uid="uid://bobww4tjx72vw" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile010.png" id="151_xka6p"]
+[ext_resource type="Texture2D" uid="uid://clwu30i4sukms" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile011.png" id="152_p6hjj"]
+[ext_resource type="Texture2D" uid="uid://d1wv28k2wy771" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile012.png" id="153_s7ngd"]
+[ext_resource type="Texture2D" uid="uid://6320ejgvj2x8" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile013.png" id="154_ole6s"]
+[ext_resource type="Texture2D" uid="uid://c0mjm7185x5pe" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile014.png" id="155_mqp81"]
+[ext_resource type="Texture2D" uid="uid://c4ve8w5kck8ns" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile015.png" id="156_rvf8a"]
+[ext_resource type="Texture2D" uid="uid://creasw4nt5on5" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile040.png" id="157_uiunc"]
+[ext_resource type="Texture2D" uid="uid://cjrg42it7s4e" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile041.png" id="158_54w44"]
+[ext_resource type="Texture2D" uid="uid://m5odwpfk0prs" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile042.png" id="159_j5d4w"]
+[ext_resource type="Texture2D" uid="uid://dt64vmnx4xltc" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile043.png" id="160_pxmw4"]
+[ext_resource type="Texture2D" uid="uid://dxffkj7u6v8kv" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile044.png" id="161_o2axd"]
+[ext_resource type="Texture2D" uid="uid://b3iiks0e8ml1j" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile045.png" id="162_qjkle"]
+[ext_resource type="Texture2D" uid="uid://c1o5bibvrjusp" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile046.png" id="163_ucvys"]
+[ext_resource type="Texture2D" uid="uid://2q08vjskx3mv" path="res://scenes/entities/enemies/basic/basic_krampus/assets/animations/Walk/tile047.png" id="164_l8rd6"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_acjdx"]
+radius = 48.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vfblx"]
+radius = 48.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_b4iof"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("5_mqikt")
+}],
+"loop": false,
+"name": &"dead_0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("6_vfigi")
+}],
+"loop": false,
+"name": &"dead_1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("7_qgad6")
+}],
+"loop": false,
+"name": &"dead_2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("8_02od6")
+}],
+"loop": false,
+"name": &"dead_3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("9_4awtq")
+}],
+"loop": false,
+"name": &"dead_4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("10_dg3rp")
+}],
+"loop": false,
+"name": &"dead_5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("11_nk5pp")
+}],
+"loop": false,
+"name": &"dead_6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("12_b1k26")
+}],
+"loop": false,
+"name": &"dead_7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_br5yh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_x1q83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_khrnj")
+}],
+"loop": false,
+"name": &"hurt_0",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_306sf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_gs3f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_xupox")
+}],
+"loop": false,
+"name": &"hurt_1",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("19_s60x1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_ea1sr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_q2qog")
+}],
+"loop": false,
+"name": &"hurt_2",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_e3lwa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_8llqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_2r2gc")
+}],
+"loop": false,
+"name": &"hurt_3",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("25_a7o17")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_jmh1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_slji1")
+}],
+"loop": false,
+"name": &"hurt_4",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("28_dl5qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_xf1rp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_fn3tl")
+}],
+"loop": false,
+"name": &"hurt_5",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("31_6s0ur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_o0k06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_n682d")
+}],
+"loop": false,
+"name": &"hurt_6",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("34_gmjhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_e0aha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_8w6ab")
+}],
+"loop": false,
+"name": &"hurt_7",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("37_nfqhy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_ux5pi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_mojqe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_pntne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_7ofwh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_c1pwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_o77pv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_vqtrb")
+}],
+"loop": true,
+"name": &"run_0",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("45_qi14l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_mua7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_umxd1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_cw3cj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_m8dxn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_5yam7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_j46ut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_gdk88")
+}],
+"loop": true,
+"name": &"run_1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("53_kxjtm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_pxs2q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_l01ei")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_h5552")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_ldvvv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_3pp8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_tlwt2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_s8fo5")
+}],
+"loop": true,
+"name": &"run_2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("61_1twen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_0stya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_2irkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_thqt5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_ndo73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_t6tqb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_u4snb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_i3cms")
+}],
+"loop": true,
+"name": &"run_3",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("69_kcq4u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_ibvcp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_ndcvr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_yrnrq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_a58ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_om2rs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_5juig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_3ydyv")
+}],
+"loop": true,
+"name": &"run_4",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("77_m5pgo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_hlfmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_fmdjk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_p5ceg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_gebk7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_n6iu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_i68os")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_a2l0l")
+}],
+"loop": true,
+"name": &"run_5",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("85_kl22h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_50stp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_haj0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_c4ecb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_osll7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_4png6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_qfrdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_kcpf6")
+}],
+"loop": true,
+"name": &"run_6",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("93_qgimn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_yklus")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_3w5py")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_oxpjf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_n7803")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_3bbro")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_viqis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_0okt1")
+}],
+"loop": true,
+"name": &"run_7",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("101_le8x3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_kr72b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_0517k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_avvo1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_7mas4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_32nyt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_idkjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_wvl4v")
+}],
+"loop": true,
+"name": &"walk_0",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("109_sor7w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_au1sx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_lqmkn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_7521t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_5gqs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_eq7jh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_mpwf0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_7oshi")
+}],
+"loop": true,
+"name": &"walk_1",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("117_227kt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_u2d67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_4olsf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_bsbht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_l2x6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_oonop")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_k4agt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_yy76h")
+}],
+"loop": true,
+"name": &"walk_2",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("125_xawcr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_u0jyo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_0ta0w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_8hplv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_qv4h6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_q4sqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_b3jvb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_jtaec")
+}],
+"loop": true,
+"name": &"walk_3",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("133_jmj8u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_05htk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_4paa7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_1y5yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_jepwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_v1vcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_0odmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_sp3g8")
+}],
+"loop": true,
+"name": &"walk_4",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("141_q2oug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_pk7po")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_hx2hd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_bovnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_w1g50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_3ukyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_jk6rd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_gtgel")
+}],
+"loop": true,
+"name": &"walk_5",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("149_t5bmb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_x0lvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_xka6p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_p6hjj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_s7ngd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_ole6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_mqp81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_rvf8a")
+}],
+"loop": true,
+"name": &"walk_6",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("157_uiunc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_54w44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_j5d4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_pxmw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_o2axd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_qjkle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_ucvys")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_l8rd6")
+}],
+"loop": true,
+"name": &"walk_7",
+"speed": 10.0
+}]
+
+[node name="BasicKrampus" type="CharacterBody2D" groups=["Enemies Group"]]
+scale = Vector2(0.75, 0.75)
+collision_layer = 8
+collision_mask = 9
+motion_mode = 1
+script = ExtResource("1_njl0c")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_114f0")]
+
+[node name="ExperienceOrbDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_y3v8b")]
+health_component = NodePath("../HealthComponent")
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_jfo2x")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(1.33333, 0)
+shape = SubResource("CircleShape2D_acjdx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_vfblx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(9, -32.6667)
+sprite_frames = SubResource("SpriteFrames_b4iof")
+animation = &"dead_7"

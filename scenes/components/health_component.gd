@@ -13,7 +13,8 @@ func damage(dmg: float):
 	
 	if entity.current_health <= 0:
 		entity.is_dead = true
-		entity._animated_sprite.play("dead")
+		var current_animation = entity._animated_sprite.animation.split("_")
+		entity._animated_sprite.play("dead_" + str(current_animation[1]))
 		await entity._animated_sprite.animation_finished
 		died.emit()
 	else:

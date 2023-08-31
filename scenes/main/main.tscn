@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://l2piccda32as"]
+[gd_scene load_steps=11 format=3 uid="uid://l2piccda32as"]
 
 [ext_resource type="TileSet" uid="uid://bed7r25026wnn" path="res://scenes/main/assets/tileset-nature.tres" id="1_1prsh"]
 [ext_resource type="PackedScene" uid="uid://dcjf4ndcrsnsc" path="res://scenes/ui/level_time_indicator.tscn" id="1_3ymwx"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://hyrlvwjsrocx" path="res://scenes/camera/game_camera.tscn" id="3_avfgy"]
 [ext_resource type="PackedScene" uid="uid://dqtgg7qek3gse" path="res://scenes/managers/experience_manager.tscn" id="4_qjthe"]
 [ext_resource type="PackedScene" uid="uid://d3icrbnls5a6x" path="res://scenes/managers/enemy_manager.tscn" id="5_oq6tw"]
+[ext_resource type="PackedScene" uid="uid://c66g12mdorck3" path="res://scenes/entities/enemies/basic/basic_krampus/basic_krampus.tscn" id="5_w03le"]
 [ext_resource type="PackedScene" uid="uid://84jgya5m8qb6" path="res://scenes/managers/upgrade_manager.tscn" id="6_mwwxx"]
 
 [node name="Main" type="Node"]
@@ -21,6 +22,7 @@ experience_manager = NodePath("../ExperienceManager")
 [node name="LevelTimeManager" parent="." instance=ExtResource("2_vctn5")]
 
 [node name="EnemyManager" parent="." instance=ExtResource("5_oq6tw")]
+basic_krampus = ExtResource("5_w03le")
 
 [node name="ExperienceManager" parent="." instance=ExtResource("4_qjthe")]
 

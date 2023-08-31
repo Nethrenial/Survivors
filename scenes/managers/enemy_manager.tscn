@@ -1,11 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://d3icrbnls5a6x"]
+[gd_scene load_steps=2 format=3 uid="uid://d3icrbnls5a6x"]
 
 [ext_resource type="Script" path="res://scenes/managers/enemy_manager.gd" id="1_35kil"]
-[ext_resource type="PackedScene" uid="uid://c66g12mdorck3" path="res://scenes/entities/enemies/basic_enemies/skeleton/basic_enemy_skeleton.tscn" id="2_ki382"]
 
 [node name="EnemyManager" type="Node"]
 script = ExtResource("1_35kil")
-basic_enemy_skeleton = ExtResource("2_ki382")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
