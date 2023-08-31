@@ -17,24 +17,18 @@ func _process(_delta):
 	var direction = movement_vector.normalized()
 	var angle = rad_to_deg(atan2(direction.y, direction.x)) + 90
 	
-	if angle == 90 && direction.x > 0:
-		prev_angle = angle
-		_animated_sprite.play("run_sword_body_090")
-	if angle != 0 && angle != -45:
-		_animated_sprite.play("run_sword_body_" + "%03d"%angle)
-	if angle == -45:
-		_animated_sprite.play("run_sword_body_315")
-	if angle == 0 && direction.y != 0:
-		_animated_sprite.play("run_sword_body_000")
-		
+	var clamped_angle = floor(angle / 45)
+	if clamped_angle == -1:
+		clamped_angle = 7
+	
+	print("Angle = ", clamped_angle)
+	
 	if (direction.x != 0 || direction.y != 0):
-		prev_angle = angle
+		prev_angle =  clamped_angle
+		_animated_sprite.play("run_" + str(clamped_angle))
 		
 	if(direction.x == 0 && direction.y == 0 && prev_angle != null):
-		if prev_angle != -45:
-			_animated_sprite.play("idle_body_" + "%03d"%prev_angle)
-		else:
-			_animated_sprite.play("idle_body_315")
+		_animated_sprite.play("idle_" + str(prev_angle))
 	
 		
 	

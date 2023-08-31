@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://by14khgn7gtuj"
-path="res://.godot/imported/Run_Empty_Body_337.png-ddf386aaf320b0d345ac19595eeb050b.ctex"
+uid="uid://qq0j3a0h7qmg"
+path="res://.godot/imported/LordEsther_running_diag.png-6c099453ebadc901f0c7013834ca07ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/entities/players/player_1/assets/animations/Run/empty_body/Run_Empty_Body_337.png"
-dest_files=["res://.godot/imported/Run_Empty_Body_337.png-ddf386aaf320b0d345ac19595eeb050b.ctex"]
+source_file="res://scenes/entities/players/player_1/assets/animations/Lord Esther/Run/LordEsther_running_diag.png"
+dest_files=["res://.godot/imported/LordEsther_running_diag.png-6c099453ebadc901f0c7013834ca07ce.ctex"]
 
 [params]
 

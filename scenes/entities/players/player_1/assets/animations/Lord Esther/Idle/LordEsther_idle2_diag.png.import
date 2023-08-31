@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c2r3xtebyxw52"
-path="res://.godot/imported/Run_Sword_Body_067.png-4df2ff1715601d328ce47ad5508a82a4.ctex"
+uid="uid://c4slvncs4j57"
+path="res://.godot/imported/LordEsther_idle2_diag.png-bfa3e8282b11c791d2f7de86434ea867.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/entities/players/player_1/assets/animations/Run/sword_body/Run_Sword_Body_067.png"
-dest_files=["res://.godot/imported/Run_Sword_Body_067.png-4df2ff1715601d328ce47ad5508a82a4.ctex"]
+source_file="res://scenes/entities/players/player_1/assets/animations/Lord Esther/Idle/LordEsther_idle2_diag.png"
+dest_files=["res://.godot/imported/LordEsther_idle2_diag.png-bfa3e8282b11c791d2f7de86434ea867.ctex"]
 
 [params]
 
