@@ -23,6 +23,11 @@ GameEvents="*res://scenes/autoload/game_events.tscn"
 
 gdscript/warnings/unused_parameter=0
 
+[editor]
+
+version_control/plugin_name="GitPlugin"
+version_control/autoload_on_startup=true
+
 [input]
 
 move_left={
@@ -66,4 +71,3 @@ left_click={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
-renderer/rendering_method="gl_compatibility"

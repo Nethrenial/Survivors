@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://x4dq8hwf6j36"]
+[gd_scene load_steps=3 format=3 uid="uid://x4dq8hwf6j36"]
 
 [ext_resource type="Script" path="res://scenes/managers/level_time_manager.gd" id="1_pwvvc"]
+[ext_resource type="PackedScene" uid="uid://bcryhx5hh018h" path="res://scenes/ui/victory_screen.tscn" id="2_gfmrq"]
 
 [node name="LevelTimeManager" type="Node"]
 script = ExtResource("1_pwvvc")
+victory_screen_scene = ExtResource("2_gfmrq")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 60.0
+wait_time = 300.0
 one_shot = true
 autostart = true

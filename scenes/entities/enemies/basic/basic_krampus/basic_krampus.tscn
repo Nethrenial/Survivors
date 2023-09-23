@@ -815,7 +815,7 @@ animations = [{
 }]
 
 [node name="BasicKrampus" type="CharacterBody2D" groups=["Enemies Group"]]
-scale = Vector2(0.75, 0.75)
+scale = Vector2(0.5, 0.5)
 collision_layer = 8
 collision_mask = 9
 motion_mode = 1
@@ -839,4 +839,4 @@ shape = SubResource("CircleShape2D_vfblx")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(9, -32.6667)
 sprite_frames = SubResource("SpriteFrames_b4iof")
-animation = &"dead_7"
+animation = &"run_0"

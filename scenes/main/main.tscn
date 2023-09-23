@@ -1,8 +1,10 @@
-[gd_scene load_steps=11 format=3 uid="uid://l2piccda32as"]
+[gd_scene load_steps=13 format=3 uid="uid://l2piccda32as"]
 
 [ext_resource type="TileSet" uid="uid://bed7r25026wnn" path="res://scenes/main/assets/tileset-nature.tres" id="1_1prsh"]
 [ext_resource type="PackedScene" uid="uid://dcjf4ndcrsnsc" path="res://scenes/ui/level_time_indicator.tscn" id="1_3ymwx"]
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_h4rvm"]
 [ext_resource type="PackedScene" uid="uid://be48qx6bpgwq8" path="res://scenes/entities/players/player_1/player_1.tscn" id="1_u7rji"]
+[ext_resource type="PackedScene" uid="uid://ceb5x5mom7cp5" path="res://scenes/ui/defeat_screen.tscn" id="2_ox1ap"]
 [ext_resource type="PackedScene" uid="uid://dklsbspxu0i2n" path="res://scenes/ui/experience_bar.tscn" id="2_r4ujr"]
 [ext_resource type="PackedScene" uid="uid://x4dq8hwf6j36" path="res://scenes/managers/level_time_manager.tscn" id="2_vctn5"]
 [ext_resource type="PackedScene" uid="uid://hyrlvwjsrocx" path="res://scenes/camera/game_camera.tscn" id="3_avfgy"]
@@ -12,6 +14,8 @@
 [ext_resource type="PackedScene" uid="uid://84jgya5m8qb6" path="res://scenes/managers/upgrade_manager.tscn" id="6_mwwxx"]
 
 [node name="Main" type="Node"]
+script = ExtResource("1_h4rvm")
+defeat_screen_scene = ExtResource("2_ox1ap")
 
 [node name="LevelTimeIndicator" parent="." node_paths=PackedStringArray("level_time_manager") instance=ExtResource("1_3ymwx")]
 level_time_manager = NodePath("../LevelTimeManager")
@@ -21,8 +25,9 @@ experience_manager = NodePath("../ExperienceManager")
 
 [node name="LevelTimeManager" parent="." instance=ExtResource("2_vctn5")]
 
-[node name="EnemyManager" parent="." instance=ExtResource("5_oq6tw")]
+[node name="EnemyManager" parent="." node_paths=PackedStringArray("level_time_mananer") instance=ExtResource("5_oq6tw")]
 basic_krampus = ExtResource("5_w03le")
+level_time_mananer = NodePath("../LevelTimeManager")
 
 [node name="ExperienceManager" parent="." instance=ExtResource("4_qjthe")]
 
@@ -40,6 +45,7 @@ layer_0/tile_data = PackedInt32Array(2687049, 65536, 4, 2621513, 65536, 4, 25559
 y_sort_enabled = true
 
 [node name="Player_1" parent="Entities" instance=ExtResource("1_u7rji")]
+unique_name_in_owner = true
 position = Vector2(500, 232)
 
 [node name="Foreground" type="Node2D" parent="." groups=["foreground_layer"]]
