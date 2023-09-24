@@ -55,7 +55,7 @@ func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_upgrades:  Dictio
 #	print("Current wait time ", $Timer.wait_time, " Percent reduction ", percent_reduction)
 #	print("Next percentage of 1.5s => ", (1 - percent_reduction), "%")
 	$Timer.wait_time = max(base_wait_time * (1 - percent_reduction), 0.1)
-	print("New wait time is ", $Timer.wait_time)
+#	print("New wait time is ", $Timer.wait_time)
 	$Timer.start()
 #	print($Timer.wait_time)
 	

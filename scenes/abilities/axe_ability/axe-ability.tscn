@@ -1,0 +1,67 @@
+[gd_scene load_steps=8 format=3 uid="uid://c11vk4uw444gd"]
+
+[ext_resource type="Script" path="res://scenes/abilities/axe_ability/axe-ability.gd" id="1_a3fou"]
+[ext_resource type="Texture2D" uid="uid://smjhnx38j7yr" path="res://scenes/abilities/axe_ability/assets/AxeDoubleT1.png" id="1_nooe0"]
+[ext_resource type="Script" path="res://scenes/components/hitbox_component.gd" id="3_iquxe"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_66ok8"]
+radius = 15.0
+
+[sub_resource type="Animation" id="Animation_q2mk6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_mn82c"]
+resource_name = "rotate_self"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 6.28319]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7brqq"]
+_data = {
+"RESET": SubResource("Animation_q2mk6"),
+"rotate_self": SubResource("Animation_mn82c")
+}
+
+[node name="AxeAbility" type="Node2D"]
+script = ExtResource("1_a3fou")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_nooe0")
+
+[node name="HitboxComponent" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("3_iquxe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("CircleShape2D_66ok8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "rotate_self"
+libraries = {
+"": SubResource("AnimationLibrary_7brqq")
+}

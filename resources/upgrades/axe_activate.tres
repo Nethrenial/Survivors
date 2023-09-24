@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityActivate" load_steps=3 format=3 uid="uid://krqsoxwdglsa"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_activate.gd" id="1_3i04q"]
+[ext_resource type="PackedScene" uid="uid://bhx2ki35iwvxl" path="res://scenes/abilities/axe_ability/axe_ability_controller.tscn" id="1_tj42s"]
+
+[resource]
+script = ExtResource("1_3i04q")
+ability_controller_scene = ExtResource("1_tj42s")
+id = "axe_activate"
+max_quantity = 1
+name = "Rotating Axe"
+description = "Periodically sends out  a Spinning Axe.
+
+
+
+"

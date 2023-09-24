@@ -21,7 +21,7 @@ func set_ability_upgrades(upgrades: Array[AbilityUpgrade]):
 
 
 func on_upgrade_selected(upgrade: AbilityUpgrade, card: AbilityUpgradeCard):
-	print("Selected upgrade", upgrade)
+#	print("Selected upgrade", upgrade)
 	upgrade_selected.emit(upgrade)
 	queue_free()
 	get_tree().paused = false

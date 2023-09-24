@@ -3,4 +3,5 @@
 [ext_resource type="Script" path="res://scenes/entities/base_entity.gd" id="1_o3g34"]
 
 [node name="BaseEntity" type="CharacterBody2D"]
+z_index = 2
 script = ExtResource("1_o3g34")

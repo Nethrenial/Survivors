@@ -1,9 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://d3icrbnls5a6x"]
+[gd_scene load_steps=3 format=3 uid="uid://d3icrbnls5a6x"]
 
 [ext_resource type="Script" path="res://scenes/managers/enemy_manager.gd" id="1_35kil"]
+[ext_resource type="PackedScene" uid="uid://c66g12mdorck3" path="res://scenes/entities/enemies/basic/basic_orc/basic_orc.tscn" id="2_g4atq"]
 
 [node name="EnemyManager" type="Node"]
 script = ExtResource("1_35kil")
+basic_orc = ExtResource("2_g4atq")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

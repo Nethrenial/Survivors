@@ -11,11 +11,13 @@ var num_colliding_enemies : int = 0
 @onready var damage_interval_time = $DamageIntervalTimer as Timer
 @onready var health_component = $HealthComponent as HealthComponent
 @onready var health_bar = $HealthBar as ProgressBar
+@onready var abilities = $Abilities
 
 func _ready():
-	max_health = 10
-	max_speed = 125
+	max_health = 20
+	max_speed = 250
 	current_health = max_health
+	GameEvents.ability_upgrades_added.connect(on_ability_upgrade_added)
 	update_heath_display()
 	
 	
@@ -70,14 +72,14 @@ func on_enemy_entered(other_body: Node2D):
 
 func on_enemy_exited(other_body: Node2D):
 	num_colliding_enemies -= 1
-	print("Colliding with ", num_colliding_enemies, " enemies")	
+#	print("Colliding with ", num_colliding_enemies, " enemies")	
 
 
 func check_deal_damage():
 	if num_colliding_enemies == 0 || !damage_interval_time.is_stopped():
 		return
 	health_component.damage(1)
-	print("Current player health ", current_health)
+#	print("Current player health ", current_health)
 	damage_interval_time.start()
 	
 func on_damage_interval_timer_timeout():
@@ -91,5 +93,14 @@ func update_heath_display():
 
 
 func on_died():
-	print("I'm dead suckers !!!!")
+#	print("I'm dead suckers !!!!")
 	queue_free()
+
+
+func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_updates: Dictionary):
+	if not upgrade is AbilityActivate:
+		return
+	
+	abilities.add_child((upgrade as AbilityActivate).ability_controller_scene.instantiate())	
+	
+	pass
