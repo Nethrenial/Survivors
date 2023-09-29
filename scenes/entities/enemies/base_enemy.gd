@@ -11,3 +11,15 @@ class_name BaseEnemy
 #@onready var _animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 #@onready var _health_component: HealthComponent = $HealthComponent
 #
+
+@onready var enemy_sfx_player = $EnemySFXPlayer as EnemySFXPlayer
+
+func _ready():
+	($HurtboxComponent as HurtboxComponent).hit.connect(on_hit)
+	
+	
+func on_hit(ability: BaseAbility):
+	if ability is SwordAbility:
+		enemy_sfx_player.play("sword_hit")
+	elif ability is AxeAbility:
+		enemy_sfx_player.play("axe_hit")		

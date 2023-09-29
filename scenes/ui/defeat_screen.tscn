@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://ceb5x5mom7cp5"]
+[gd_scene load_steps=4 format=3 uid="uid://ceb5x5mom7cp5"]
 
 [ext_resource type="Script" path="res://scenes/ui/victory_screen.gd" id="1_1sa2d"]
+[ext_resource type="Script" path="res://scenes/ui/ui_sound_button.gd" id="2_kysyb"]
+[ext_resource type="PackedScene" uid="uid://c4dwgxco3a61b" path="res://scenes/components/ui_audio_player.tscn" id="3_hb6aj"]
 
 [node name="DefeatScreen" type="CanvasLayer"]
 process_mode = 3
@@ -14,6 +16,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(400, 200)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
@@ -28,6 +31,8 @@ theme_override_constants/margin_bottom = 20
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
 layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 16
 
 [node name="TitleLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -38,15 +43,31 @@ vertical_alignment = 1
 
 [node name="DescriptionLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "You lost!"
+text = "You failed to complete the level, do you want to restart this level?"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
 
-[node name="RestartButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
+[node name="VBoxContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-text = "Restart"
+theme_override_constants/separation = 16
 
-[node name="QuitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+[node name="QuitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
+size_flags_horizontal = 3
 text = "Quit
 "
+script = ExtResource("2_kysyb")
+
+[node name="UIAudioPlayer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/QuitButton" instance=ExtResource("3_hb6aj")]
+
+[node name="RestartButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Restart"
+script = ExtResource("2_kysyb")
+
+[node name="UIAudioPlayer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer/RestartButton" instance=ExtResource("3_hb6aj")]

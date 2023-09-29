@@ -1,7 +1,7 @@
 extends Node
 class_name LevelTimeManager
 
-const DIFFICULTY_INCREASE_INTERVAL = 100
+const DIFFICULTY_INCREASE_INTERVAL = 5
 
 @export var victory_screen_scene:  PackedScene
 @onready var timer = $Timer

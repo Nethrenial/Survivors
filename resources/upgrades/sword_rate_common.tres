@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://dlcm5dxbn0x4w"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_bxp62"]
+
+[resource]
+script = ExtResource("1_bxp62")
+id = "sword_rate_common"
+category = 0
+max_quantity = 1
+name = "Sword Attack Rate"
+description = "Increases the rate of which the sword appears and strikes an enemy by 10%
+
+"
+texture = "res://scenes/abilities/sword_ability/assets/sword-texture.png"

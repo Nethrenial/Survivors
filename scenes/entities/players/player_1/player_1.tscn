@@ -1,7 +1,7 @@
 [gd_scene load_steps=166 format=3 uid="uid://be48qx6bpgwq8"]
 
 [ext_resource type="Script" path="res://scenes/entities/players/player_1/player_1.gd" id="1_0v13h"]
-[ext_resource type="PackedScene" uid="uid://luvrjhhiehr6" path="res://scenes/abilities/medieval_sword_ability/medieval_sword_ability_controller.tscn" id="2_m2wy1"]
+[ext_resource type="PackedScene" uid="uid://luvrjhhiehr6" path="res://scenes/abilities/sword_ability/sword_ability_controller.tscn" id="2_m2wy1"]
 [ext_resource type="PackedScene" uid="uid://ccmmkgbkxgne2" path="res://scenes/components/health_component.tscn" id="2_pq3kw"]
 [ext_resource type="Texture2D" uid="uid://caslxy1osomhw" path="res://scenes/entities/players/player_1/assets/animations/Lord Esther/Dead/LordEsther_collapse.png" id="4_b6p7q"]
 [ext_resource type="Texture2D" uid="uid://673lcl4yt2hd" path="res://scenes/entities/players/player_1/assets/animations/Lord Esther/Idle/LordEsther_idle2.png" id="4_bpp0w"]
@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://8eokknrb0prs" path="res://scenes/entities/players/player_1/assets/animations/Lord Esther/Dead/LordEsther_dead_diag.png" id="7_dp31c"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_njhgq"]
-bg_color = Color(0.247059, 0.14902, 0.192157, 1)
+bg_color = Color(0.117647, 0.14902, 0.192157, 1)
 border_color = Color(0, 0, 0, 1)
 corner_radius_top_left = 2
 corner_radius_top_right = 2
@@ -24,7 +24,7 @@ corner_radius_bottom_left = 2
 anti_aliasing_size = 0.01
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xokig"]
-bg_color = Color(0.262745, 0.882353, 0.701961, 1)
+bg_color = Color(0, 0.694118, 0.470588, 1)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
@@ -41,7 +41,7 @@ corner_detail = 20
 radius = 64.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4nl8k"]
-radius = 30.0
+radius = 24.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_d4jw7"]
 radius = 40.0
@@ -1265,7 +1265,6 @@ position = Vector2(-20.8, 33.6)
 shape = SubResource("CircleShape2D_s06mv")
 
 [node name="EnemyCollisionArea2D" type="Area2D" parent="."]
-visible = false
 position = Vector2(2.66667, 29.3333)
 collision_layer = 0
 collision_mask = 8

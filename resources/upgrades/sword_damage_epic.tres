@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://cyp5leiw375ci"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_3fcfs"]
+
+[resource]
+script = ExtResource("1_3fcfs")
+id = "sword_damage_epic"
+category = 2
+max_quantity = 1
+name = "Sword Attack Damage"
+description = "Increases the medieval sword damage  by 3
+0%
+
+"
+texture = "res://scenes/abilities/sword_ability/assets/sword-texture.png"

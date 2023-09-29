@@ -7,6 +7,8 @@ const ACCELERATION_SMOOTHING = 25
 var prev_angle: float
 var num_colliding_enemies : int = 0
 
+var calculated_max_speed : float = 0
+
 @onready var enemy_collision_area = $EnemyCollisionArea2D as Area2D
 @onready var damage_interval_time = $DamageIntervalTimer as Timer
 @onready var health_component = $HealthComponent as HealthComponent
@@ -14,8 +16,9 @@ var num_colliding_enemies : int = 0
 @onready var abilities = $Abilities
 
 func _ready():
-	max_health = 20
+	max_health = 1
 	max_speed = 250
+	calculated_max_speed = max_speed
 	current_health = max_health
 	GameEvents.ability_upgrades_added.connect(on_ability_upgrade_added)
 	update_heath_display()
@@ -49,7 +52,7 @@ func _process(_delta):
 	
 		
 	
-	var target_velocity = direction * max_speed
+	var target_velocity = direction * calculated_max_speed
 	velocity = velocity.lerp(target_velocity, 1 - exp(-_delta * ACCELERATION_SMOOTHING))
 	move_and_slide()
 	
@@ -67,7 +70,7 @@ func get_movement_vector():
 
 func on_enemy_entered(other_body: Node2D):
 	num_colliding_enemies += 1
-	print("Colliding with ", num_colliding_enemies, " enemies")
+#	print("Colliding with ", num_colliding_enemies, " enemies")
 	check_deal_damage()
 
 func on_enemy_exited(other_body: Node2D):
@@ -97,10 +100,20 @@ func on_died():
 	queue_free()
 
 
-func on_ability_upgrade_added(upgrade: AbilityUpgrade, current_updates: Dictionary):
-	if not upgrade is AbilityActivate:
-		return
-	
-	abilities.add_child((upgrade as AbilityActivate).ability_controller_scene.instantiate())	
-	
-	pass
+func on_ability_upgrade_added(upgrade: Upgrade, current_upgrades: Dictionary):
+	if upgrade is AbilityActivate:
+		abilities.add_child((upgrade as AbilityActivate).ability_controller_scene.instantiate())	
+	elif upgrade is PlayerUpgrade:
+		if upgrade.id.begins_with("player_move_speed"):
+			var percent_increase = 0.0
+			if "player_move_speed_common" in current_upgrades and "quantity" in current_upgrades["player_move_speed_common"]:
+				percent_increase += current_upgrades["player_move_speed_common"]["quantity"] * 0.1
+
+			if "player_move_speed_rare" in current_upgrades:
+				percent_increase += current_upgrades["player_move_speed_rare"]["quantity"] * 0.2
+
+			if "player_move_speed_epic" in current_upgrades:
+				percent_increase += current_upgrades["player_move_speed_epic"]["quantity"] * 0.3
+				
+			calculated_max_speed = max_speed * (1 + percent_increase)
+			

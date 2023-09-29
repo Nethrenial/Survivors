@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://b0pt4lciid4xe"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_fmjui"]
+
+[resource]
+script = ExtResource("1_fmjui")
+id = "sword_rate_epic"
+category = 2
+max_quantity = 1
+name = "Sword Attack Rate"
+description = "Increases the rate of which the sword appears and strikes an enemy by 30%
+
+"
+texture = "res://scenes/abilities/sword_ability/assets/sword-texture.png"

@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://c11vk4uw444gd"]
 
 [ext_resource type="Script" path="res://scenes/abilities/axe_ability/axe-ability.gd" id="1_a3fou"]
-[ext_resource type="Texture2D" uid="uid://smjhnx38j7yr" path="res://scenes/abilities/axe_ability/assets/AxeDoubleT1.png" id="1_nooe0"]
+[ext_resource type="Texture2D" uid="uid://smjhnx38j7yr" path="res://scenes/abilities/axe_ability/assets/axe.png" id="1_nooe0"]
 [ext_resource type="Script" path="res://scenes/components/hitbox_component.gd" id="3_iquxe"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_66ok8"]

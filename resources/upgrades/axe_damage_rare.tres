@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://kymy6n8xhp6l"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_qixgr"]
+
+[resource]
+script = ExtResource("1_qixgr")
+id = "axe_damage_rare"
+category = 1
+max_quantity = 1
+name = "Axe Attack Damage"
+description = "Increases the Spinning axe damage  by 20%
+
+"
+texture = "res://scenes/abilities/axe_ability/assets/axe.png"

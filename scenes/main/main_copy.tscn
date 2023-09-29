@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dklsbspxu0i2n" path="res://scenes/ui/experience_bar.tscn" id="4_tqsjc"]
 [ext_resource type="PackedScene" uid="uid://x4dq8hwf6j36" path="res://scenes/managers/level_time_manager.tscn" id="5_jaxls"]
 [ext_resource type="PackedScene" uid="uid://d3icrbnls5a6x" path="res://scenes/managers/enemy_manager.tscn" id="6_dw34j"]
-[ext_resource type="PackedScene" uid="uid://c66g12mdorck3" path="res://scenes/entities/enemies/basic/basic_krampus/basic_orc.tscn" id="7_s3y8s"]
+[ext_resource type="PackedScene" uid="uid://c66g12mdorck3" path="res://scenes/entities/enemies/basic/orc/orc.tscn" id="7_s3y8s"]
 [ext_resource type="PackedScene" uid="uid://dqtgg7qek3gse" path="res://scenes/managers/experience_manager.tscn" id="8_nwk6v"]
 [ext_resource type="PackedScene" uid="uid://84jgya5m8qb6" path="res://scenes/managers/upgrade_manager.tscn" id="9_i2do5"]
 [ext_resource type="PackedScene" uid="uid://hyrlvwjsrocx" path="res://scenes/camera/game_camera.tscn" id="10_34qlk"]

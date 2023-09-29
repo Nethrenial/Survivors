@@ -3,3 +3,6 @@ class_name BaseAbility
 
 
 @export var damage: float
+var additional_damage_percent: float = 1
+
+

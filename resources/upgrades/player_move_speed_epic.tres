@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="PlayerUpgrade" load_steps=2 format=3 uid="uid://crqohp28ctbhu"]
+
+[ext_resource type="Script" path="res://resources/upgrades/player_upgrade.gd" id="1_5o7vk"]
+
+[resource]
+script = ExtResource("1_5o7vk")
+id = "player_move_speed_epic"
+category = 2
+max_quantity = 1
+name = "Epic Boots"
+description = "Increases your movement speed by 30%"
+texture = "res://resources/upgrades/assets/boots/epic-boots.png"

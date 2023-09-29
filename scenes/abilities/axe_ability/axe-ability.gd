@@ -1,4 +1,5 @@
 extends BaseAbility
+class_name AxeAbility
 
 var max_radius = 100
 @onready var hitbox_component = $HitboxComponent as HitboxComponent

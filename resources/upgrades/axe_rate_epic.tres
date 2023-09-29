@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://cu6kk6xurcom1"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_qlba2"]
+
+[resource]
+script = ExtResource("1_qlba2")
+id = "axe_rate_epic"
+category = 2
+max_quantity = 5
+name = "Axe Attack Rate"
+description = "Increases the spawn rate of the Spinning Axe by 30%
+
+
+"
+texture = "res://scenes/abilities/axe_ability/assets/axe.png"

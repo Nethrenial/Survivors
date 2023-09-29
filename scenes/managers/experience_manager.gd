@@ -4,14 +4,14 @@ class_name ExperienceManager
 signal experience_updated(current_experience: float, target_experience: float)
 signal level_up(new_level: int)
 
-const TARGET_EXPERIENCE_GROWTH = 5
+const TARGET_EXPERIENCE_GROWTH = 2
 
 var current_experience: float = 0
 var current_level : int = 1
-var target_experience: float = 5
+var target_experience: float = 2
 
 func _ready():
-	GameEvents.experience_orb_collected.connect(on_experience_vial_collected)
+	GameEvents.exp_vial_collected.connect(on_exp_vial_collected)
 
 func increment_experience(by: float):
 	current_experience  = min(current_experience + by, target_experience)
@@ -26,5 +26,5 @@ func increment_experience(by: float):
 	
 
 
-func on_experience_vial_collected(number: float):
+func on_exp_vial_collected(number: float):
 	increment_experience(number)
