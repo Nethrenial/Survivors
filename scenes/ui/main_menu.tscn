@@ -1,0 +1,80 @@
+[gd_scene load_steps=8 format=3 uid="uid://d0wmtvsip8emq"]
+
+[ext_resource type="PackedScene" uid="uid://dlvfk47jt18ft" path="res://scenes/ui/custom_buttons/start_game_button.tscn" id="1_by7w1"]
+[ext_resource type="Texture2D" uid="uid://d0oisw11hyegr" path="res://resources/theme/assets/backgrounds/welcome-screen-bg.jpg" id="1_fmhee"]
+[ext_resource type="Script" path="res://scenes/ui/main_menu.gd" id="1_o5ogj"]
+[ext_resource type="PackedScene" uid="uid://drs8pqrltl4lq" path="res://scenes/ui/custom_buttons/quit_game_button.tscn" id="2_t0oeg"]
+[ext_resource type="PackedScene" uid="uid://dbus6k0g0mpgm" path="res://scenes/ui/custom_buttons/options_button.tscn" id="3_c2o53"]
+[ext_resource type="PackedScene" uid="uid://dshnc6mcfoq3l" path="res://scenes/ui/custom_buttons/upgrads_shop_button.tscn" id="4_ftsj8"]
+[ext_resource type="PackedScene" uid="uid://bscdw00dke3m0" path="res://scenes/ui/custom_buttons/about_game_button.tscn" id="5_ay47s"]
+
+[node name="MainMenu" type="CanvasLayer"]
+script = ExtResource("1_o5ogj")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_fmhee")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Knights Vs Monsters "
+
+[node name="GameActionButtons" type="VBoxContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="StartGameButton" parent="MarginContainer/MarginContainer/VBoxContainer/GameActionButtons" instance=ExtResource("1_by7w1")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="QuitGameButton" parent="MarginContainer/MarginContainer/VBoxContainer/GameActionButtons" instance=ExtResource("2_t0oeg")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="OptionsButton" parent="." instance=ExtResource("3_c2o53")]
+unique_name_in_owner = true
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 207.0
+offset_bottom = 92.0
+
+[node name="UpgradesShopButton" parent="." instance=ExtResource("4_ftsj8")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(180, 60)
+offset_left = 1068.0
+offset_top = 32.0
+offset_right = 1248.0
+offset_bottom = 92.0
+
+[node name="AboutGameButton" parent="." instance=ExtResource("5_ay47s")]
+unique_name_in_owner = true
+offset_left = 32.0
+offset_top = 628.0
+offset_right = 207.0
+offset_bottom = 688.0

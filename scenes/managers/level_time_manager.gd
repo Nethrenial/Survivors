@@ -24,5 +24,6 @@ func get_time_elapsed():
 
 
 func on_timer_timeout():
+	print("Time timed out")
 	var victory_screen_instance = victory_screen_scene.instantiate()
 	add_child(victory_screen_instance)

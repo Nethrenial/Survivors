@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckm42iw15vbsp"]
+
+[ext_resource type="Script" path="res://scenes/autoload/background_music_player.gd" id="1_4v45s"]
+[ext_resource type="AudioStream" uid="uid://rhdrlcuxirlf" path="res://resources/audio/music/action_bg.mp3" id="2_g447e"]
+
+[node name="BackgroundMusicPlayer" type="Node"]
+script = ExtResource("1_4v45s")
+
+[node name="ActionBackgroundMusic" type="AudioStreamPlayer" parent="."]
+process_mode = 3
+stream = ExtResource("2_g447e")
+volume_db = -15.0
+bus = &"Music"

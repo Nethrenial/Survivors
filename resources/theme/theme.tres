@@ -1,17 +1,17 @@
-[gd_resource type="Theme" load_steps=14 format=3 uid="uid://cb30wsy6ud71a"]
+[gd_resource type="Theme" load_steps=15 format=3 uid="uid://cb30wsy6ud71a"]
 
 [ext_resource type="Texture2D" uid="uid://dt8tx4ii4rrrj" path="res://resources/theme/assets/HeadingWrapper-1-min.png" id="1_4rs1s"]
 [ext_resource type="Texture2D" uid="uid://btqh5kgbvivse" path="res://resources/theme/assets/Card-1-min.png" id="1_les5w"]
 [ext_resource type="Texture2D" uid="uid://dtndboc7dd5cv" path="res://resources/theme/assets/Button-states-min.png" id="1_tgfni"]
 [ext_resource type="FontFile" uid="uid://b258827qiwm26" path="res://resources/theme/Rockboxcond12.ttf" id="1_u77vn"]
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3p2vk"]
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ny1i"]
 texture = ExtResource("1_tgfni")
 texture_margin_left = 5.0
 texture_margin_top = 6.0
 texture_margin_right = 5.0
-texture_margin_bottom = 5.0
-region_rect = Rect2(15, 15, 230, 46)
+texture_margin_bottom = 6.0
+region_rect = Rect2(15, 16, 230, 45)
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_r5f57"]
 texture = ExtResource("1_tgfni")
@@ -68,6 +68,9 @@ texture_margin_right = 14.0
 texture_margin_bottom = 32.0
 region_rect = Rect2(0, -1, 390, 560)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pyqsu"]
+texture = ExtResource("1_les5w")
+
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_njhgq"]
 bg_color = Color(0.117647, 0.14902, 0.192157, 1)
 border_color = Color(0, 0, 0, 1)
@@ -94,7 +97,7 @@ corner_detail = 20
 [resource]
 default_font = ExtResource("1_u77vn")
 default_font_size = 16
-Button/styles/focus = SubResource("StyleBoxTexture_3p2vk")
+Button/styles/focus = SubResource("StyleBoxTexture_7ny1i")
 Button/styles/hover = SubResource("StyleBoxTexture_r5f57")
 Button/styles/normal = SubResource("StyleBoxTexture_pn0dx")
 ExperienceBar/base_type = &"ProgressBar"
@@ -103,5 +106,6 @@ ExperienceBar/styles/fill = SubResource("StyleBoxFlat_dmpfh")
 HeadingWrappingPanelContainer/base_type = &"PanelContainer"
 HeadingWrappingPanelContainer/styles/panel = SubResource("StyleBoxTexture_o08f5")
 PanelContainer/styles/panel = SubResource("StyleBoxTexture_p2qga")
+PopupPanel/styles/panel = SubResource("StyleBoxTexture_pyqsu")
 ProgressBar/styles/background = SubResource("StyleBoxFlat_njhgq")
 ProgressBar/styles/fill = SubResource("StyleBoxFlat_xokig")

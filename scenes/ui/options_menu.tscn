@@ -1,0 +1,127 @@
+[gd_scene load_steps=5 format=3 uid="uid://bypbxgc4hnxp7"]
+
+[ext_resource type="Script" path="res://scenes/ui/options_menu.gd" id="1_lxnmk"]
+[ext_resource type="Texture2D" uid="uid://dj8pofovjxah3" path="res://resources/theme/assets/backgrounds/options-screen-bg.jpg" id="2_bxibr"]
+[ext_resource type="PackedScene" uid="uid://dbnfqmuyh3pw8" path="res://scenes/ui/custom_buttons/reset_options_button.tscn" id="4_axci4"]
+[ext_resource type="PackedScene" uid="uid://b4n7hgwt5m0ra" path="res://scenes/ui/custom_buttons/back_button.tscn" id="5_8xm2c"]
+
+[node name="OptionsMenu" type="CanvasLayer"]
+script = ExtResource("1_lxnmk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_bxibr")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 64
+text = "Options"
+horizontal_alignment = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 0
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 0
+theme_override_constants/margin_bottom = 40
+
+[node name="OptionsContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="SFXOption" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/OptionsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/OptionsContainer/SFXOption"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "SFX Volume"
+
+[node name="SFXSlider" type="HSlider" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/OptionsContainer/SFXOption"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="MusicOption" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/OptionsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/OptionsContainer/MusicOption"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Music Volume"
+
+[node name="MusicSlider" type="HSlider" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/OptionsContainer/MusicOption"]
+unique_name_in_owner = true
+layout_mode = 2
+max_value = 1.0
+step = 0.01
+
+[node name="DisplayOption" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/OptionsContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/OptionsContainer/DisplayOption"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Display Mode"
+
+[node name="DisplayOptionButton" type="OptionButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/OptionsContainer/DisplayOption"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 60)
+layout_mode = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/arrow_margin = 24
+theme_override_font_sizes/font_size = 24
+alignment = 1
+item_count = 2
+selected = 1
+popup/item_0/text = "Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Windowed"
+popup/item_1/id = 1
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/OptionsContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="BackButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/OptionsContainer/ButtonsContainer" instance=ExtResource("5_8xm2c")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="ResetOptionsButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/MarginContainer/OptionsContainer/ButtonsContainer" instance=ExtResource("4_axci4")]
+unique_name_in_owner = true
+layout_mode = 2

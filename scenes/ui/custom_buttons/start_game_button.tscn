@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlvfk47jt18ft"]
+
+[ext_resource type="Script" path="res://scenes/ui/ui_sound_button.gd" id="1_d26i7"]
+[ext_resource type="PackedScene" uid="uid://c4dwgxco3a61b" path="res://scenes/components/ui_audio_player.tscn" id="2_t1uvg"]
+[ext_resource type="Texture2D" uid="uid://dw47rqkuo1s6t" path="res://resources/theme/assets/icons/options-icon-min.png" id="3_nf262"]
+
+[node name="StartGameButton" type="Button"]
+custom_minimum_size = Vector2(175, 60)
+offset_right = 175.0
+offset_bottom = 60.0
+script = ExtResource("1_d26i7")
+
+[node name="UIAudioPlayer" parent="." instance=ExtResource("2_t1uvg")]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 4
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_nf262")
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "Start Game"
+horizontal_alignment = 1
+vertical_alignment = 1

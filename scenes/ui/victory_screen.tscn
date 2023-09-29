@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bcryhx5hh018h"]
+[gd_scene load_steps=4 format=3 uid="uid://bcryhx5hh018h"]
 
 [ext_resource type="Script" path="res://scenes/ui/victory_screen.gd" id="1_aips8"]
-[ext_resource type="Script" path="res://scenes/ui/ui_sound_button.gd" id="2_f3h5c"]
+[ext_resource type="AudioStream" uid="uid://b2p5g38p0sdcr" path="res://resources/audio/game_actions_sfx/victory.mp3" id="3_nhfyi"]
+[ext_resource type="PackedScene" uid="uid://c71ok7mrdq1uk" path="res://scenes/ui/ui_sound_button.tscn" id="4_q0vdp"]
 
 [node name="VictoryScreen" type="CanvasLayer"]
 process_mode = 3
@@ -51,19 +52,21 @@ autowrap_mode = 3
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="QuitButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="QuitButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("4_q0vdp")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
 text = "Quit
 "
-script = ExtResource("2_f3h5c")
 
-[node name="RestartButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer"]
+[node name="RestartButton" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/VBoxContainer" instance=ExtResource("4_q0vdp")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 3
-text = "Rplay
+text = "Replay
 "
-script = ExtResource("2_f3h5c")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_nhfyi")
+bus = &"SFX"

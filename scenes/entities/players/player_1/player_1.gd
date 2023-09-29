@@ -16,7 +16,7 @@ var calculated_max_speed : float = 0
 @onready var abilities = $Abilities
 
 func _ready():
-	max_health = 1
+	max_health = 100
 	max_speed = 250
 	calculated_max_speed = max_speed
 	current_health = max_health

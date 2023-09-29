@@ -1,12 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4dwgxco3a61b"]
+[gd_scene load_steps=4 format=3 uid="uid://c4dwgxco3a61b"]
 
 [ext_resource type="Script" path="res://scenes/components/ui_audio_player.gd" id="1_fwikj"]
-[ext_resource type="AudioStream" uid="uid://bylwuv0valmsh" path="res://resources/audio/ui_actions_audio/mouse_click.ogg" id="2_e5lce"]
+[ext_resource type="AudioStream" uid="uid://bylwuv0valmsh" path="res://resources/audio/ui_actions_audio/mouse.ogg" id="2_x6s7d"]
+[ext_resource type="AudioStream" uid="uid://dv3e8hjykjb6x" path="res://resources/audio/ui_actions_audio/upgrade_select.ogg" id="3_x6216"]
 
 [node name="UIAudioPlayer" type="Node"]
 script = ExtResource("1_fwikj")
 
 [node name="ButtonClickAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_e5lce")
+stream = ExtResource("2_x6s7d")
 mix_target = 1
 bus = &"UI"
+
+[node name="UpgradeHoverAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_x6216")
+
+[node name="UpgradeClickAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_x6216")

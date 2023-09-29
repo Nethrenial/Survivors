@@ -24,4 +24,4 @@ texture = ExtResource("2_t0sow")
 
 [node name="CollectSFX" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_7y3rc")
-bus = &"Item Pickup"
+bus = &"SFX"

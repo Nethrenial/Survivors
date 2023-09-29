@@ -11,13 +11,14 @@ config_version=5
 [application]
 
 config/name="Survivors-godot"
-run/main_scene="res://scenes/main/main.tscn"
+run/main_scene="res://scenes/ui/main_menu.tscn"
 config/features=PackedStringArray("4.0", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 GameEvents="*res://scenes/autoload/game_events.tscn"
+BackgroundMusicPlayer="*res://scenes/autoload/background_music_player.tscn"
 
 [debug]
 

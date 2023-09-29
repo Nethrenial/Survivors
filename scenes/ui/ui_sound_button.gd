@@ -6,4 +6,4 @@ func _ready():
 
 
 func on_pressed():
-	($UIAudioPlayer as UIAudioPlayer).play("button")
+	($UIAudioPlayer as UIAudioPlayer).play("button-click")

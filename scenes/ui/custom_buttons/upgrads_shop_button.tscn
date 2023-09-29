@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://dshnc6mcfoq3l"]
+
+[ext_resource type="Script" path="res://scenes/ui/ui_sound_button.gd" id="1_d2ylr"]
+[ext_resource type="PackedScene" uid="uid://c4dwgxco3a61b" path="res://scenes/components/ui_audio_player.tscn" id="2_rdxyi"]
+[ext_resource type="Texture2D" uid="uid://46tuligchjci" path="res://resources/theme/assets/icons/shop-icon-min.png" id="3_s3vu8"]
+
+[node name="UpgradesShopButton" type="Button"]
+custom_minimum_size = Vector2(175, 60)
+offset_right = 175.0
+offset_bottom = 60.0
+script = ExtResource("1_d2ylr")
+
+[node name="UIAudioPlayer" parent="." instance=ExtResource("2_rdxyi")]
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("3_s3vu8")
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 24
+text = "Upgrades"
+horizontal_alignment = 1
+vertical_alignment = 1
