@@ -6,9 +6,9 @@
 script = ExtResource("1_bxp62")
 id = "sword_rate_common"
 category = 0
-max_quantity = 1
-name = "Sword Attack Rate"
+max_quantity = 3
+name = "Sword Attack Rate (Common)"
 description = "Increases the rate of which the sword appears and strikes an enemy by 10%
 
 "
-texture = "res://scenes/abilities/sword_ability/assets/sword-texture.png"
+texture = "res://scenes/abilities/sword_ability/assets/sword-1.png"

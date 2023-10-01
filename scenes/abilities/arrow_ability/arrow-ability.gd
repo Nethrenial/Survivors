@@ -6,7 +6,7 @@ var current_radius = 0
 var speed = 10  # Adjust this speed as needed
 
 func _ready():
-	damage = 1
+	damage = 5
 
 func _process(delta):
 	# Calculate the direction vector based on the current rotation angle

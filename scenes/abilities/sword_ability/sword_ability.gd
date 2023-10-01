@@ -2,5 +2,5 @@ extends BaseAbility
 class_name SwordAbility
 
 func _ready():
-	damage = 0.5
+	damage = 2.5
 

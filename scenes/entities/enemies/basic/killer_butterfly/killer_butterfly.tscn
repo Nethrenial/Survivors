@@ -2058,7 +2058,7 @@ animations = [{
 
 [node name="KillerButterfly" type="CharacterBody2D" groups=["Enemies Group"]]
 z_index = 2
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.35, 0.35)
 collision_layer = 8
 collision_mask = 9
 motion_mode = 1

@@ -1,13 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://ce3a461x3m7ul"]
 
 [ext_resource type="Script" path="res://scenes/abilities/sword_ability/sword_ability.gd" id="1_jssbk"]
+[ext_resource type="Texture2D" uid="uid://dxjctj3ubn3ab" path="res://scenes/abilities/sword_ability/assets/sword-1.png" id="2_7f00c"]
 [ext_resource type="PackedScene" uid="uid://dkecupku8ffq2" path="res://scenes/components/hitbox_component.tscn" id="2_vhdyb"]
 
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ip7c1"]
-load_path = "res://.godot/imported/medieval_sword_image.png-cf311fdfb6fe12f8e2c537279caf23cc.ctex"
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b085j"]
-size = Vector2(99.571, 130.667)
+size = Vector2(40, 40)
 
 [sub_resource type="Animation" id="Animation_agipk"]
 length = 0.001
@@ -110,18 +108,17 @@ _data = {
 }
 
 [node name="MedievalSwordAbility" type="Node2D"]
-scale = Vector2(1.049, 0.75)
+scale = Vector2(0.6, 0.6)
 script = ExtResource("1_jssbk")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(1, 1)
-texture = SubResource("CompressedTexture2D_ip7c1")
-offset = Vector2(0, -22)
+texture = ExtResource("2_7f00c")
+offset = Vector2(0, -20)
 
 [node name="HitboxComponent" parent="." instance=ExtResource("2_vhdyb")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
-position = Vector2(49.3565, -20)
+position = Vector2(20, -20)
 shape = SubResource("RectangleShape2D_b085j")
 disabled = true
 

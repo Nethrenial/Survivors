@@ -6,9 +6,9 @@
 script = ExtResource("1_ab5vd")
 id = "sword_damage_rare"
 category = 1
-max_quantity = 1
-name = "Sword Attack Damage"
+max_quantity = 2
+name = "Sword Damage (Rare)"
 description = "Increases the medieval sword damage  by 20%
 
 "
-texture = "res://scenes/abilities/sword_ability/assets/sword-texture.png"
+texture = "res://scenes/abilities/sword_ability/assets/sword-1.png"

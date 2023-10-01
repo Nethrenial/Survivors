@@ -15,7 +15,7 @@ var calculated_max_speed : float = 0
 @onready var health_bar = $HealthBar as ProgressBar
 @onready var abilities = $Abilities
 
-var base_max_health = 100
+var base_max_health = 50
 var base_max_speed = 200
 
 func _ready():

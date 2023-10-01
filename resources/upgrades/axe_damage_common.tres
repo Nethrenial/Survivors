@@ -6,8 +6,8 @@
 script = ExtResource("1_gkfv1")
 id = "axe_damage_common"
 category = 0
-max_quantity = 5
-name = "Axe Attack Damage"
+max_quantity = 3
+name = "Axe Damage (Common) "
 description = "Increases the Spinning axe damage  by 10%
 
 "

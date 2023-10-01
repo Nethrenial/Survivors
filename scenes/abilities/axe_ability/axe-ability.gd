@@ -7,7 +7,7 @@ var max_radius = 100
 var base_rotation = Vector2.RIGHT
 
 func _ready():
-	damage = 0.25
+	damage = 3.75
 	base_rotation = Vector2.RIGHT.rotated(randf_range(0, TAU))
 	var tween = create_tween()
 	tween.tween_method(tween_method,0.0, 2.0, 3)

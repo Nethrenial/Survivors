@@ -6,7 +6,7 @@
 script = ExtResource("1_jl53i")
 id = "arrow_damage_common"
 category = 0
-max_quantity = 5
+max_quantity = 3
 name = "Arrow Damage (Common)"
 description = "Increases the damage of an arrow by 10%"
 texture = "res://scenes/abilities/arrow_ability/assets/arrow.png"

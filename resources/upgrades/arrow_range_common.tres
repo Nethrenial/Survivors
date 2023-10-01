@@ -6,7 +6,7 @@
 script = ExtResource("1_ldvfi")
 id = "arrow_range_common"
 category = 0
-max_quantity = 5
+max_quantity = 3
 name = "Arrow Range (Common)"
 description = "Increases the range of an arrow by 10%"
 texture = "res://scenes/abilities/arrow_ability/assets/arrow.png"

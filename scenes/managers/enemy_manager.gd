@@ -46,14 +46,15 @@ func on_timer_timeout():
 	var player = get_tree().get_first_node_in_group("Player Group") as CharacterBody2D
 	if player == null:
 		return
-	
-	var enemy_scene = enemy_table.pick_item()
-	var enemy_instance = enemy_scene.instantiate() as BaseEnemy
-	var entities_layer = get_tree().get_first_node_in_group("entities_layer") as Node2D
-	if entities_layer == null:
-		return
-	entities_layer.add_child(enemy_instance)
-	enemy_instance.global_position = get_spawn_position()
+		
+	for i in 1:
+		var enemy_scene = enemy_table.pick_item()
+		var enemy_instance = enemy_scene.instantiate() as BaseEnemy
+		var entities_layer = get_tree().get_first_node_in_group("entities_layer") as Node2D
+		if entities_layer == null:
+			return
+		entities_layer.add_child(enemy_instance)
+		enemy_instance.global_position = get_spawn_position()
 	
 
 func on_level_difficulty_increased(difficulty: int):

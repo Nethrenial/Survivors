@@ -6,8 +6,8 @@
 script = ExtResource("1_qlba2")
 id = "axe_rate_epic"
 category = 2
-max_quantity = 5
-name = "Axe Attack Rate"
+max_quantity = 1
+name = "Axe Attack Rate (Epic)"
 description = "Increases the spawn rate of the Spinning Axe by 30%
 
 

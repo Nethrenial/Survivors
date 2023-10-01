@@ -6,7 +6,7 @@
 script = ExtResource("1_30a36")
 id = "player_move_speed_common"
 category = 0
-max_quantity = 1
+max_quantity = 3
 name = "Common Boots"
 description = "Increases your movement speed by 10%"
 texture = "res://resources/upgrades/assets/boots/normal-boots.png"

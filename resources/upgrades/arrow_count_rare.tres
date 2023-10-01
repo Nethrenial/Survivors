@@ -6,7 +6,7 @@
 script = ExtResource("1_qxx4e")
 id = "arrow_count_rare"
 category = 1
-max_quantity = 4
+max_quantity = 2
 name = "Arrow Count (Rare)"
 description = "Increment the arrow count by 2.Maximum arrow count is 8 (including the initial 1).
 

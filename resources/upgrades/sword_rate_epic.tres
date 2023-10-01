@@ -7,8 +7,8 @@ script = ExtResource("1_fmjui")
 id = "sword_rate_epic"
 category = 2
 max_quantity = 1
-name = "Sword Attack Rate"
+name = "Sword Attack Rate (Epic)"
 description = "Increases the rate of which the sword appears and strikes an enemy by 30%
 
 "
-texture = "res://scenes/abilities/sword_ability/assets/sword-texture.png"
+texture = "res://scenes/abilities/sword_ability/assets/sword-1.png"

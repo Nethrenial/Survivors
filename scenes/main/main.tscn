@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://l2piccda32as"]
+[gd_scene load_steps=13 format=3 uid="uid://l2piccda32as"]
 
 [ext_resource type="PackedScene" uid="uid://dcjf4ndcrsnsc" path="res://scenes/ui/level_time_indicator.tscn" id="1_3ymwx"]
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_h4rvm"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dklsbspxu0i2n" path="res://scenes/ui/experience_bar.tscn" id="2_r4ujr"]
 [ext_resource type="PackedScene" uid="uid://x4dq8hwf6j36" path="res://scenes/managers/level_time_manager.tscn" id="2_vctn5"]
 [ext_resource type="PackedScene" uid="uid://hyrlvwjsrocx" path="res://scenes/camera/game_camera.tscn" id="3_avfgy"]
+[ext_resource type="PackedScene" uid="uid://b0yjy72culnh3" path="res://scenes/ui/custom_buttons/pause_game_button.tscn" id="3_wohbu"]
 [ext_resource type="PackedScene" uid="uid://dqtgg7qek3gse" path="res://scenes/managers/experience_manager.tscn" id="4_qjthe"]
 [ext_resource type="PackedScene" uid="uid://d3icrbnls5a6x" path="res://scenes/managers/enemy_manager.tscn" id="5_oq6tw"]
 [ext_resource type="PackedScene" uid="uid://84jgya5m8qb6" path="res://scenes/managers/upgrade_manager.tscn" id="6_mwwxx"]
@@ -15,6 +16,11 @@
 [node name="Main" type="Node"]
 script = ExtResource("1_h4rvm")
 defeat_screen_scene = ExtResource("2_ox1ap")
+
+[node name="PauseButtonContainer" type="CanvasLayer" parent="."]
+
+[node name="PauseGameButton" parent="PauseButtonContainer" instance=ExtResource("3_wohbu")]
+unique_name_in_owner = true
 
 [node name="LevelTimeIndicator" parent="." node_paths=PackedStringArray("level_time_manager") instance=ExtResource("1_3ymwx")]
 level_time_manager = NodePath("../LevelTimeManager")

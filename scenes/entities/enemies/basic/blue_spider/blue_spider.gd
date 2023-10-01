@@ -6,7 +6,7 @@ var prev_angle: float
 func _ready():
 	super._ready()
 	# Setup initial values
-	max_health = 0.5
+	max_health = 10
 	max_speed = 100
 	current_health = max_health
 

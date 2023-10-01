@@ -6,7 +6,7 @@
 script = ExtResource("1_aegif")
 id = "arrow_count_epic"
 category = 2
-max_quantity = 2
+max_quantity = 1
 name = "Arrow Count (Epic)"
 description = "Increment the arrow count by 4.Maximum arrow count is 8 (including the initial 1).
 

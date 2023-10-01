@@ -6,7 +6,7 @@
 script = ExtResource("1_aw0yk")
 id = "arrow_rate_epic"
 category = 2
-max_quantity = 5
+max_quantity = 1
 name = "Arrow Rate (Epic)"
 description = "Decreases the wait time for next set of arrows by 30%"
 texture = "res://scenes/abilities/arrow_ability/assets/arrow.png"

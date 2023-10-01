@@ -14,16 +14,16 @@ var arrow_activate_upgrade = preload("res://resources/upgrades/arrow_activate.tr
 func _ready():
 		
 	#  New ability activation upgrades
-	upgrade_pool.add_item(axe_activate_upgrade, 10)
-	upgrade_pool.add_item(arrow_activate_upgrade, 10)
+	upgrade_pool.add_item(axe_activate_upgrade, 100)
+	upgrade_pool.add_item(arrow_activate_upgrade, 100)
 
 	
 	# Upgrades for the default skill
-	upgrade_pool.add_item(load("res://resources/upgrades/sword_rate_common.tres"), 10)
-	upgrade_pool.add_item(load("res://resources/upgrades/sword_rate_rare.tres"), 10)
+	upgrade_pool.add_item(load("res://resources/upgrades/sword_rate_common.tres"), 30)
+	upgrade_pool.add_item(load("res://resources/upgrades/sword_rate_rare.tres"), 20)
 	upgrade_pool.add_item(load("res://resources/upgrades/sword_rate_epic.tres"), 10)	
-	upgrade_pool.add_item(load("res://resources/upgrades/sword_damage_common.tres"), 10)
-	upgrade_pool.add_item(load("res://resources/upgrades/sword_damage_rare.tres"), 10)
+	upgrade_pool.add_item(load("res://resources/upgrades/sword_damage_common.tres"), 30)
+	upgrade_pool.add_item(load("res://resources/upgrades/sword_damage_rare.tres"), 20)
 	upgrade_pool.add_item(load("res://resources/upgrades/sword_damage_epic.tres"), 10)
 
 	# Adding player upgrades

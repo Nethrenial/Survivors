@@ -6,8 +6,8 @@
 script = ExtResource("1_4oas7")
 id = "axe_rate_common"
 category = 0
-max_quantity = 5
-name = "Axe Attack Rate"
+max_quantity = 3
+name = "Axe Attack Rate (Common)"
 description = "Increases the spawn rate of the Spinning Axe by 10%
 
 

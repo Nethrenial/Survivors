@@ -4394,7 +4394,7 @@ animations = [{
 
 [node name="BasicOrc" type="CharacterBody2D" groups=["Enemies Group"]]
 z_index = 2
-scale = Vector2(0.5, 0.5)
+scale = Vector2(0.45, 0.45)
 collision_layer = 8
 collision_mask = 9
 motion_mode = 1
@@ -4403,7 +4403,6 @@ script = ExtResource("1_2cxx0")
 [node name="HealthComponent" parent="." instance=ExtResource("2_rnwkq")]
 
 [node name="ExperienceOrbDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_2qxht")]
-drop_percent = 1.0
 health_component = NodePath("../HealthComponent")
 exp_vial_scene = ExtResource("4_6g2l4")
 

@@ -6,7 +6,7 @@
 script = ExtResource("1_pg8cv")
 id = "arrow_count_common"
 category = 0
-max_quantity = 7
+max_quantity = 3
 name = "Arrow Count (Common)"
 description = "Increment the arrow count by 1.Maximum arrow count is 8 (including the initial 1).
 

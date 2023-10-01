@@ -6,7 +6,7 @@
 script = ExtResource("1_htqrh")
 id = "player_move_speed_rare"
 category = 1
-max_quantity = 1
+max_quantity = 2
 name = "Rare Boots"
 description = "Increases you movement speed by 20%
 

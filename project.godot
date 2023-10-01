@@ -15,7 +15,7 @@ config/description="A Rogue-like survival game inspired by Vampire Survivors"
 run/main_scene="res://scenes/ui/main_menu.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="KnightsVsMonsters"
-config/features=PackedStringArray("4.0", "Forward Plus")
+config/features=PackedStringArray("4.1", "Forward Plus")
 boot_splash/image="res://splash_screen_bg.png"
 config/icon="res://icon.png"
 config/windows_native_icon="res://icon.ico"
@@ -26,6 +26,7 @@ boot_splash/minimum_display_time=5000
 GameEvents="*res://scenes/autoload/game_events.tscn"
 BackgroundMusicPlayer="*res://scenes/autoload/background_music_player.tscn"
 MetaProgressionManager="*res://scenes/autoload/meta_progression_manager.gd"
+SettingsManager="*res://scenes/autoload/settings_manager.tscn"
 
 [debug]
 
@@ -79,7 +80,7 @@ move_down={
 }
 left_click={
 "deadzone": 0.5,
-"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"pressed":false,"double_click":false,"script":null)
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":0,"position":Vector2(0, 0),"global_position":Vector2(0, 0),"factor":1.0,"button_index":1,"canceled":false,"pressed":false,"double_click":false,"script":null)
 ]
 }
 pause={
@@ -100,3 +101,4 @@ pause={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"

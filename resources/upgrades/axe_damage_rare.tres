@@ -6,8 +6,8 @@
 script = ExtResource("1_qixgr")
 id = "axe_damage_rare"
 category = 1
-max_quantity = 1
-name = "Axe Attack Damage"
+max_quantity = 2
+name = "Axe Damage (Rare)"
 description = "Increases the Spinning axe damage  by 20%
 
 "

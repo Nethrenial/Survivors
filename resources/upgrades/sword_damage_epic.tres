@@ -7,9 +7,9 @@ script = ExtResource("1_3fcfs")
 id = "sword_damage_epic"
 category = 2
 max_quantity = 1
-name = "Sword Attack Damage"
+name = "Sword Damage (Epic)"
 description = "Increases the medieval sword damage  by 3
 0%
 
 "
-texture = "res://scenes/abilities/sword_ability/assets/sword-texture.png"
+texture = "res://scenes/abilities/sword_ability/assets/sword-1.png"

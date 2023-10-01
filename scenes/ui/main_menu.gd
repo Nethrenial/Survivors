@@ -1,8 +1,11 @@
 extends CanvasLayer
 
 
+#const main_scene_path = "res://scenes/main/main.tscn"
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+#	ResourceLoader.load_threaded_request(main_scene_path)
 	$%StartGameButton.pressed.connect(on_start_game_btn_pressed)
 	$%QuitGameButton.pressed.connect(on_quit_game_btn_clicked)
 	$%OptionsButton.pressed.connect(on_options_btn_clicked)
@@ -13,6 +16,11 @@ func _ready():
 
 func on_start_game_btn_pressed():
 	get_tree().change_scene_to_file("res://scenes/main/main.tscn")
+# # Obtain the resource now that we need it
+#	var main_scene = ResourceLoader.load_threaded_get(main_scene_path)
+#	# Instantiate the enemy scene and add it to the current scene
+#	var main_scene_instance = main_scene.instantiate()
+#	add_child(main_scene_instance)
 
 
 func on_quit_game_btn_clicked():
