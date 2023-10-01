@@ -2,11 +2,14 @@ extends Node
 class_name ExpVialDropComponent
 
 
-@export_range(0, 1) var drop_percent: float = 0.9
+@export_range(0, 1) var base_drop_percent: float = 0.5
 @export var health_component: Node
 @export var exp_vial_scene: PackedScene
 
+var drop_percent: float
+
 func _ready():
+	drop_percent = base_drop_percent + (MetaProgressionManager.get_current_upgrade_count("increase_luck") * 0.2 * base_drop_percent)
 	(health_component as HealthComponent).died.connect(on_died)
 
 

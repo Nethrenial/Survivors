@@ -2,7 +2,7 @@ extends Node
 class_name UIAudioPlayer
 
 func play(type: String, volume: float = 0):
-	print("type = ", type, " volume = ", volume)
+#	print("type = ", type, " volume = ", volume)
 	if type == "button-click":
 		$ButtonClickAudio.play()
 	elif type == "upgrade-click":

@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=3 uid="uid://c6ptyql0sdstr"]
+
+[ext_resource type="Script" path="res://scenes/ui/meta_upgrade_card.gd" id="1_a4sdb"]
+[ext_resource type="Resource" uid="uid://bfd7cnwewy380" path="res://resources/meta-upgrades/increase_health.tres" id="2_kxx7v"]
+[ext_resource type="Texture2D" uid="uid://baxi8nm8wgqdl" path="res://resources/meta-upgrades/assets/st_christopher_medal_icon-min.png" id="2_w3osb"]
+[ext_resource type="PackedScene" uid="uid://c4dwgxco3a61b" path="res://scenes/components/ui_audio_player.tscn" id="3_n1l54"]
+[ext_resource type="PackedScene" uid="uid://c71ok7mrdq1uk" path="res://scenes/ui/ui_sound_button.tscn" id="3_n7jce"]
+[ext_resource type="PackedScene" uid="uid://b0tlr8x168vql" path="res://scenes/ui/meta_upgrade_cell.tscn" id="3_plbbo"]
+
+[node name="MetaUpgradeCard" type="PanelContainer" groups=["meta_upgrade_cards"]]
+custom_minimum_size = Vector2(250, 350)
+offset_right = 250.0
+offset_bottom = 350.0
+pivot_offset = Vector2(125, 175)
+size_flags_vertical = 4
+script = ExtResource("1_a4sdb")
+meta_upgrade = ExtResource("2_kxx7v")
+meta_upgrade_cell = ExtResource("3_plbbo")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="UpgradeNameLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "St. Christopher Medals"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+clip_contents = true
+custom_minimum_size = Vector2(200, 100)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+texture = ExtResource("2_w3osb")
+stretch_mode = 3
+
+[node name="UpgradeDescriptionContainer" type="PanelContainer" parent="MarginContainer/VBoxContainer"]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+theme_type_variation = &"HeadingWrappingPanelContainer"
+
+[node name="UpgradeDescriptionLabel" type="Label" parent="MarginContainer/VBoxContainer/UpgradeDescriptionContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Increases your luck by 10% and causes exp vials to drop more frequently."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="UpgradeCellsContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="ResetUpgradeButton" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_n7jce")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Reset"
+
+[node name="BuyUpgradeButton" parent="MarginContainer/VBoxContainer/HBoxContainer" instance=ExtResource("3_n7jce")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 40)
+layout_mode = 2
+text = "Spend 100 Exp"
+
+[node name="UIAudioPlayer" parent="." instance=ExtResource("3_n1l54")]

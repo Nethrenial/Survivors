@@ -16,8 +16,9 @@ func on_area_entered(other_area: Area2D):
 		return
 	var ability = other_area.get_parent() as BaseAbility
 	var dmg: float = ability.damage * ability.additional_damage_percent
-	if ability is AxeAbility:
-		print("Causing ", dmg, " with ", ability, " base dmg = ", ability.damage)
+	print(ability, " ", dmg)
+#	if ability is WarAxeAbility:
+#		print("Causing ", dmg, " with ", ability, " base dmg = ", ability.damage)
 	hit.emit(ability)
 	health_component.damage(dmg)
 	

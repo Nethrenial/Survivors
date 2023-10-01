@@ -16,8 +16,6 @@
 script = ExtResource("1_h4rvm")
 defeat_screen_scene = ExtResource("2_ox1ap")
 
-[node name="GrassLandMap" parent="." instance=ExtResource("13_vro87")]
-
 [node name="LevelTimeIndicator" parent="." node_paths=PackedStringArray("level_time_manager") instance=ExtResource("1_3ymwx")]
 level_time_manager = NodePath("../LevelTimeManager")
 
@@ -38,6 +36,8 @@ experience_manager = NodePath("../ExperienceManager")
 
 [node name="Entities" type="Node2D" parent="." groups=["entities_layer"]]
 y_sort_enabled = true
+
+[node name="GrassLandMap" parent="Entities" instance=ExtResource("13_vro87")]
 
 [node name="Player_1" parent="Entities" instance=ExtResource("1_u7rji")]
 unique_name_in_owner = true

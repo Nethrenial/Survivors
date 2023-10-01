@@ -1,13 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3icrbnls5a6x"]
+[gd_scene load_steps=7 format=3 uid="uid://d3icrbnls5a6x"]
 
 [ext_resource type="Script" path="res://scenes/managers/enemy_manager.gd" id="1_35kil"]
 [ext_resource type="PackedScene" uid="uid://c66g12mdorck3" path="res://scenes/entities/enemies/basic/orc/orc.tscn" id="2_f0exe"]
 [ext_resource type="PackedScene" uid="uid://c7ashfhrq18jw" path="res://scenes/entities/enemies/basic/orange_spider/orange_spider.tscn" id="3_0f4i0"]
+[ext_resource type="PackedScene" uid="uid://u1k35277cnm5" path="res://scenes/entities/enemies/basic/blue_spider/blue_spider.tscn" id="4_52pd6"]
+[ext_resource type="PackedScene" uid="uid://pfvwrov2bpsa" path="res://scenes/entities/enemies/basic/reptile_warrior/reptile_warrior.tscn" id="5_4r1i6"]
+[ext_resource type="PackedScene" uid="uid://18t4w7kx2hwd" path="res://scenes/entities/enemies/basic/killer_butterfly/killer_butterfly.tscn" id="6_gkns8"]
 
 [node name="EnemyManager" type="Node"]
 script = ExtResource("1_35kil")
 orc = ExtResource("2_f0exe")
 orange_spider = ExtResource("3_0f4i0")
+blue_spider = ExtResource("4_52pd6")
+reptile_warrior = ExtResource("5_4r1i6")
+killer_butterfly = ExtResource("6_gkns8")
 
 [node name="Timer" type="Timer" parent="."]
 one_shot = true

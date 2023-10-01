@@ -26,7 +26,7 @@ func set_ability_upgrades(upgrades: Array[Upgrade]):
 
 
 func on_upgrade_selected(upgrade: Upgrade, card: AbilityUpgradeCard):
-	print("Selected upgrade", upgrade.id)
+#	print("Selected upgrade", upgrade.id)
 	upgrade_selected.emit(upgrade)
 	$AnimationPlayer.play("out")
 	await $AnimationPlayer.animation_finished

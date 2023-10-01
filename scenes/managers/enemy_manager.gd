@@ -2,16 +2,20 @@ extends Node
 
 @export var orc: PackedScene
 @export var orange_spider: PackedScene
+@export var blue_spider: PackedScene
+@export var reptile_warrior: PackedScene
+@export var killer_butterfly: PackedScene
+
 @export var level_time_mananer: LevelTimeManager
 @onready var timer = $Timer as Timer
 
-const SPAWN_RADIUS = 600
+const SPAWN_RADIUS = 640
 
 
 var enemy_table = WeightedTable.new()
 
 func _ready():
-	enemy_table.add_item(orange_spider, 10)
+	enemy_table.add_item(orange_spider, 20)
 	timer.timeout.connect(on_timer_timeout)
 	level_time_mananer.level_difficulty_increased.connect(on_level_difficulty_increased)
 	
@@ -26,7 +30,8 @@ func get_spawn_position():
 	var random_direction = Vector2.RIGHT.rotated(randf_range(0, TAU))	
 	for i in 10:
 		spawn_position = player.global_position + (random_direction * SPAWN_RADIUS)
-		var query_parameters = PhysicsRayQueryParameters2D.create(player.global_position, spawn_position, 1)
+		var addition_check_offset = random_direction * 50
+		var query_parameters = PhysicsRayQueryParameters2D.create(player.global_position, spawn_position + addition_check_offset, 1)
 		var result = get_tree().root.world_2d.direct_space_state.intersect_ray(query_parameters)
 		
 		if result.is_empty():
@@ -57,6 +62,15 @@ func on_level_difficulty_increased(difficulty: int):
 	timer.wait_time = max(0.5, timer.wait_time - time_off)
 #	print("New wait time: ", timer.wait_time)
 
+	if difficulty == 3:
+		enemy_table.add_item(blue_spider, 20)
+
 	if difficulty == 6:
 		enemy_table.add_item(orc, 20)
+	
+	if difficulty == 9:
+		enemy_table.add_item(reptile_warrior, 20)
+	
+	if difficulty == 12:
+		enemy_table.add_item(killer_butterfly, 20)
 

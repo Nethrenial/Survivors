@@ -1,0 +1,97 @@
+[gd_scene load_steps=8 format=3 uid="uid://bdpgpaphid850"]
+
+[ext_resource type="Texture2D" uid="uid://c20r4pgseuhdx" path="res://resources/theme/assets/backgrounds/upgrades-screen.jpg" id="1_4pcff"]
+[ext_resource type="Script" path="res://scenes/ui/meta_upgrades_menu.gd" id="1_weq5t"]
+[ext_resource type="PackedScene" uid="uid://c6ptyql0sdstr" path="res://scenes/ui/meta_upgrade_card.tscn" id="2_2e4ih"]
+[ext_resource type="Resource" uid="uid://bh2g4ohxrturu" path="res://resources/meta-upgrades/increase_movement_speed.tres" id="3_krbbj"]
+[ext_resource type="Resource" uid="uid://csgey8bv7whj1" path="res://resources/meta-upgrades/increase_luck.tres" id="4_67t6i"]
+[ext_resource type="PackedScene" uid="uid://b4n7hgwt5m0ra" path="res://scenes/ui/custom_buttons/back_button.tscn" id="5_h7mr1"]
+[ext_resource type="Texture2D" uid="uid://loi8w4a0dx18" path="res://scenes/game_objects/exp_vial/assets/exp_vial.png" id="6_12pkl"]
+
+[node name="MetaUpgradesMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_weq5t")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4pcff")
+expand_mode = 1
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Buy Upgrades"
+horizontal_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="MarginContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_constants/h_separation = 32
+columns = 3
+
+[node name="HealthUpgradeCard" parent="MarginContainer/MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_2e4ih")]
+layout_mode = 2
+
+[node name="MovementSpeedUpgradeCard" parent="MarginContainer/MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_2e4ih")]
+layout_mode = 2
+meta_upgrade = ExtResource("3_krbbj")
+
+[node name="LuckUpgradeCard" parent="MarginContainer/MarginContainer/VBoxContainer/GridContainer" instance=ExtResource("2_2e4ih")]
+layout_mode = 2
+meta_upgrade = ExtResource("4_67t6i")
+
+[node name="BackButton" parent="." instance=ExtResource("5_h7mr1")]
+unique_name_in_owner = true
+offset_left = 1068.0
+offset_top = 32.0
+offset_right = 1243.0
+offset_bottom = 92.0
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(120, 40)
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 152.0
+offset_bottom = 85.0
+theme_type_variation = &"HeadingWrappingPanelContainer"
+
+[node name="ExpPointsContainer" type="HBoxContainer" parent="PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/ExpPointsContainer"]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+texture = ExtResource("6_12pkl")
+expand_mode = 1
+
+[node name="ExpAmountLabel" type="Label" parent="PanelContainer/ExpPointsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "2000 XP"
+horizontal_alignment = 1
+vertical_alignment = 1

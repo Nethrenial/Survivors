@@ -1,0 +1,2090 @@
+[gd_scene load_steps=490 format=3 uid="uid://18t4w7kx2hwd"]
+
+[ext_resource type="Script" path="res://scenes/entities/enemies/basic/killer_butterfly/killer_butterfly.gd" id="1_0wgpd"]
+[ext_resource type="PackedScene" uid="uid://ccmmkgbkxgne2" path="res://scenes/components/health_component.tscn" id="2_6j3k4"]
+[ext_resource type="PackedScene" uid="uid://va1hn2sykhi2" path="res://scenes/components/exp_vial_drop_component.tscn" id="3_bm1ni"]
+[ext_resource type="PackedScene" uid="uid://dgqyl15dn51co" path="res://scenes/game_objects/exp_vial/exp_vial.tscn" id="4_fw6cn"]
+[ext_resource type="PackedScene" uid="uid://nr3n0b22ime8" path="res://scenes/components/hurt_box_component.tscn" id="5_pk2qo"]
+[ext_resource type="Texture2D" uid="uid://26wqj64s1thv" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0001.png" id="6_4xrm5"]
+[ext_resource type="Texture2D" uid="uid://dwvrfo52xgwfb" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0002.png" id="7_qco2m"]
+[ext_resource type="Texture2D" uid="uid://7ko0joaa4twa" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0003.png" id="8_pd2tm"]
+[ext_resource type="Texture2D" uid="uid://cbatr1785fm0w" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0004.png" id="9_iye3w"]
+[ext_resource type="Texture2D" uid="uid://b1bd3beo6hffg" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0005.png" id="10_pirjb"]
+[ext_resource type="Texture2D" uid="uid://ciutkltdu3e0g" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0006.png" id="11_mc7o2"]
+[ext_resource type="Texture2D" uid="uid://cq2fnon4eiur6" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0007.png" id="12_1tndd"]
+[ext_resource type="Texture2D" uid="uid://dxc0nybk3jht6" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0008.png" id="13_w88p2"]
+[ext_resource type="Texture2D" uid="uid://c0lowqwcwjf1c" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0009.png" id="14_txldf"]
+[ext_resource type="Texture2D" uid="uid://6gomh0dcunac" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0010.png" id="15_mwdij"]
+[ext_resource type="Texture2D" uid="uid://d4gveo2mcey03" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0011.png" id="16_dkqwr"]
+[ext_resource type="Texture2D" uid="uid://badti7jtxsc5p" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0012.png" id="17_sgmaf"]
+[ext_resource type="Texture2D" uid="uid://bbaefkr23wyvx" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0013.png" id="18_d8muo"]
+[ext_resource type="Texture2D" uid="uid://ckre4mwi5p7je" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0014.png" id="19_1xjhx"]
+[ext_resource type="Texture2D" uid="uid://di3yp6s14as7e" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0015.png" id="20_5hv51"]
+[ext_resource type="Texture2D" uid="uid://bcmf4mqrpbtsd" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0016.png" id="21_ihefx"]
+[ext_resource type="Texture2D" uid="uid://37tkci03finh" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0017.png" id="22_c5q1i"]
+[ext_resource type="Texture2D" uid="uid://dmls5ouyvxl1q" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0018.png" id="23_mek8n"]
+[ext_resource type="Texture2D" uid="uid://beot5knd6n6yk" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0019.png" id="24_vr1gx"]
+[ext_resource type="Texture2D" uid="uid://bswhv8pacuocp" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/000/Death_000_0020.png" id="25_t1851"]
+[ext_resource type="Texture2D" uid="uid://cew633r7mnqf3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0001.png" id="26_q7rgj"]
+[ext_resource type="Texture2D" uid="uid://brbt01yjp8ysa" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0002.png" id="27_2fllq"]
+[ext_resource type="Texture2D" uid="uid://bctqpqw2plsrg" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0003.png" id="28_i4f4q"]
+[ext_resource type="Texture2D" uid="uid://sikhqgi22jsm" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0004.png" id="29_2f7gd"]
+[ext_resource type="Texture2D" uid="uid://xitystme220o" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0005.png" id="30_i37wi"]
+[ext_resource type="Texture2D" uid="uid://va072t08tgr8" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0006.png" id="31_mctht"]
+[ext_resource type="Texture2D" uid="uid://ddhnl10chtl6n" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0007.png" id="32_sqr50"]
+[ext_resource type="Texture2D" uid="uid://dk2e58l1qyp8p" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0008.png" id="33_0ykjr"]
+[ext_resource type="Texture2D" uid="uid://b8nhyil7yt58f" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0009.png" id="34_tcvip"]
+[ext_resource type="Texture2D" uid="uid://enifs2dhpg6e" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0010.png" id="35_f5imc"]
+[ext_resource type="Texture2D" uid="uid://deawcvtaupjgq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0011.png" id="36_04dvx"]
+[ext_resource type="Texture2D" uid="uid://kh4rfvvki6j" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0012.png" id="37_leg3b"]
+[ext_resource type="Texture2D" uid="uid://qaax7t0geaae" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0013.png" id="38_3epkw"]
+[ext_resource type="Texture2D" uid="uid://d2jaulnhbfo7j" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0014.png" id="39_0f6bf"]
+[ext_resource type="Texture2D" uid="uid://c4wl7lqu8e7qj" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0015.png" id="40_73oan"]
+[ext_resource type="Texture2D" uid="uid://2ysp4p648uvq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0016.png" id="41_2bd3y"]
+[ext_resource type="Texture2D" uid="uid://m52dxxvukuf3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0017.png" id="42_nqtec"]
+[ext_resource type="Texture2D" uid="uid://bfhhvuld4360l" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0018.png" id="43_og1jr"]
+[ext_resource type="Texture2D" uid="uid://dig5pnsq7gety" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0019.png" id="44_1yqrv"]
+[ext_resource type="Texture2D" uid="uid://2ixc40mqu1pc" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/045/Death_045_0020.png" id="45_orokl"]
+[ext_resource type="Texture2D" uid="uid://blm0mu7hblurp" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0001.png" id="46_71xfu"]
+[ext_resource type="Texture2D" uid="uid://blo88kc4mircq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0002.png" id="47_ccwwi"]
+[ext_resource type="Texture2D" uid="uid://bj7c1jqpjc51q" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0003.png" id="48_j6hk5"]
+[ext_resource type="Texture2D" uid="uid://nvvo7q2gdegf" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0004.png" id="49_hljmw"]
+[ext_resource type="Texture2D" uid="uid://bt6nrp3j782ps" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0005.png" id="50_yce61"]
+[ext_resource type="Texture2D" uid="uid://hpbvrhvgojak" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0006.png" id="51_x5rb1"]
+[ext_resource type="Texture2D" uid="uid://cs81biwt15yks" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0007.png" id="52_emlxy"]
+[ext_resource type="Texture2D" uid="uid://dv5s4vnsbmro7" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0008.png" id="53_nc5bu"]
+[ext_resource type="Texture2D" uid="uid://dqyeynhtin0qn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0009.png" id="54_kr5hs"]
+[ext_resource type="Texture2D" uid="uid://dqfxry4v4btah" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0010.png" id="55_ugkpp"]
+[ext_resource type="Texture2D" uid="uid://bmyfbe68wbojx" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0011.png" id="56_dvlml"]
+[ext_resource type="Texture2D" uid="uid://bjj5fi7kcoywe" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0012.png" id="57_4tvf7"]
+[ext_resource type="Texture2D" uid="uid://ci5j13ie7t3xq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0013.png" id="58_7lces"]
+[ext_resource type="Texture2D" uid="uid://83wtnvt6ceg1" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0014.png" id="59_qnp6t"]
+[ext_resource type="Texture2D" uid="uid://bvdekyv8dht3k" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0015.png" id="60_gk2na"]
+[ext_resource type="Texture2D" uid="uid://dlexkfsmibhdf" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0016.png" id="61_4ujmg"]
+[ext_resource type="Texture2D" uid="uid://co0hbs3jlmqx1" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0017.png" id="62_x1pwd"]
+[ext_resource type="Texture2D" uid="uid://djl8v2v8x52ca" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0018.png" id="63_qhl00"]
+[ext_resource type="Texture2D" uid="uid://kafpb2tk3xoc" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0019.png" id="64_o78ta"]
+[ext_resource type="Texture2D" uid="uid://dfug80tjkb7ya" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/090/Death_090_0020.png" id="65_0u382"]
+[ext_resource type="Texture2D" uid="uid://beic62ag42shy" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0001.png" id="66_p0sqk"]
+[ext_resource type="Texture2D" uid="uid://co4xcrurknomp" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0002.png" id="67_00fx2"]
+[ext_resource type="Texture2D" uid="uid://bnl1cpjru0gnt" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0003.png" id="68_8eg26"]
+[ext_resource type="Texture2D" uid="uid://oijmi1b5hk2e" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0004.png" id="69_qlvmb"]
+[ext_resource type="Texture2D" uid="uid://d4cgqqqmsgg6i" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0005.png" id="70_kpt8w"]
+[ext_resource type="Texture2D" uid="uid://3ex33pwuqoal" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0006.png" id="71_yp37l"]
+[ext_resource type="Texture2D" uid="uid://dnund37723dsq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0007.png" id="72_e3ci8"]
+[ext_resource type="Texture2D" uid="uid://gr2jr64mq52c" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0008.png" id="73_aisjq"]
+[ext_resource type="Texture2D" uid="uid://c0v1r70vu1c6b" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0009.png" id="74_1kpoo"]
+[ext_resource type="Texture2D" uid="uid://bajswg658ym1t" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0010.png" id="75_fkfpi"]
+[ext_resource type="Texture2D" uid="uid://dub7tena5sy2f" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0011.png" id="76_450tu"]
+[ext_resource type="Texture2D" uid="uid://b0sdx04pmt1m0" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0012.png" id="77_a2syb"]
+[ext_resource type="Texture2D" uid="uid://cb7ls7vkg7wfi" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0013.png" id="78_r6kjg"]
+[ext_resource type="Texture2D" uid="uid://fhge08mrxsi3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0014.png" id="79_gsdx8"]
+[ext_resource type="Texture2D" uid="uid://dwukuw6bpfuli" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0015.png" id="80_xwby6"]
+[ext_resource type="Texture2D" uid="uid://632slr1yro7p" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0016.png" id="81_4yqc2"]
+[ext_resource type="Texture2D" uid="uid://cwxfd4l55b51r" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0017.png" id="82_0v4dn"]
+[ext_resource type="Texture2D" uid="uid://cogf5vytjw6x2" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0018.png" id="83_muq0u"]
+[ext_resource type="Texture2D" uid="uid://cxs88ldd765ns" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0019.png" id="84_pkndv"]
+[ext_resource type="Texture2D" uid="uid://cauqe61kvojje" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/135/Death_135_0020.png" id="85_wllgb"]
+[ext_resource type="Texture2D" uid="uid://c6t2slvd6af7g" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0001.png" id="86_kpyp2"]
+[ext_resource type="Texture2D" uid="uid://dvlleb1rho2go" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0002.png" id="87_lr6qf"]
+[ext_resource type="Texture2D" uid="uid://jngbmc44tcbb" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0003.png" id="88_muxxm"]
+[ext_resource type="Texture2D" uid="uid://bxb8kjtxavldx" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0004.png" id="89_mxmo5"]
+[ext_resource type="Texture2D" uid="uid://be5fje8re35oi" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0005.png" id="90_huo0s"]
+[ext_resource type="Texture2D" uid="uid://cx28rs3j3v308" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0006.png" id="91_dwnlb"]
+[ext_resource type="Texture2D" uid="uid://c18nwevfsmlr0" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0007.png" id="92_l824g"]
+[ext_resource type="Texture2D" uid="uid://crq1yfxgcnpxn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0008.png" id="93_na1fo"]
+[ext_resource type="Texture2D" uid="uid://c6xllqsn0nmfj" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0009.png" id="94_q8pm0"]
+[ext_resource type="Texture2D" uid="uid://c7qxer2ockhud" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0010.png" id="95_sj60a"]
+[ext_resource type="Texture2D" uid="uid://dvbdj5uqhqpst" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0011.png" id="96_sfs84"]
+[ext_resource type="Texture2D" uid="uid://dmeifug7vap55" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0012.png" id="97_okyf3"]
+[ext_resource type="Texture2D" uid="uid://pxwmrlnrval8" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0013.png" id="98_n8wuf"]
+[ext_resource type="Texture2D" uid="uid://75icrc3o00cf" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0014.png" id="99_mwk57"]
+[ext_resource type="Texture2D" uid="uid://baumhboe1dghm" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0015.png" id="100_meb27"]
+[ext_resource type="Texture2D" uid="uid://dv1nprtu537kl" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0016.png" id="101_2oftu"]
+[ext_resource type="Texture2D" uid="uid://cxqt2334d31wr" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0017.png" id="102_j62tg"]
+[ext_resource type="Texture2D" uid="uid://b00jeyftko80m" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0018.png" id="103_suf3g"]
+[ext_resource type="Texture2D" uid="uid://bdep57wi3cakb" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0019.png" id="104_otnvu"]
+[ext_resource type="Texture2D" uid="uid://v7hl7kf7k5he" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/180/Death_180_0020.png" id="105_3lot8"]
+[ext_resource type="Texture2D" uid="uid://bpqxw18vvih88" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0001.png" id="106_nujko"]
+[ext_resource type="Texture2D" uid="uid://h7lrxx6knw11" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0002.png" id="107_vr6x7"]
+[ext_resource type="Texture2D" uid="uid://hm6f1ax033ns" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0003.png" id="108_51rg1"]
+[ext_resource type="Texture2D" uid="uid://gjxxmcx7gmlj" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0004.png" id="109_mkaq2"]
+[ext_resource type="Texture2D" uid="uid://dgx4681jejwpd" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0005.png" id="110_addie"]
+[ext_resource type="Texture2D" uid="uid://cgtwgtau2s0gv" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0006.png" id="111_jyfcw"]
+[ext_resource type="Texture2D" uid="uid://ciy86ciw6nng5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0007.png" id="112_qfiai"]
+[ext_resource type="Texture2D" uid="uid://dqyy06ylcuro" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0008.png" id="113_exkf6"]
+[ext_resource type="Texture2D" uid="uid://e3n61xb5e5tt" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0009.png" id="114_ehij4"]
+[ext_resource type="Texture2D" uid="uid://c3he2nuypg7gm" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0010.png" id="115_4nkac"]
+[ext_resource type="Texture2D" uid="uid://b6oet6hp847w0" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0011.png" id="116_g15hq"]
+[ext_resource type="Texture2D" uid="uid://cnxjac5v8v1fc" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0012.png" id="117_dwat0"]
+[ext_resource type="Texture2D" uid="uid://crl1dor1fp8cu" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0013.png" id="118_y3mnp"]
+[ext_resource type="Texture2D" uid="uid://i7xguamv4t1a" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0014.png" id="119_5nhk0"]
+[ext_resource type="Texture2D" uid="uid://dv6mo10qrvqqs" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0015.png" id="120_jj1im"]
+[ext_resource type="Texture2D" uid="uid://0xu1qdboc13f" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0016.png" id="121_7iyuv"]
+[ext_resource type="Texture2D" uid="uid://bkftmldfi2wu8" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0017.png" id="122_11qo2"]
+[ext_resource type="Texture2D" uid="uid://b3lguf63e7vl1" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0018.png" id="123_py768"]
+[ext_resource type="Texture2D" uid="uid://ckfjbrr33pa7d" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0019.png" id="124_0atu0"]
+[ext_resource type="Texture2D" uid="uid://d23jd7e3516xb" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/225/Death_225_0020.png" id="125_3h3jh"]
+[ext_resource type="Texture2D" uid="uid://dqakflg88kleg" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0001.png" id="126_onkbh"]
+[ext_resource type="Texture2D" uid="uid://bg0nsdevls0e3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0002.png" id="127_gjyp1"]
+[ext_resource type="Texture2D" uid="uid://j1jwc0hpwrpa" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0003.png" id="128_7twg8"]
+[ext_resource type="Texture2D" uid="uid://deupbem0ts1le" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0004.png" id="129_rwahv"]
+[ext_resource type="Texture2D" uid="uid://bxnfbvtp66qlx" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0005.png" id="130_08jkv"]
+[ext_resource type="Texture2D" uid="uid://beh2ite1p7tl4" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0006.png" id="131_ku8js"]
+[ext_resource type="Texture2D" uid="uid://bcrld4nh2uit3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0007.png" id="132_g74k8"]
+[ext_resource type="Texture2D" uid="uid://c6fbiyh0a0oe4" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0008.png" id="133_82vb8"]
+[ext_resource type="Texture2D" uid="uid://devsoa4tylexm" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0009.png" id="134_4it5m"]
+[ext_resource type="Texture2D" uid="uid://bhw6f5qy776aq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0010.png" id="135_s885k"]
+[ext_resource type="Texture2D" uid="uid://stprqh6upkog" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0011.png" id="136_5n55o"]
+[ext_resource type="Texture2D" uid="uid://cpfdixq5ukwud" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0012.png" id="137_3t85g"]
+[ext_resource type="Texture2D" uid="uid://d01o7tjthkbrv" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0013.png" id="138_55ix7"]
+[ext_resource type="Texture2D" uid="uid://r0de0yb8fygx" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0014.png" id="139_8kngi"]
+[ext_resource type="Texture2D" uid="uid://564l8bmxf4r7" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0015.png" id="140_4kgnc"]
+[ext_resource type="Texture2D" uid="uid://orb5t40v1g08" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0016.png" id="141_wuhtl"]
+[ext_resource type="Texture2D" uid="uid://bw77coqs6uhkn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0017.png" id="142_jjcvk"]
+[ext_resource type="Texture2D" uid="uid://df7hkxi267vl3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0018.png" id="143_840us"]
+[ext_resource type="Texture2D" uid="uid://b3enf7dgphuts" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0019.png" id="144_vxyyb"]
+[ext_resource type="Texture2D" uid="uid://cagmcsctdr3o2" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/270/Death_270_0020.png" id="145_umj8h"]
+[ext_resource type="Texture2D" uid="uid://cgl5am20exec" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0001.png" id="146_vi335"]
+[ext_resource type="Texture2D" uid="uid://beb5qun4o0q6l" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0002.png" id="147_8meqw"]
+[ext_resource type="Texture2D" uid="uid://ch1cs4mob54wa" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0003.png" id="148_5nojj"]
+[ext_resource type="Texture2D" uid="uid://xt6qyu780n52" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0004.png" id="149_yulce"]
+[ext_resource type="Texture2D" uid="uid://cm6myeb78n03h" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0005.png" id="150_aaem7"]
+[ext_resource type="Texture2D" uid="uid://c7y6wi23habi1" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0006.png" id="151_7kc6j"]
+[ext_resource type="Texture2D" uid="uid://b03isdnfm77n0" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0007.png" id="152_yg3sd"]
+[ext_resource type="Texture2D" uid="uid://kksel23j1b3w" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0008.png" id="153_wyxnr"]
+[ext_resource type="Texture2D" uid="uid://dp8hjiv5wehnw" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0009.png" id="154_01beh"]
+[ext_resource type="Texture2D" uid="uid://djq46xkwgdq2t" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0010.png" id="155_30mfo"]
+[ext_resource type="Texture2D" uid="uid://rpx8gjkkwbe3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0011.png" id="156_h55o6"]
+[ext_resource type="Texture2D" uid="uid://bnxeaetikqsxj" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0012.png" id="157_vi6o0"]
+[ext_resource type="Texture2D" uid="uid://bnsgll64c1sw8" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0013.png" id="158_uft8v"]
+[ext_resource type="Texture2D" uid="uid://d3ni60rfgkmun" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0014.png" id="159_edj8y"]
+[ext_resource type="Texture2D" uid="uid://dhhrmyvt1xhjs" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0015.png" id="160_vacw1"]
+[ext_resource type="Texture2D" uid="uid://bm4g87yqi0vxh" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0016.png" id="161_e2hes"]
+[ext_resource type="Texture2D" uid="uid://qk2ftyngpfra" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0017.png" id="162_6kfak"]
+[ext_resource type="Texture2D" uid="uid://8pxpvy14puj1" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0018.png" id="163_kpdx1"]
+[ext_resource type="Texture2D" uid="uid://dxyh7hx2rsdah" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0019.png" id="164_2nf2f"]
+[ext_resource type="Texture2D" uid="uid://cn4651ijrn407" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Death/315/Death_315_0020.png" id="165_7k858"]
+[ext_resource type="Texture2D" uid="uid://yb338udnnvl" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0001.png" id="166_x4ca8"]
+[ext_resource type="Texture2D" uid="uid://ci78bk0x0txj3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0002.png" id="167_tn4se"]
+[ext_resource type="Texture2D" uid="uid://bs1rkevc5r2h3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0003.png" id="168_ah1p4"]
+[ext_resource type="Texture2D" uid="uid://cyt4ogni1jcvu" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0004.png" id="169_5jqem"]
+[ext_resource type="Texture2D" uid="uid://da62bj8d88cem" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0005.png" id="170_1sg0r"]
+[ext_resource type="Texture2D" uid="uid://b3bu7veeworev" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0006.png" id="171_sl1yb"]
+[ext_resource type="Texture2D" uid="uid://cou4nqnpo2iyg" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0007.png" id="172_t6gne"]
+[ext_resource type="Texture2D" uid="uid://450fng8wgqym" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0008.png" id="173_f8lk8"]
+[ext_resource type="Texture2D" uid="uid://c3xqpdfw3jc16" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0009.png" id="174_psouk"]
+[ext_resource type="Texture2D" uid="uid://bdip3ri6pvp1i" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0010.png" id="175_th4vb"]
+[ext_resource type="Texture2D" uid="uid://dfajfx3t0ve55" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0011.png" id="176_75do3"]
+[ext_resource type="Texture2D" uid="uid://cbdplh1ovllu2" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0012.png" id="177_kw3hr"]
+[ext_resource type="Texture2D" uid="uid://c6qxfh0vl17ej" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0013.png" id="178_j2s0q"]
+[ext_resource type="Texture2D" uid="uid://gi4435xt4bwp" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0014.png" id="179_7h3hk"]
+[ext_resource type="Texture2D" uid="uid://djq30ixs7yij2" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0015.png" id="180_cv45a"]
+[ext_resource type="Texture2D" uid="uid://s6c0i1kc7xic" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0016.png" id="181_35gga"]
+[ext_resource type="Texture2D" uid="uid://cu2jwybe3gtc6" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0017.png" id="182_ybbwb"]
+[ext_resource type="Texture2D" uid="uid://bw4lg0m7m0ojn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0018.png" id="183_w4bb8"]
+[ext_resource type="Texture2D" uid="uid://dk4rkfjyfkkg3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0019.png" id="184_eukwy"]
+[ext_resource type="Texture2D" uid="uid://h8q8xbr0ux5q" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/000/Hit_000_0020.png" id="185_qbf2u"]
+[ext_resource type="Texture2D" uid="uid://b5mficudgc1tx" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0001.png" id="186_86415"]
+[ext_resource type="Texture2D" uid="uid://cxm728b2wp72e" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0002.png" id="187_tavam"]
+[ext_resource type="Texture2D" uid="uid://c2qnk8pq50673" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0003.png" id="188_lsfdn"]
+[ext_resource type="Texture2D" uid="uid://bh0otdhnj7skt" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0004.png" id="189_4fch2"]
+[ext_resource type="Texture2D" uid="uid://cl3d7clwbpolp" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0005.png" id="190_uejpv"]
+[ext_resource type="Texture2D" uid="uid://cru17fi1xwlud" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0006.png" id="191_jb3c2"]
+[ext_resource type="Texture2D" uid="uid://c5cvhrnfybhhi" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0007.png" id="192_1neu8"]
+[ext_resource type="Texture2D" uid="uid://iljoo43yrywp" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0008.png" id="193_6i1ht"]
+[ext_resource type="Texture2D" uid="uid://03m4cxqi2p1y" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0009.png" id="194_a6afd"]
+[ext_resource type="Texture2D" uid="uid://brsgppecobx7f" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0010.png" id="195_5wi8x"]
+[ext_resource type="Texture2D" uid="uid://d2o8cwqkk5qhf" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0011.png" id="196_fwk4n"]
+[ext_resource type="Texture2D" uid="uid://baslpeu12aoyo" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0012.png" id="197_1qefg"]
+[ext_resource type="Texture2D" uid="uid://i6pvq0ajs3pp" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0013.png" id="198_1icj8"]
+[ext_resource type="Texture2D" uid="uid://d2nj4fq33rduy" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0014.png" id="199_tk8qy"]
+[ext_resource type="Texture2D" uid="uid://dn17bbi0clsou" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0015.png" id="200_if2wn"]
+[ext_resource type="Texture2D" uid="uid://djjg0tnimrqh1" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0016.png" id="201_75i2h"]
+[ext_resource type="Texture2D" uid="uid://25wb5yrq3q3j" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0017.png" id="202_x3jas"]
+[ext_resource type="Texture2D" uid="uid://jg01dkjea2os" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0018.png" id="203_ocvux"]
+[ext_resource type="Texture2D" uid="uid://c6em6sudge2y2" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0019.png" id="204_jhq27"]
+[ext_resource type="Texture2D" uid="uid://c5bc5gn1fn51t" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/045/Hit_045_0020.png" id="205_cdg0m"]
+[ext_resource type="Texture2D" uid="uid://q1erltc3rmso" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0001.png" id="206_o6yn1"]
+[ext_resource type="Texture2D" uid="uid://cxdns46yw4kl5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0002.png" id="207_j44ts"]
+[ext_resource type="Texture2D" uid="uid://dknmjk8hqd2d3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0003.png" id="208_jaymd"]
+[ext_resource type="Texture2D" uid="uid://ca6bxwvwbc6qq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0004.png" id="209_ve5pr"]
+[ext_resource type="Texture2D" uid="uid://csuxbnjhowmef" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0005.png" id="210_j8uph"]
+[ext_resource type="Texture2D" uid="uid://ohsb74j0xdqk" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0006.png" id="211_14rvk"]
+[ext_resource type="Texture2D" uid="uid://k88tf6qrcejx" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0007.png" id="212_0n0gh"]
+[ext_resource type="Texture2D" uid="uid://bijeaxyrvvuul" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0008.png" id="213_7gxtk"]
+[ext_resource type="Texture2D" uid="uid://b2f3h7wc7wlkk" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0009.png" id="214_ne8ve"]
+[ext_resource type="Texture2D" uid="uid://c2t43ysbmhd6d" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0010.png" id="215_hwq72"]
+[ext_resource type="Texture2D" uid="uid://cfans6usfhbb1" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0011.png" id="216_7bfwe"]
+[ext_resource type="Texture2D" uid="uid://dq2m1xh0y4n4r" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0012.png" id="217_d0v1i"]
+[ext_resource type="Texture2D" uid="uid://o6g5dp5cunwq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0013.png" id="218_y5638"]
+[ext_resource type="Texture2D" uid="uid://dwxv0fko0pm5r" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0014.png" id="219_0bori"]
+[ext_resource type="Texture2D" uid="uid://08t2e5rym187" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0015.png" id="220_vaasn"]
+[ext_resource type="Texture2D" uid="uid://bn5cg5n14q4rg" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0016.png" id="221_wknqk"]
+[ext_resource type="Texture2D" uid="uid://hhykwsql6xjo" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0017.png" id="222_x4jed"]
+[ext_resource type="Texture2D" uid="uid://d8rb515c37a3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0018.png" id="223_bycnd"]
+[ext_resource type="Texture2D" uid="uid://b8ye6kdnp0k6h" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0019.png" id="224_of4ih"]
+[ext_resource type="Texture2D" uid="uid://bku0qno34mgng" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/090/Hit_090_0020.png" id="225_33gpb"]
+[ext_resource type="Texture2D" uid="uid://vqwfgqdt3dvn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0001.png" id="226_v7rgi"]
+[ext_resource type="Texture2D" uid="uid://6y861ix45vuy" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0002.png" id="227_osu2x"]
+[ext_resource type="Texture2D" uid="uid://cqdxnkyihi8in" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0003.png" id="228_jse1x"]
+[ext_resource type="Texture2D" uid="uid://bvdrbjqfxt2se" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0004.png" id="229_cf7yj"]
+[ext_resource type="Texture2D" uid="uid://ja8nfjo6umjy" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0005.png" id="230_6so6j"]
+[ext_resource type="Texture2D" uid="uid://bx6krfe08n8rb" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0006.png" id="231_08n00"]
+[ext_resource type="Texture2D" uid="uid://d030bkwk7pap8" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0007.png" id="232_2vo6m"]
+[ext_resource type="Texture2D" uid="uid://bwryee5bt5iq7" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0008.png" id="233_wtww7"]
+[ext_resource type="Texture2D" uid="uid://bjeaxuaqck8rg" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0009.png" id="234_w8glf"]
+[ext_resource type="Texture2D" uid="uid://cpj1do686wm1h" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0010.png" id="235_ktwnr"]
+[ext_resource type="Texture2D" uid="uid://dwxeku0lhrrc8" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0011.png" id="236_u065t"]
+[ext_resource type="Texture2D" uid="uid://db20g1cjp7ly7" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0012.png" id="237_7ujsw"]
+[ext_resource type="Texture2D" uid="uid://boqiaiuv1mxjs" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0013.png" id="238_2scy3"]
+[ext_resource type="Texture2D" uid="uid://doj8wx2wv2eo" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0014.png" id="239_jutq4"]
+[ext_resource type="Texture2D" uid="uid://bdktqma2k4ojw" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0015.png" id="240_lrddl"]
+[ext_resource type="Texture2D" uid="uid://cg6fjsup3e32q" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0016.png" id="241_3ptti"]
+[ext_resource type="Texture2D" uid="uid://cqwj8vv86jc8y" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0017.png" id="242_vfkag"]
+[ext_resource type="Texture2D" uid="uid://cy4y40lddvc0g" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0018.png" id="243_nc0u6"]
+[ext_resource type="Texture2D" uid="uid://dmtmfwxwnd7k5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0019.png" id="244_i2ykn"]
+[ext_resource type="Texture2D" uid="uid://bsuooyawy4lpe" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/135/Hit_135_0020.png" id="245_stp2s"]
+[ext_resource type="Texture2D" uid="uid://5saplrn3tcxg" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0001.png" id="246_yoy5o"]
+[ext_resource type="Texture2D" uid="uid://bdf0e47hhwvud" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0002.png" id="247_slwt8"]
+[ext_resource type="Texture2D" uid="uid://lfche2u6fsls" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0003.png" id="248_euahx"]
+[ext_resource type="Texture2D" uid="uid://bjg7odcdwug68" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0004.png" id="249_3dsk5"]
+[ext_resource type="Texture2D" uid="uid://d0pt18nupbwmu" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0005.png" id="250_4ie4h"]
+[ext_resource type="Texture2D" uid="uid://bcrw7dn05y137" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0006.png" id="251_836bo"]
+[ext_resource type="Texture2D" uid="uid://6m6l70ursrva" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0007.png" id="252_muo8w"]
+[ext_resource type="Texture2D" uid="uid://o66eagyb1ha3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0008.png" id="253_2xr6k"]
+[ext_resource type="Texture2D" uid="uid://cariatsb6tljh" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0009.png" id="254_udosi"]
+[ext_resource type="Texture2D" uid="uid://dwo4fpo1ii0ns" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0010.png" id="255_fxa3e"]
+[ext_resource type="Texture2D" uid="uid://mcxae448swqv" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0011.png" id="256_281d0"]
+[ext_resource type="Texture2D" uid="uid://387f0lr4nel6" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0012.png" id="257_qqewr"]
+[ext_resource type="Texture2D" uid="uid://bwhf2yl03v7wr" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0013.png" id="258_nv4sh"]
+[ext_resource type="Texture2D" uid="uid://bmb823wlnm80h" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0014.png" id="259_0naqa"]
+[ext_resource type="Texture2D" uid="uid://dgqnl166juxgl" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0015.png" id="260_ioojg"]
+[ext_resource type="Texture2D" uid="uid://yt0rt67r78wr" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0016.png" id="261_byib2"]
+[ext_resource type="Texture2D" uid="uid://ba40n85gxdvsf" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0017.png" id="262_dvh12"]
+[ext_resource type="Texture2D" uid="uid://cibrhh56suja2" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0018.png" id="263_811jy"]
+[ext_resource type="Texture2D" uid="uid://cnva8s1ynl5rr" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0019.png" id="264_5pdjp"]
+[ext_resource type="Texture2D" uid="uid://bqwgxc88lm2g5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/180/Hit_180_0020.png" id="265_2864d"]
+[ext_resource type="Texture2D" uid="uid://bqapw5s6uga7x" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0001.png" id="266_g6l43"]
+[ext_resource type="Texture2D" uid="uid://ben54s0gd2d0s" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0002.png" id="267_bou7o"]
+[ext_resource type="Texture2D" uid="uid://coyg42fhlr8ul" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0003.png" id="268_mye0i"]
+[ext_resource type="Texture2D" uid="uid://xs7bi1rme3ma" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0004.png" id="269_8vdq7"]
+[ext_resource type="Texture2D" uid="uid://2tcudxbrnal0" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0005.png" id="270_kjly5"]
+[ext_resource type="Texture2D" uid="uid://dnt2wb0svo4t4" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0006.png" id="271_his7o"]
+[ext_resource type="Texture2D" uid="uid://d06g53rvnsjva" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0007.png" id="272_ne0r2"]
+[ext_resource type="Texture2D" uid="uid://cssueqih65hq1" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0008.png" id="273_jwj53"]
+[ext_resource type="Texture2D" uid="uid://rg5qphgynwxk" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0009.png" id="274_pe34d"]
+[ext_resource type="Texture2D" uid="uid://b8jt1ygg2y28u" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0010.png" id="275_pj7eu"]
+[ext_resource type="Texture2D" uid="uid://i35xjbopuvvm" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0011.png" id="276_nljkj"]
+[ext_resource type="Texture2D" uid="uid://ds43ffl8efpxk" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0012.png" id="277_umdqq"]
+[ext_resource type="Texture2D" uid="uid://b0n26egx1pp8c" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0013.png" id="278_aswdl"]
+[ext_resource type="Texture2D" uid="uid://oqry87f515bn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0014.png" id="279_fyxs1"]
+[ext_resource type="Texture2D" uid="uid://dd2itcd54th78" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0015.png" id="280_ayqf8"]
+[ext_resource type="Texture2D" uid="uid://dv6eusr06ekc5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0016.png" id="281_e78pg"]
+[ext_resource type="Texture2D" uid="uid://y84l0wtbsv7u" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0017.png" id="282_d5g7a"]
+[ext_resource type="Texture2D" uid="uid://bslric8tpof24" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0018.png" id="283_l2n1c"]
+[ext_resource type="Texture2D" uid="uid://jbrvi0r34pgc" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0019.png" id="284_d0214"]
+[ext_resource type="Texture2D" uid="uid://m83og00ekkut" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/225/Hit_225_0020.png" id="285_yy5kn"]
+[ext_resource type="Texture2D" uid="uid://dg0fjyd3vouiy" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0001.png" id="286_2tbhc"]
+[ext_resource type="Texture2D" uid="uid://cgcxwglsp73h8" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0002.png" id="287_uagvu"]
+[ext_resource type="Texture2D" uid="uid://c7vybj8juk0o8" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0003.png" id="288_fugi2"]
+[ext_resource type="Texture2D" uid="uid://twy78bcwm6ol" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0004.png" id="289_dnhym"]
+[ext_resource type="Texture2D" uid="uid://dos0qi0vn82av" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0005.png" id="290_g5wcv"]
+[ext_resource type="Texture2D" uid="uid://4juaofys31hs" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0006.png" id="291_endtx"]
+[ext_resource type="Texture2D" uid="uid://5ejpevpqm61q" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0007.png" id="292_wtktd"]
+[ext_resource type="Texture2D" uid="uid://hmtqaoosm07s" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0008.png" id="293_wm7fc"]
+[ext_resource type="Texture2D" uid="uid://cvf64uytlwcap" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0009.png" id="294_td5hk"]
+[ext_resource type="Texture2D" uid="uid://bnt5ca5hdl36j" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0010.png" id="295_mt0yi"]
+[ext_resource type="Texture2D" uid="uid://cgn2qt37pm5ia" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0011.png" id="296_2l6gk"]
+[ext_resource type="Texture2D" uid="uid://uidcdlm3bukh" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0012.png" id="297_t3gll"]
+[ext_resource type="Texture2D" uid="uid://b5euhgt2a38e5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0013.png" id="298_4ph3p"]
+[ext_resource type="Texture2D" uid="uid://bccnisr3j11vu" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0014.png" id="299_voyk2"]
+[ext_resource type="Texture2D" uid="uid://bfwgltpcru2vo" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0015.png" id="300_i5fpr"]
+[ext_resource type="Texture2D" uid="uid://hekmwpmgyv3d" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0016.png" id="301_lkbxc"]
+[ext_resource type="Texture2D" uid="uid://g1e104kxugc6" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0017.png" id="302_gu82m"]
+[ext_resource type="Texture2D" uid="uid://upee3a6yjt2y" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0018.png" id="303_7k808"]
+[ext_resource type="Texture2D" uid="uid://d6c0jjk5gmfp" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0019.png" id="304_afry5"]
+[ext_resource type="Texture2D" uid="uid://bd0dcl0s134y6" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/270/Hit_270_0020.png" id="305_wccs4"]
+[ext_resource type="Texture2D" uid="uid://d2q82a5syxnne" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0001.png" id="306_n01lo"]
+[ext_resource type="Texture2D" uid="uid://dt4npln6ycyeq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0002.png" id="307_xh7sm"]
+[ext_resource type="Texture2D" uid="uid://cq0lu6bbxyrwc" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0003.png" id="308_oxytl"]
+[ext_resource type="Texture2D" uid="uid://bldb34wos3fas" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0004.png" id="309_quqv3"]
+[ext_resource type="Texture2D" uid="uid://cmr5nec76618k" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0005.png" id="310_f1y1k"]
+[ext_resource type="Texture2D" uid="uid://cpdyig83c6x5u" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0006.png" id="311_t1vdj"]
+[ext_resource type="Texture2D" uid="uid://cr3slyhpngkw5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0007.png" id="312_smf12"]
+[ext_resource type="Texture2D" uid="uid://dy2jp12kobav3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0008.png" id="313_p8gce"]
+[ext_resource type="Texture2D" uid="uid://dk1dnl4ujvjk6" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0009.png" id="314_oqwyy"]
+[ext_resource type="Texture2D" uid="uid://d1d38qcw4w34d" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0010.png" id="315_eocyd"]
+[ext_resource type="Texture2D" uid="uid://fokt14acx1gu" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0011.png" id="316_rl0n4"]
+[ext_resource type="Texture2D" uid="uid://cbq8jgewr5rfc" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0012.png" id="317_3me1w"]
+[ext_resource type="Texture2D" uid="uid://bhcrdbj8e8wht" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0013.png" id="318_16uca"]
+[ext_resource type="Texture2D" uid="uid://rulvxxkgnteg" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0014.png" id="319_01wp3"]
+[ext_resource type="Texture2D" uid="uid://cf1t5p5rtvje" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0015.png" id="320_7hsae"]
+[ext_resource type="Texture2D" uid="uid://s4wjwrpwe66i" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0016.png" id="321_3imfo"]
+[ext_resource type="Texture2D" uid="uid://ib7jn5goexew" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0017.png" id="322_e41t8"]
+[ext_resource type="Texture2D" uid="uid://dlenwbtsio4w3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0018.png" id="323_b26wn"]
+[ext_resource type="Texture2D" uid="uid://j0x507a3eieu" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0019.png" id="324_achib"]
+[ext_resource type="Texture2D" uid="uid://bp5p2p5i3lyyq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Hurt/315/Hit_315_0020.png" id="325_cbfua"]
+[ext_resource type="Texture2D" uid="uid://b331o7j8tlw3q" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0001.png" id="326_iaosx"]
+[ext_resource type="Texture2D" uid="uid://cubqdmpjxbhoi" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0002.png" id="327_xl6fc"]
+[ext_resource type="Texture2D" uid="uid://bqu8nb1v6nmi8" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0003.png" id="328_r4dnd"]
+[ext_resource type="Texture2D" uid="uid://f3gksvv2aaki" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0004.png" id="329_xfsg6"]
+[ext_resource type="Texture2D" uid="uid://b1ywo2tgrubee" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0005.png" id="330_trtg3"]
+[ext_resource type="Texture2D" uid="uid://c0clu01pnx2yx" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0006.png" id="331_dje50"]
+[ext_resource type="Texture2D" uid="uid://dc2snki44ljb3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0007.png" id="332_pn2r1"]
+[ext_resource type="Texture2D" uid="uid://dnrahwiv5aa1a" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0008.png" id="333_41xbp"]
+[ext_resource type="Texture2D" uid="uid://rv64ep3mj30p" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0009.png" id="334_v6ow7"]
+[ext_resource type="Texture2D" uid="uid://dcbj46m8omkbi" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0010.png" id="335_mt4bs"]
+[ext_resource type="Texture2D" uid="uid://bakuv2rynvjjs" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0011.png" id="336_j1ti4"]
+[ext_resource type="Texture2D" uid="uid://dpx7n5iiqssv3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0012.png" id="337_6lfs5"]
+[ext_resource type="Texture2D" uid="uid://dhurexjrgu1eg" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0013.png" id="338_sfxm1"]
+[ext_resource type="Texture2D" uid="uid://b8u6cahrrgji5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0014.png" id="339_4q4kn"]
+[ext_resource type="Texture2D" uid="uid://cgkx0d3vec7de" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0015.png" id="340_pogrs"]
+[ext_resource type="Texture2D" uid="uid://bwyvsqc3l6g2b" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0016.png" id="341_n43nw"]
+[ext_resource type="Texture2D" uid="uid://csya0kyne33il" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0017.png" id="342_ts0pg"]
+[ext_resource type="Texture2D" uid="uid://fopadybguu4" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0018.png" id="343_7g834"]
+[ext_resource type="Texture2D" uid="uid://c3aljkor40icq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0019.png" id="344_imhg1"]
+[ext_resource type="Texture2D" uid="uid://bkcce3nllp2gh" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/000/Fly_000_0020.png" id="345_w1g2n"]
+[ext_resource type="Texture2D" uid="uid://cwwf0b6makikd" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0001.png" id="346_01ddr"]
+[ext_resource type="Texture2D" uid="uid://d13rcgbvpc22q" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0002.png" id="347_7opv7"]
+[ext_resource type="Texture2D" uid="uid://b1i6ac0ef3rvf" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0003.png" id="348_kfg5g"]
+[ext_resource type="Texture2D" uid="uid://cbdkpau0fog6x" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0004.png" id="349_sxm75"]
+[ext_resource type="Texture2D" uid="uid://sjbhw526854y" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0005.png" id="350_goywp"]
+[ext_resource type="Texture2D" uid="uid://crysk4mqxf2vd" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0006.png" id="351_x1col"]
+[ext_resource type="Texture2D" uid="uid://hqomy5ej5onk" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0007.png" id="352_45c52"]
+[ext_resource type="Texture2D" uid="uid://50u3nji2bh7n" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0008.png" id="353_fbx6q"]
+[ext_resource type="Texture2D" uid="uid://co4y8ekmtvbxk" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0009.png" id="354_1xjtl"]
+[ext_resource type="Texture2D" uid="uid://blerbtmm4v0br" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0010.png" id="355_52dcf"]
+[ext_resource type="Texture2D" uid="uid://bnh56divs3isl" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0011.png" id="356_56jw3"]
+[ext_resource type="Texture2D" uid="uid://uig608mb8sp8" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0012.png" id="357_gq58d"]
+[ext_resource type="Texture2D" uid="uid://bmxnfx152xjn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0013.png" id="358_wl5ci"]
+[ext_resource type="Texture2D" uid="uid://t48w5jumeqif" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0014.png" id="359_tuahf"]
+[ext_resource type="Texture2D" uid="uid://da6mmj36iax71" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0015.png" id="360_sh1yu"]
+[ext_resource type="Texture2D" uid="uid://cusynwfk0tfel" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0016.png" id="361_bhl4a"]
+[ext_resource type="Texture2D" uid="uid://bmyy1o1fxc7w4" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0017.png" id="362_u5tnv"]
+[ext_resource type="Texture2D" uid="uid://b74nhk1upmpt5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0018.png" id="363_x2adx"]
+[ext_resource type="Texture2D" uid="uid://b4e0rhialn14a" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0019.png" id="364_pexbb"]
+[ext_resource type="Texture2D" uid="uid://bjv20uvxxy8ke" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/045/Fly_045_0020.png" id="365_ix6be"]
+[ext_resource type="Texture2D" uid="uid://dgctqihxdfujm" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0001.png" id="366_r3bmn"]
+[ext_resource type="Texture2D" uid="uid://cm4s23omfj5c2" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0002.png" id="367_smenq"]
+[ext_resource type="Texture2D" uid="uid://c8qym8r2b01p6" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0003.png" id="368_s4cky"]
+[ext_resource type="Texture2D" uid="uid://tubh3fomv2re" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0004.png" id="369_lg0ra"]
+[ext_resource type="Texture2D" uid="uid://bln4aoinqbgae" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0005.png" id="370_2gtxe"]
+[ext_resource type="Texture2D" uid="uid://oof2vp63cfsv" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0006.png" id="371_nhv5g"]
+[ext_resource type="Texture2D" uid="uid://cuhw2jf7immel" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0007.png" id="372_ak2li"]
+[ext_resource type="Texture2D" uid="uid://d173oqn0ug1xa" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0008.png" id="373_0ar3v"]
+[ext_resource type="Texture2D" uid="uid://by0fmf0iaynx3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0009.png" id="374_r7hab"]
+[ext_resource type="Texture2D" uid="uid://byrfilwuq3ou6" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0010.png" id="375_b8nsc"]
+[ext_resource type="Texture2D" uid="uid://rpsr7n4xdj0f" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0011.png" id="376_gjylc"]
+[ext_resource type="Texture2D" uid="uid://bs6i8741wbhki" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0012.png" id="377_uev3j"]
+[ext_resource type="Texture2D" uid="uid://b40hb3xun3cko" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0013.png" id="378_f42wp"]
+[ext_resource type="Texture2D" uid="uid://emh0menhkw83" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0014.png" id="379_nwlxk"]
+[ext_resource type="Texture2D" uid="uid://bjftwslfnftcl" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0015.png" id="380_prys4"]
+[ext_resource type="Texture2D" uid="uid://d4d5hthbjaebn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0016.png" id="381_arsih"]
+[ext_resource type="Texture2D" uid="uid://qft1u14vm3nl" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0017.png" id="382_jewvj"]
+[ext_resource type="Texture2D" uid="uid://c0aqi3vefhjuc" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0018.png" id="383_3c8je"]
+[ext_resource type="Texture2D" uid="uid://b1gni3ssccrtn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0019.png" id="384_b06fn"]
+[ext_resource type="Texture2D" uid="uid://xpeamykpg2gy" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/090/Fly_090_0020.png" id="385_qqh0y"]
+[ext_resource type="Texture2D" uid="uid://bge1iihk5hwpc" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0001.png" id="386_vwidq"]
+[ext_resource type="Texture2D" uid="uid://ccpkn7nqv2shp" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0002.png" id="387_1b4wp"]
+[ext_resource type="Texture2D" uid="uid://bl8pgt68uqqd" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0003.png" id="388_23o35"]
+[ext_resource type="Texture2D" uid="uid://dekpdkdnn0ogp" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0004.png" id="389_ooj2l"]
+[ext_resource type="Texture2D" uid="uid://x48fd73f2li5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0005.png" id="390_ks5bw"]
+[ext_resource type="Texture2D" uid="uid://d35unptdhq1w2" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0006.png" id="391_dcj16"]
+[ext_resource type="Texture2D" uid="uid://qq5jnhvmn52y" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0007.png" id="392_6cb7d"]
+[ext_resource type="Texture2D" uid="uid://dwe70lbwbiwbb" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0008.png" id="393_xrh0p"]
+[ext_resource type="Texture2D" uid="uid://cp2jwfqxals51" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0009.png" id="394_18l1k"]
+[ext_resource type="Texture2D" uid="uid://cfp0hckyn6pa8" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0010.png" id="395_1k1ly"]
+[ext_resource type="Texture2D" uid="uid://bsjryxupe6ur5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0011.png" id="396_vdfry"]
+[ext_resource type="Texture2D" uid="uid://ymmxs5ojwkq4" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0012.png" id="397_230iw"]
+[ext_resource type="Texture2D" uid="uid://ckrmol0cb25jx" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0013.png" id="398_s6nyh"]
+[ext_resource type="Texture2D" uid="uid://cx5qbwni2fmo3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0014.png" id="399_jo8y1"]
+[ext_resource type="Texture2D" uid="uid://daqeq5pd47i2a" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0015.png" id="400_i72cv"]
+[ext_resource type="Texture2D" uid="uid://do8fksjakf0fq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0016.png" id="401_fxl73"]
+[ext_resource type="Texture2D" uid="uid://btq2vjxq3byj7" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0017.png" id="402_wa5ey"]
+[ext_resource type="Texture2D" uid="uid://dwqbwrbn812oo" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0018.png" id="403_fbx22"]
+[ext_resource type="Texture2D" uid="uid://oprysxieycgu" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0019.png" id="404_hfpmq"]
+[ext_resource type="Texture2D" uid="uid://c73rdpwsiv2mm" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/135/Fly_135_0020.png" id="405_r0mrx"]
+[ext_resource type="Texture2D" uid="uid://d1664mr4ia3gb" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0001.png" id="406_2chjc"]
+[ext_resource type="Texture2D" uid="uid://bydx63635yjmn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0002.png" id="407_p8et1"]
+[ext_resource type="Texture2D" uid="uid://ibwt2is4jyuh" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0003.png" id="408_ajya1"]
+[ext_resource type="Texture2D" uid="uid://bcdx6d3uocpiu" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0004.png" id="409_5w6kq"]
+[ext_resource type="Texture2D" uid="uid://q5imubuslv3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0005.png" id="410_ylquu"]
+[ext_resource type="Texture2D" uid="uid://bav5nwfa1syo3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0006.png" id="411_ixyb2"]
+[ext_resource type="Texture2D" uid="uid://bcbivha77f3ib" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0007.png" id="412_f3ljt"]
+[ext_resource type="Texture2D" uid="uid://cy767juul8gqw" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0008.png" id="413_pvgt0"]
+[ext_resource type="Texture2D" uid="uid://vxjuoubxx4t2" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0009.png" id="414_bwsxx"]
+[ext_resource type="Texture2D" uid="uid://ddjk61nj6h031" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0010.png" id="415_eevq3"]
+[ext_resource type="Texture2D" uid="uid://dxx0dtw53cofi" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0011.png" id="416_vwukk"]
+[ext_resource type="Texture2D" uid="uid://v661p71x0kpf" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0012.png" id="417_uhxrl"]
+[ext_resource type="Texture2D" uid="uid://d5yslcaaverv" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0013.png" id="418_a430n"]
+[ext_resource type="Texture2D" uid="uid://br5064e7wsswr" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0014.png" id="419_7ucih"]
+[ext_resource type="Texture2D" uid="uid://bsgf13hji6hlb" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0015.png" id="420_22n48"]
+[ext_resource type="Texture2D" uid="uid://c5pfj4w0yrscx" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0016.png" id="421_v10yk"]
+[ext_resource type="Texture2D" uid="uid://byd0a0cgeadcx" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0017.png" id="422_spgg1"]
+[ext_resource type="Texture2D" uid="uid://bu2knoho7nix5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0018.png" id="423_r65aw"]
+[ext_resource type="Texture2D" uid="uid://bcm4a7tp0bghy" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0019.png" id="424_fbgkv"]
+[ext_resource type="Texture2D" uid="uid://b3ejamd7denul" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/180/Fly_180_0020.png" id="425_xbjyh"]
+[ext_resource type="Texture2D" uid="uid://jv6nd5di2xfm" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0001.png" id="426_kxnr2"]
+[ext_resource type="Texture2D" uid="uid://c1v5k6nsgdsiu" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0002.png" id="427_76dtn"]
+[ext_resource type="Texture2D" uid="uid://bos4oqtu2s2dh" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0003.png" id="428_onix4"]
+[ext_resource type="Texture2D" uid="uid://cyxyj2xyfajo0" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0004.png" id="429_8211s"]
+[ext_resource type="Texture2D" uid="uid://dcsxg8qv78ut5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0005.png" id="430_jr3bn"]
+[ext_resource type="Texture2D" uid="uid://t7s847aaacpe" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0006.png" id="431_ion7o"]
+[ext_resource type="Texture2D" uid="uid://b5khk51c8l5kd" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0007.png" id="432_g0jkj"]
+[ext_resource type="Texture2D" uid="uid://bboeyse7arglq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0008.png" id="433_8vuta"]
+[ext_resource type="Texture2D" uid="uid://dpp6vg3iifeyl" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0009.png" id="434_tsrdt"]
+[ext_resource type="Texture2D" uid="uid://but2qmhnbhywf" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0010.png" id="435_vt8s7"]
+[ext_resource type="Texture2D" uid="uid://bhd2amveudjlm" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0011.png" id="436_3f77u"]
+[ext_resource type="Texture2D" uid="uid://ci8bghik2fib5" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0012.png" id="437_amfhg"]
+[ext_resource type="Texture2D" uid="uid://c20yly5qk7qvg" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0013.png" id="438_lak0u"]
+[ext_resource type="Texture2D" uid="uid://dchk33dpu063x" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0014.png" id="439_s42bw"]
+[ext_resource type="Texture2D" uid="uid://c7n1da5ms3r8y" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0015.png" id="440_g6wen"]
+[ext_resource type="Texture2D" uid="uid://3rxwpqyikvh2" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0016.png" id="441_d0hxr"]
+[ext_resource type="Texture2D" uid="uid://basb7sybs1i6t" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0017.png" id="442_t8q6e"]
+[ext_resource type="Texture2D" uid="uid://cuwmufwfo0qpn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0018.png" id="443_5gt5q"]
+[ext_resource type="Texture2D" uid="uid://o0fwqdb6k0dr" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0019.png" id="444_phbqm"]
+[ext_resource type="Texture2D" uid="uid://ce5daex8n36lo" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/225/Fly_225_0020.png" id="445_3nyl3"]
+[ext_resource type="Texture2D" uid="uid://bf0lu8pyfw87j" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0001.png" id="446_a74g0"]
+[ext_resource type="Texture2D" uid="uid://nlwnwg0vh3n7" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0002.png" id="447_p2ubp"]
+[ext_resource type="Texture2D" uid="uid://c417hd58awsvo" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0003.png" id="448_pgb2d"]
+[ext_resource type="Texture2D" uid="uid://b24ypea2cihdw" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0004.png" id="449_0h03i"]
+[ext_resource type="Texture2D" uid="uid://c2h7jcowvu3sq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0005.png" id="450_p6rc6"]
+[ext_resource type="Texture2D" uid="uid://du57t3al720us" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0006.png" id="451_7vtob"]
+[ext_resource type="Texture2D" uid="uid://d4a2ktlymw3b3" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0007.png" id="452_ci3w6"]
+[ext_resource type="Texture2D" uid="uid://cd26jdfed56sv" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0008.png" id="453_jt7qk"]
+[ext_resource type="Texture2D" uid="uid://c7ntqbdey677f" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0009.png" id="454_8nna1"]
+[ext_resource type="PackedScene" uid="uid://bg4805gow586o" path="res://scenes/components/EnemySFXPlayer.tscn" id="454_ju0hf"]
+[ext_resource type="Texture2D" uid="uid://72pdb0g21ldo" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0010.png" id="455_8xvpu"]
+[ext_resource type="Texture2D" uid="uid://4l8ttcaigiu6" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0011.png" id="456_80bcy"]
+[ext_resource type="Texture2D" uid="uid://bh1cgxfun8dfn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0012.png" id="457_x1wct"]
+[ext_resource type="Texture2D" uid="uid://cyotuhusgs8ca" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0013.png" id="458_x15gp"]
+[ext_resource type="Texture2D" uid="uid://cp8anbcvlhm3j" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0014.png" id="459_7fysn"]
+[ext_resource type="Texture2D" uid="uid://c67gfhj8bnbeo" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0015.png" id="460_lsirm"]
+[ext_resource type="Texture2D" uid="uid://ccipqxtk36hq0" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0016.png" id="461_07p76"]
+[ext_resource type="Texture2D" uid="uid://cx7v1f7x3nmjq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0017.png" id="462_yhho6"]
+[ext_resource type="Texture2D" uid="uid://ds2svg2nkbp83" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0018.png" id="463_qhq1y"]
+[ext_resource type="Texture2D" uid="uid://dxo1ho06ef0w" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0019.png" id="464_f0imi"]
+[ext_resource type="Texture2D" uid="uid://dwuranybopksf" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/270/Fly_270_0020.png" id="465_konts"]
+[ext_resource type="Texture2D" uid="uid://dvoy2p7dwljxi" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0001.png" id="466_oifdy"]
+[ext_resource type="Texture2D" uid="uid://wtu4qkhgn467" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0002.png" id="467_cmuer"]
+[ext_resource type="Texture2D" uid="uid://qb4b6lchs5uq" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0003.png" id="468_6xxrr"]
+[ext_resource type="Texture2D" uid="uid://bp6sdynr6fpim" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0004.png" id="469_cuwhm"]
+[ext_resource type="Texture2D" uid="uid://bdf4ko7c05m8c" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0005.png" id="470_fjgqk"]
+[ext_resource type="Texture2D" uid="uid://1jacmfcghoc2" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0006.png" id="471_7vy27"]
+[ext_resource type="Texture2D" uid="uid://cyfc7lyi4gblm" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0007.png" id="472_6e1eg"]
+[ext_resource type="Texture2D" uid="uid://bii41pksbyhcn" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0008.png" id="473_87ljg"]
+[ext_resource type="Texture2D" uid="uid://de5mp1exrw0uu" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0009.png" id="474_te75s"]
+[ext_resource type="Texture2D" uid="uid://dq4fnrjamdrnd" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0010.png" id="475_icsq0"]
+[ext_resource type="Texture2D" uid="uid://dy0bii5y7g7vs" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0011.png" id="476_l2oyl"]
+[ext_resource type="Texture2D" uid="uid://c2x1edk8r1akt" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0012.png" id="477_y0vh4"]
+[ext_resource type="Texture2D" uid="uid://hv01bfovkh1a" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0013.png" id="478_lba4a"]
+[ext_resource type="Texture2D" uid="uid://b0mqhp5jx4uyu" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0014.png" id="479_xbfbi"]
+[ext_resource type="Texture2D" uid="uid://b2qwg7j88b2qu" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0015.png" id="480_38otv"]
+[ext_resource type="Texture2D" uid="uid://yw5rcuucgjrv" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0016.png" id="481_nyyct"]
+[ext_resource type="Texture2D" uid="uid://bjvaykovxxf4g" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0017.png" id="482_rnk14"]
+[ext_resource type="Texture2D" uid="uid://lrhfjmajkp0p" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0018.png" id="483_xuuwf"]
+[ext_resource type="Texture2D" uid="uid://bbwqvxchxddya" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0019.png" id="484_4tuha"]
+[ext_resource type="Texture2D" uid="uid://c7xwwhw540blr" path="res://scenes/entities/enemies/basic/killer_butterfly/assets/animations/Run/315/Fly_315_0020.png" id="485_5mky3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_acjdx"]
+radius = 160.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vfblx"]
+radius = 120.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pe1c3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4xrm5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_qco2m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_pd2tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_iye3w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_pirjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_mc7o2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1tndd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_w88p2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_txldf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_mwdij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dkqwr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_sgmaf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_d8muo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_1xjhx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_5hv51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ihefx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_c5q1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_mek8n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_vr1gx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_t1851")
+}],
+"loop": false,
+"name": &"dead_0",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("26_q7rgj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_2fllq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_i4f4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_2f7gd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_i37wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_mctht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_sqr50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_0ykjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_tcvip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_f5imc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_04dvx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_leg3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_3epkw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_0f6bf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_73oan")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_2bd3y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_nqtec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_og1jr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_1yqrv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_orokl")
+}],
+"loop": false,
+"name": &"dead_1",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("46_71xfu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ccwwi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_j6hk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_hljmw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_yce61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_x5rb1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_emlxy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_nc5bu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_kr5hs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_ugkpp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_dvlml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_4tvf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_7lces")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_qnp6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_gk2na")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_4ujmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_x1pwd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_qhl00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_o78ta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_0u382")
+}],
+"loop": false,
+"name": &"dead_2",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("66_p0sqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_00fx2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_8eg26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_qlvmb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_kpt8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_yp37l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_e3ci8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_aisjq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_1kpoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_fkfpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_450tu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_a2syb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_r6kjg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_gsdx8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_xwby6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_4yqc2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_0v4dn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_muq0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_pkndv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_wllgb")
+}],
+"loop": false,
+"name": &"dead_3",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("86_kpyp2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_lr6qf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_muxxm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_mxmo5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_huo0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_dwnlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_l824g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_na1fo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_q8pm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_sj60a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_sfs84")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_okyf3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_n8wuf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_mwk57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_meb27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_2oftu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_j62tg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_suf3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_otnvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_3lot8")
+}],
+"loop": false,
+"name": &"dead_4",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("106_nujko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_vr6x7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_51rg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_mkaq2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_addie")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_jyfcw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_qfiai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_exkf6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_ehij4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_4nkac")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_g15hq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_dwat0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_y3mnp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_5nhk0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_jj1im")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_7iyuv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_11qo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_py768")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_0atu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_3h3jh")
+}],
+"loop": false,
+"name": &"dead_5",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("126_onkbh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_gjyp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_7twg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_rwahv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_08jkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_ku8js")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_g74k8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_82vb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_4it5m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_s885k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_5n55o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_3t85g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_55ix7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_8kngi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_4kgnc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_wuhtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_jjcvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_840us")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_vxyyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_umj8h")
+}],
+"loop": false,
+"name": &"dead_6",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("146_vi335")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_8meqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_5nojj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_yulce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_aaem7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_7kc6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_yg3sd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_wyxnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_01beh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_30mfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_h55o6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_vi6o0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_uft8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_edj8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_vacw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_e2hes")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_6kfak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_kpdx1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_2nf2f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_7k858")
+}],
+"loop": false,
+"name": &"dead_7",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("166_x4ca8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_tn4se")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_ah1p4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_5jqem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_1sg0r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_sl1yb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_t6gne")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_f8lk8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_psouk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_th4vb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_75do3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_kw3hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_j2s0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_7h3hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_cv45a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_35gga")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_ybbwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_w4bb8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_eukwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_qbf2u")
+}],
+"loop": false,
+"name": &"hurt_0",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("186_86415")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_tavam")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_lsfdn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_4fch2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_uejpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_jb3c2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_1neu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_6i1ht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_a6afd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_5wi8x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_fwk4n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_1qefg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_1icj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_tk8qy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_if2wn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_75i2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_x3jas")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_ocvux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_jhq27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_cdg0m")
+}],
+"loop": false,
+"name": &"hurt_1",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("206_o6yn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_j44ts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_jaymd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_ve5pr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_j8uph")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_14rvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_0n0gh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_7gxtk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_ne8ve")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_hwq72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_7bfwe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_d0v1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_y5638")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_0bori")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_vaasn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_wknqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_x4jed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_bycnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_of4ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_33gpb")
+}],
+"loop": false,
+"name": &"hurt_2",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("226_v7rgi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_osu2x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_jse1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_cf7yj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_6so6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_08n00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_2vo6m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_wtww7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_w8glf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_ktwnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_u065t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_7ujsw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_2scy3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_jutq4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_lrddl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_3ptti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_vfkag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_nc0u6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_i2ykn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_stp2s")
+}],
+"loop": false,
+"name": &"hurt_3",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("246_yoy5o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_slwt8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("248_euahx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("249_3dsk5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("250_4ie4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("251_836bo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("252_muo8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("253_2xr6k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("254_udosi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("255_fxa3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("256_281d0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("257_qqewr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("258_nv4sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("259_0naqa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("260_ioojg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("261_byib2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("262_dvh12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("263_811jy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("264_5pdjp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("265_2864d")
+}],
+"loop": false,
+"name": &"hurt_4",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("266_g6l43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("267_bou7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("268_mye0i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("269_8vdq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("270_kjly5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("271_his7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("272_ne0r2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("273_jwj53")
+}, {
+"duration": 1.0,
+"texture": ExtResource("274_pe34d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("275_pj7eu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("276_nljkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("277_umdqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("278_aswdl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("279_fyxs1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("280_ayqf8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("281_e78pg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("282_d5g7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("283_l2n1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("284_d0214")
+}, {
+"duration": 1.0,
+"texture": ExtResource("285_yy5kn")
+}],
+"loop": false,
+"name": &"hurt_5",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("286_2tbhc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("287_uagvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("288_fugi2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("289_dnhym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("290_g5wcv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("291_endtx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("292_wtktd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("293_wm7fc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("294_td5hk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("295_mt0yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("296_2l6gk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("297_t3gll")
+}, {
+"duration": 1.0,
+"texture": ExtResource("298_4ph3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("299_voyk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("300_i5fpr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("301_lkbxc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("302_gu82m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("303_7k808")
+}, {
+"duration": 1.0,
+"texture": ExtResource("304_afry5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("305_wccs4")
+}],
+"loop": false,
+"name": &"hurt_6",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("306_n01lo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("307_xh7sm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("308_oxytl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("309_quqv3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("310_f1y1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_t1vdj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("312_smf12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("313_p8gce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("314_oqwyy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("315_eocyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("316_rl0n4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("317_3me1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("318_16uca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("319_01wp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("320_7hsae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("321_3imfo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("322_e41t8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("323_b26wn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("324_achib")
+}, {
+"duration": 1.0,
+"texture": ExtResource("325_cbfua")
+}],
+"loop": false,
+"name": &"hurt_7",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("326_iaosx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("327_xl6fc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("328_r4dnd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("329_xfsg6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("330_trtg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("331_dje50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("332_pn2r1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("333_41xbp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("334_v6ow7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("335_mt4bs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("336_j1ti4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("337_6lfs5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("338_sfxm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("339_4q4kn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("340_pogrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("341_n43nw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("342_ts0pg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("343_7g834")
+}, {
+"duration": 1.0,
+"texture": ExtResource("344_imhg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("345_w1g2n")
+}],
+"loop": true,
+"name": &"run_0",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("346_01ddr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_7opv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_kfg5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_sxm75")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_goywp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_x1col")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_45c52")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_fbx6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("354_1xjtl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("355_52dcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("356_56jw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("357_gq58d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("358_wl5ci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("359_tuahf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("360_sh1yu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("361_bhl4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_u5tnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("363_x2adx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("364_pexbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("365_ix6be")
+}],
+"loop": true,
+"name": &"run_1",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("366_r3bmn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("367_smenq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("368_s4cky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("369_lg0ra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("370_2gtxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("371_nhv5g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("372_ak2li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("373_0ar3v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("374_r7hab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("375_b8nsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("376_gjylc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("377_uev3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("378_f42wp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("379_nwlxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("380_prys4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("381_arsih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("382_jewvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("383_3c8je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("384_b06fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("385_qqh0y")
+}],
+"loop": true,
+"name": &"run_2",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("386_vwidq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("387_1b4wp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("388_23o35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("389_ooj2l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("390_ks5bw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("391_dcj16")
+}, {
+"duration": 1.0,
+"texture": ExtResource("392_6cb7d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("393_xrh0p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("394_18l1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("395_1k1ly")
+}, {
+"duration": 1.0,
+"texture": ExtResource("396_vdfry")
+}, {
+"duration": 1.0,
+"texture": ExtResource("397_230iw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("398_s6nyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("399_jo8y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("400_i72cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("401_fxl73")
+}, {
+"duration": 1.0,
+"texture": ExtResource("402_wa5ey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("403_fbx22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("404_hfpmq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("405_r0mrx")
+}],
+"loop": true,
+"name": &"run_3",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("406_2chjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("407_p8et1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("408_ajya1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("409_5w6kq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("410_ylquu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("411_ixyb2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("412_f3ljt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("413_pvgt0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("414_bwsxx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("415_eevq3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("416_vwukk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("417_uhxrl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("418_a430n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("419_7ucih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("420_22n48")
+}, {
+"duration": 1.0,
+"texture": ExtResource("421_v10yk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("422_spgg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("423_r65aw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("424_fbgkv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("425_xbjyh")
+}],
+"loop": true,
+"name": &"run_4",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("426_kxnr2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("427_76dtn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("428_onix4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("429_8211s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("430_jr3bn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("431_ion7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("432_g0jkj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("433_8vuta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("434_tsrdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("435_vt8s7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("436_3f77u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("437_amfhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("438_lak0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("439_s42bw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("440_g6wen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("441_d0hxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("442_t8q6e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("443_5gt5q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("444_phbqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("445_3nyl3")
+}],
+"loop": true,
+"name": &"run_5",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("446_a74g0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("447_p2ubp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("448_pgb2d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("449_0h03i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("450_p6rc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("451_7vtob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("452_ci3w6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("453_jt7qk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("454_8nna1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("455_8xvpu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("456_80bcy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("457_x1wct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("458_x15gp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("459_7fysn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("460_lsirm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("461_07p76")
+}, {
+"duration": 1.0,
+"texture": ExtResource("462_yhho6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("463_qhq1y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("464_f0imi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("465_konts")
+}],
+"loop": true,
+"name": &"run_6",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("466_oifdy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("467_cmuer")
+}, {
+"duration": 1.0,
+"texture": ExtResource("468_6xxrr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("469_cuwhm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("470_fjgqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("471_7vy27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("472_6e1eg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("473_87ljg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("474_te75s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("475_icsq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("476_l2oyl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("477_y0vh4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("478_lba4a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("479_xbfbi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("480_38otv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("481_nyyct")
+}, {
+"duration": 1.0,
+"texture": ExtResource("482_rnk14")
+}, {
+"duration": 1.0,
+"texture": ExtResource("483_xuuwf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("484_4tuha")
+}, {
+"duration": 1.0,
+"texture": ExtResource("485_5mky3")
+}],
+"loop": true,
+"name": &"run_7",
+"speed": 16.0
+}]
+
+[node name="KillerButterfly" type="CharacterBody2D" groups=["Enemies Group"]]
+z_index = 2
+scale = Vector2(0.5, 0.5)
+collision_layer = 8
+collision_mask = 9
+motion_mode = 1
+script = ExtResource("1_0wgpd")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_6j3k4")]
+
+[node name="ExperienceOrbDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_bm1ni")]
+health_component = NodePath("../HealthComponent")
+exp_vial_scene = ExtResource("4_fw6cn")
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("5_pk2qo")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(-2.66667, 58.6667)
+shape = SubResource("CircleShape2D_acjdx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1.33333, 61.3333)
+shape = SubResource("CircleShape2D_vfblx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pe1c3")
+animation = &"hurt_7"
+frame = 19
+frame_progress = 1.0
+
+[node name="EnemySFXPlayer" parent="." instance=ExtResource("454_ju0hf")]

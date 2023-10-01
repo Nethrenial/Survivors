@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=2 format=3 uid="uid://327ti8kkalhv"]
+
+[ext_resource type="Script" path="res://resources/upgrades/ability_upgrade.gd" id="1_qxx4e"]
+
+[resource]
+script = ExtResource("1_qxx4e")
+id = "arrow_count_rare"
+category = 1
+max_quantity = 4
+name = "Arrow Count (Rare)"
+description = "Increment the arrow count by 2.Maximum arrow count is 8 (including the initial 1).
+
+"
+texture = "res://scenes/abilities/arrow_ability/assets/arrow.png"

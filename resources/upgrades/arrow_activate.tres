@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="AbilityActivate" load_steps=3 format=3 uid="uid://djm203mtx1qv8"]
+
+[ext_resource type="PackedScene" uid="uid://ce3jxhob3fyjr" path="res://scenes/abilities/arrow_ability/arrow_ability_controller.tscn" id="1_4fm02"]
+[ext_resource type="Script" path="res://resources/upgrades/ability_activate.gd" id="2_8crjh"]
+
+[resource]
+script = ExtResource("2_8crjh")
+ability_controller_scene = ExtResource("1_4fm02")
+id = "arrow_activate"
+category = 0
+max_quantity = 1
+name = "Shooting Arrow"
+description = "Periodically shoots an arrow in one of the 8 standard directions
+
+
+
+"
+texture = "res://scenes/abilities/arrow_ability/assets/arrow.png"

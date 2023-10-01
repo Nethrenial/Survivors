@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=2 format=3 uid="uid://csgey8bv7whj1"]
+
+[ext_resource type="Script" path="res://resources/meta-upgrades/meta-upgrade.gd" id="1_s57ql"]
+
+[resource]
+script = ExtResource("1_s57ql")
+id = "increase_luck"
+max_quantity = 10
+initial_upgrade_cost = 100
+upgrade_cost_increment = 100
+title = "St. Christopher Medals"
+description = "Each upgrade will increases your exp vial drop chance by 20%."
+texture = "res://resources/meta-upgrades/assets/st_christopher_medal_icon-min.png"

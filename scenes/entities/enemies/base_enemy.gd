@@ -21,5 +21,5 @@ func _ready():
 func on_hit(ability: BaseAbility):
 	if ability is SwordAbility:
 		enemy_sfx_player.play("sword_hit")
-	elif ability is AxeAbility:
+	elif ability is WarAxeAbility:
 		enemy_sfx_player.play("axe_hit")		

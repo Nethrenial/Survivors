@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dxcp4t2kr2mnx"]
+
+[ext_resource type="Script" path="res://scenes/abilities/arrow_ability/arrow-ability.gd" id="1_gfhbt"]
+[ext_resource type="Texture2D" uid="uid://bgx7wuh5teqao" path="res://scenes/abilities/arrow_ability/assets/arrow.png" id="2_lktas"]
+[ext_resource type="Script" path="res://scenes/components/hitbox_component.gd" id="3_ucuad"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ptt41"]
+size = Vector2(64, 7)
+
+[node name="ArrowAbility" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_gfhbt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_lktas")
+
+[node name="HitboxComponent" type="Area2D" parent="."]
+visible = false
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("3_ucuad")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxComponent"]
+shape = SubResource("RectangleShape2D_ptt41")

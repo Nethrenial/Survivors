@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=2 format=3 uid="uid://bh2g4ohxrturu"]
+
+[ext_resource type="Script" path="res://resources/meta-upgrades/meta-upgrade.gd" id="1_y514j"]
+
+[resource]
+script = ExtResource("1_y514j")
+id = "increase_movement_speed"
+max_quantity = 10
+initial_upgrade_cost = 100
+upgrade_cost_increment = 100
+title = "Hermes's Shoes"
+description = "Each upgrade will increases your base movement speed by 10%."
+texture = "res://resources/meta-upgrades/assets/hermes_shoes_icon-min.png"

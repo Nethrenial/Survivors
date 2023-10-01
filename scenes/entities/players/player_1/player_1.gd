@@ -15,9 +15,14 @@ var calculated_max_speed : float = 0
 @onready var health_bar = $HealthBar as ProgressBar
 @onready var abilities = $Abilities
 
+var base_max_health = 100
+var base_max_speed = 200
+
 func _ready():
-	max_health = 100
-	max_speed = 250
+	max_health = base_max_health + (MetaProgressionManager.get_current_upgrade_count("increase_health") * 0.1 *base_max_health)
+	print("Player Max health is ", max_health)
+	max_speed = base_max_speed + (MetaProgressionManager.get_current_upgrade_count("increase_movement_speed") * 0.1 * base_max_speed)
+	print("Player Speed is ", max_speed)	
 	calculated_max_speed = max_speed
 	current_health = max_health
 	GameEvents.ability_upgrades_added.connect(on_ability_upgrade_added)

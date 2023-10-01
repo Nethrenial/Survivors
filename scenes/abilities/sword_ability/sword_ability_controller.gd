@@ -79,5 +79,5 @@ func on_ability_upgrade_added(upgrade: Upgrade, current_upgrades: Dictionary):
 			percent_increase += current_upgrades["sword_damage_epic"]["quantity"] * 0.3
 			
 		calculated_additional_damage_percent = base_additional_damage_percent * (1 + percent_increase)
-		print("New damage percent is ", calculated_additional_damage_percent)
+#		print("New damage percent is ", calculated_additional_damage_percent)
 		

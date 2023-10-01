@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://b0tlr8x168vql"]
+
+[ext_resource type="Script" path="res://scenes/ui/meta_upgrade_cell.gd" id="1_5ekuc"]
+
+[node name="MetaUpgradeCell" type="Panel"]
+custom_minimum_size = Vector2(16, 16)
+offset_right = 16.0
+offset_bottom = 16.0
+script = ExtResource("1_5ekuc")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.705882, 0.486275, 0.219608, 1)

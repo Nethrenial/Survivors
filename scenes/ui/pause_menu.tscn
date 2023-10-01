@@ -1,0 +1,79 @@
+[gd_scene load_steps=5 format=3 uid="uid://ix7vjrbcs03k"]
+
+[ext_resource type="Script" path="res://scenes/ui/pause_menu.gd" id="1_0fqfe"]
+[ext_resource type="PackedScene" uid="uid://du25dnu08rmkj" path="res://scenes/ui/custom_buttons/resume_game_button.tscn" id="2_ebvrg"]
+[ext_resource type="PackedScene" uid="uid://dbus6k0g0mpgm" path="res://scenes/ui/custom_buttons/options_button.tscn" id="5_21ah7"]
+[ext_resource type="PackedScene" uid="uid://sjpm4665esra" path="res://scenes/ui/custom_buttons/quit_to_menu_button.tscn" id="5_euyqq"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_0fqfe")
+
+[node name="BackgroundRect" type="ColorRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.286275)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 100
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 100
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/MarginContainer/PanelContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 50
+theme_override_constants/margin_top = 50
+theme_override_constants/margin_right = 50
+theme_override_constants/margin_bottom = 50
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 2
+theme_override_constants/separation = 32
+
+[node name="Label" type="Label" parent="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Game is Paused"
+horizontal_alignment = 1
+
+[node name="GameActionButtons" type="VBoxContainer" parent="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="ResumeGameButton" parent="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/GameActionButtons" instance=ExtResource("2_ebvrg")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="OptionsButton" parent="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/GameActionButtons" instance=ExtResource("5_21ah7")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="QuitToMenuButton" parent="MarginContainer/MarginContainer/PanelContainer/MarginContainer/VBoxContainer/GameActionButtons" instance=ExtResource("5_euyqq")]
+unique_name_in_owner = true
+layout_mode = 2

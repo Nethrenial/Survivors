@@ -8,57 +8,56 @@ var upgrade_pool: WeightedTable = WeightedTable.new()
 
 
 var axe_activate_upgrade = preload("res://resources/upgrades/axe_activate.tres")
-var axe_damage_common_upgrade = preload("res://resources/upgrades/axe_damage_common.tres")
-var axe_damage_rare_upgrade = preload("res://resources/upgrades/axe_damage_rare.tres")
-var axe_damage_epic_upgrade = preload("res://resources/upgrades/axe_damage_epic.tres")
-var axe_rate_common_upgrade = preload("res://resources/upgrades/axe_rate_common.tres")
-var axe_rate_rare_upgrade = preload("res://resources/upgrades/axe_rate_rare.tres")
-var axe_rate_epic_upgrade = preload("res://resources/upgrades/axe_rate_epic.tres")
-
-var sword_rate_common_upgrade = preload("res://resources/upgrades/sword_rate_common.tres")
-var sword_rate_rare_upgrade = preload("res://resources/upgrades/sword_rate_rare.tres")
-var sword_rate_epic_upgrade = preload("res://resources/upgrades/sword_rate_epic.tres")
-
-var sword_damage_common_upgrade = preload("res://resources/upgrades/sword_damage_common.tres")
-var sword_damage_rare_upgrade = preload("res://resources/upgrades/sword_damage_rare.tres")
-var sword_damage_epic_upgrade = preload("res://resources/upgrades/sword_damage_epic.tres")
-
-var player_move_speed_common_upgrade = preload("res://resources/upgrades/player_move_speed_common.tres")
-var player_move_speed_rare_upgrade = preload("res://resources/upgrades/player_move_speed_rare.tres")
-var player_move_speed_epic_upgrade = preload("res://resources/upgrades/player_move_speed_epic.tres")
-
+var arrow_activate_upgrade = preload("res://resources/upgrades/arrow_activate.tres")
 
 
 func _ready():
+		
+	#  New ability activation upgrades
 	upgrade_pool.add_item(axe_activate_upgrade, 10)
-##
-#	upgrade_pool.add_item(sword_rate_common_upgrade, 10)
-#	upgrade_pool.add_item(sword_rate_rare_upgrade, 10)
-#	upgrade_pool.add_item(sword_rate_epic_upgrade, 10)	
-#	upgrade_pool.add_item(sword_damage_common_upgrade, 10)
-#	upgrade_pool.add_item(sword_damage_rare_upgrade, 10)
-#	upgrade_pool.add_item(sword_damage_epic_upgrade, 10)
+	upgrade_pool.add_item(arrow_activate_upgrade, 10)
+
 	
-#	upgrade_pool.add_item(player_move_speed_common_upgrade, 10)
-#	upgrade_pool.add_item(player_move_speed_rare_upgrade, 10)
-#	upgrade_pool.add_item(player_move_speed_epic_upgrade, 10)
+	# Upgrades for the default skill
+	upgrade_pool.add_item(load("res://resources/upgrades/sword_rate_common.tres"), 10)
+	upgrade_pool.add_item(load("res://resources/upgrades/sword_rate_rare.tres"), 10)
+	upgrade_pool.add_item(load("res://resources/upgrades/sword_rate_epic.tres"), 10)	
+	upgrade_pool.add_item(load("res://resources/upgrades/sword_damage_common.tres"), 10)
+	upgrade_pool.add_item(load("res://resources/upgrades/sword_damage_rare.tres"), 10)
+	upgrade_pool.add_item(load("res://resources/upgrades/sword_damage_epic.tres"), 10)
+
+	# Adding player upgrades
+	upgrade_pool.add_item(load("res://resources/upgrades/player_move_speed_common.tres"), 30)
+	upgrade_pool.add_item(load("res://resources/upgrades/player_move_speed_rare.tres"), 20)
+	upgrade_pool.add_item(load("res://resources/upgrades/player_move_speed_epic.tres"), 10)
 	
-	print("Upgrades pool", upgrade_pool)
-	
-	
+	# When a new level is reached
 	experience_manager.level_up.connect(on_level_up)
-#	ingame_upgrade_screen.upgrade_selected.connect(apply_upgrade)
 	
 
 
 func update_upgrade_pool(chosen_upgrade: Upgrade):
 	if chosen_upgrade.id == axe_activate_upgrade.id:
-		upgrade_pool.add_item(axe_damage_common_upgrade, 30)
-		upgrade_pool.add_item(axe_damage_rare_upgrade, 20)
-		upgrade_pool.add_item(axe_damage_epic_upgrade, 10)
-		upgrade_pool.add_item(axe_rate_common_upgrade, 30)
-		upgrade_pool.add_item(axe_rate_rare_upgrade, 20)
-		upgrade_pool.add_item(axe_rate_epic_upgrade, 10)
+		upgrade_pool.add_item(load("res://resources/upgrades/axe_damage_common.tres"), 30)
+		upgrade_pool.add_item(load("res://resources/upgrades/axe_damage_rare.tres"), 20)
+		upgrade_pool.add_item(load("res://resources/upgrades/axe_damage_epic.tres"), 10)
+		upgrade_pool.add_item(load("res://resources/upgrades/axe_rate_common.tres"), 30)
+		upgrade_pool.add_item(load("res://resources/upgrades/axe_rate_rare.tres"), 20)
+		upgrade_pool.add_item(load("res://resources/upgrades/axe_rate_epic.tres"), 10)
+	elif chosen_upgrade.id == arrow_activate_upgrade.id:
+		upgrade_pool.add_item(load("res://resources/upgrades/arrow_count_common.tres"), 30)
+		upgrade_pool.add_item(load("res://resources/upgrades/arrow_count_rare.tres"), 20)
+		upgrade_pool.add_item(load("res://resources/upgrades/arrow_count_epic.tres"), 10)
+		upgrade_pool.add_item(load("res://resources/upgrades/arrow_rate_common.tres"), 30)
+		upgrade_pool.add_item(load("res://resources/upgrades/arrow_rate_rare.tres"), 20)
+		upgrade_pool.add_item(load("res://resources/upgrades/arrow_rate_epic.tres"), 10)
+		upgrade_pool.add_item(load("res://resources/upgrades/arrow_damage_common.tres"), 30)
+		upgrade_pool.add_item(load("res://resources/upgrades/arrow_damage_rare.tres"), 20)
+		upgrade_pool.add_item(load("res://resources/upgrades/arrow_damage_epic.tres"), 10)
+		upgrade_pool.add_item(load("res://resources/upgrades/arrow_range_common.tres"), 30)
+		upgrade_pool.add_item(load("res://resources/upgrades/arrow_range_rare.tres"), 20)
+		upgrade_pool.add_item(load("res://resources/upgrades/arrow_range_epic.tres"), 10)
+		
 	
 	
 func apply_upgrade(upgrade: Upgrade):

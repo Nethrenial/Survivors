@@ -1,6 +1,5 @@
 extends Node
 
-
 @export var axe_ability_scene: PackedScene
 
 
@@ -28,12 +27,12 @@ func on_timer_timeout():
 		return
 	var axe_instance = axe_ability_scene.instantiate() as Node2D
 	foreground.add_child(axe_instance)
-	(axe_instance as AxeAbility).additional_damage_percent = calculated_additional_damage_percent
+	(axe_instance as BaseAbility).additional_damage_percent = calculated_additional_damage_percent
 	axe_instance.global_position = player.global_position
 
 
 func on_ability_upgrade_added(upgrade: Upgrade, current_upgrades: Dictionary): 
-	print(upgrade.id)
+#	print(upgrade.id)
 	if upgrade.id.begins_with("axe_rate"):
 		var percent_reduction = 0.0
 		if "axe_rate_common" in current_upgrades and "quantity" in current_upgrades["axe_rate_common"]:
@@ -59,5 +58,5 @@ func on_ability_upgrade_added(upgrade: Upgrade, current_upgrades: Dictionary):
 			percent_increase += current_upgrades["axe_damage_epic"]["quantity"] * 0.3
 			
 		calculated_additional_damage_percent = base_additional_damage_percent * (1 + percent_increase)
-		print("New damage percent is ", calculated_additional_damage_percent)
+#		print("New damage percent is ", calculated_additional_damage_percent)
 		

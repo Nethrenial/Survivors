@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bscdw00dke3m0" path="res://scenes/ui/custom_buttons/about_game_button.tscn" id="5_ay47s"]
 
 [node name="MainMenu" type="CanvasLayer"]
+process_mode = 3
 script = ExtResource("1_o5ogj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -74,6 +75,7 @@ offset_bottom = 92.0
 
 [node name="AboutGameButton" parent="." instance=ExtResource("5_ay47s")]
 unique_name_in_owner = true
+visible = false
 offset_left = 32.0
 offset_top = 628.0
 offset_right = 207.0

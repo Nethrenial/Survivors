@@ -1,0 +1,1961 @@
+[gd_scene load_steps=458 format=3 uid="uid://pfvwrov2bpsa"]
+
+[ext_resource type="Script" path="res://scenes/entities/enemies/basic/reptile_warrior/reptile_warrior.gd" id="1_v8wkd"]
+[ext_resource type="PackedScene" uid="uid://ccmmkgbkxgne2" path="res://scenes/components/health_component.tscn" id="2_2jwsu"]
+[ext_resource type="PackedScene" uid="uid://va1hn2sykhi2" path="res://scenes/components/exp_vial_drop_component.tscn" id="3_b63ca"]
+[ext_resource type="PackedScene" uid="uid://dgqyl15dn51co" path="res://scenes/game_objects/exp_vial/exp_vial.tscn" id="4_agwqw"]
+[ext_resource type="PackedScene" uid="uid://nr3n0b22ime8" path="res://scenes/components/hurt_box_component.tscn" id="5_y5ioh"]
+[ext_resource type="Texture2D" uid="uid://cuqovyvdj0u5w" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0001.png" id="6_t3cby"]
+[ext_resource type="Texture2D" uid="uid://dcw7ra1juiyk5" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0002.png" id="7_s8nnq"]
+[ext_resource type="Texture2D" uid="uid://bhldqr4b4wg0f" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0003.png" id="8_bsmxq"]
+[ext_resource type="Texture2D" uid="uid://b8ut5j4vkphc7" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0004.png" id="9_h0rlb"]
+[ext_resource type="Texture2D" uid="uid://10u1eb4gqahg" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0005.png" id="10_cyfow"]
+[ext_resource type="Texture2D" uid="uid://cfym1o3rqkq1v" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0006.png" id="11_buxgl"]
+[ext_resource type="Texture2D" uid="uid://b5h0il8l8lchd" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0007.png" id="12_s3sx7"]
+[ext_resource type="Texture2D" uid="uid://c3x6ncgie1efi" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0008.png" id="13_m3qjw"]
+[ext_resource type="Texture2D" uid="uid://cs5at5etqch5l" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0009.png" id="14_1v2wi"]
+[ext_resource type="Texture2D" uid="uid://bpf12hogliaj4" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0010.png" id="15_5w685"]
+[ext_resource type="Texture2D" uid="uid://bc5bywe5sxth1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0011.png" id="16_kv3ka"]
+[ext_resource type="Texture2D" uid="uid://cre47alv1nstw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0012.png" id="17_onbrw"]
+[ext_resource type="Texture2D" uid="uid://bmd2peflp83be" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0013.png" id="18_i0ifm"]
+[ext_resource type="Texture2D" uid="uid://dm5lxdfxsujjl" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0014.png" id="19_6rip5"]
+[ext_resource type="Texture2D" uid="uid://bxsgakyvpr21q" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0015.png" id="20_cl22t"]
+[ext_resource type="Texture2D" uid="uid://dh5cacfhpim60" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/000/Death_000_0016.png" id="21_m43y0"]
+[ext_resource type="Texture2D" uid="uid://bobpk7ylao120" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0001.png" id="22_ctpf4"]
+[ext_resource type="Texture2D" uid="uid://cuntutcoxgr37" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0002.png" id="23_3pge6"]
+[ext_resource type="Texture2D" uid="uid://v4hvk8qy13bt" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0003.png" id="24_w60et"]
+[ext_resource type="Texture2D" uid="uid://63qlw8shkg53" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0004.png" id="25_4djge"]
+[ext_resource type="Texture2D" uid="uid://84b4etmakvnc" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0005.png" id="26_anmw1"]
+[ext_resource type="Texture2D" uid="uid://cxf63ej3rvv28" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0006.png" id="27_vi48j"]
+[ext_resource type="Texture2D" uid="uid://wpifl8e5d7pr" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0007.png" id="28_k6lpq"]
+[ext_resource type="Texture2D" uid="uid://chy4u7cf4jkko" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0008.png" id="29_u2uup"]
+[ext_resource type="Texture2D" uid="uid://cimlewh0ro5tm" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0009.png" id="30_lib1t"]
+[ext_resource type="Texture2D" uid="uid://bhne8q3o5lrq0" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0010.png" id="31_7palr"]
+[ext_resource type="Texture2D" uid="uid://bxcp62hva6p42" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0011.png" id="32_2jmf7"]
+[ext_resource type="Texture2D" uid="uid://060fumw885fs" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0012.png" id="33_rllhg"]
+[ext_resource type="Texture2D" uid="uid://bunwbagjx83cx" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0013.png" id="34_ch3ay"]
+[ext_resource type="Texture2D" uid="uid://ca30b7ohrw6h8" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0014.png" id="35_stj6v"]
+[ext_resource type="Texture2D" uid="uid://b1tyuuv8qpxa4" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0015.png" id="36_8kur4"]
+[ext_resource type="Texture2D" uid="uid://dtgmjvc8uo85y" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/045/Death_045_0016.png" id="37_mi1ea"]
+[ext_resource type="Texture2D" uid="uid://cpydcbbrqgh2g" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0001.png" id="38_c2qpv"]
+[ext_resource type="Texture2D" uid="uid://wcwdck85voxe" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0002.png" id="39_nc7p2"]
+[ext_resource type="Texture2D" uid="uid://deftkux5jqf7s" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0003.png" id="40_iu8xy"]
+[ext_resource type="Texture2D" uid="uid://ls47p8nxb1to" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0004.png" id="41_n6psu"]
+[ext_resource type="Texture2D" uid="uid://dyhqryke5fwnc" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0005.png" id="42_x47kb"]
+[ext_resource type="Texture2D" uid="uid://uawrweymequk" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0006.png" id="43_oalt6"]
+[ext_resource type="Texture2D" uid="uid://deqke3podnt3u" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0007.png" id="44_o74li"]
+[ext_resource type="Texture2D" uid="uid://buu06g3e72lvh" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0008.png" id="45_fms12"]
+[ext_resource type="Texture2D" uid="uid://j5ouxv73y27d" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0009.png" id="46_bsfue"]
+[ext_resource type="Texture2D" uid="uid://ca63rs87sh2lc" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0010.png" id="47_65v1o"]
+[ext_resource type="Texture2D" uid="uid://bjiglwu6l2clb" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0011.png" id="48_gk47a"]
+[ext_resource type="Texture2D" uid="uid://clrc3opw6n3kq" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0012.png" id="49_4e6ok"]
+[ext_resource type="Texture2D" uid="uid://bfd3mnuhyu5v7" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0013.png" id="50_tekfh"]
+[ext_resource type="Texture2D" uid="uid://dkcxnkowydrf3" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0014.png" id="51_dndar"]
+[ext_resource type="Texture2D" uid="uid://cb0gqakuatbvi" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0015.png" id="52_0vvvi"]
+[ext_resource type="Texture2D" uid="uid://cb8cyda0wpy16" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/090/Death_090_0016.png" id="53_3ra71"]
+[ext_resource type="Texture2D" uid="uid://cos3am1ay8a7p" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0001.png" id="54_x8ms6"]
+[ext_resource type="Texture2D" uid="uid://dkem6kdawqa5y" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0002.png" id="55_iponh"]
+[ext_resource type="Texture2D" uid="uid://d08bii1hg6sg6" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0003.png" id="56_wes1c"]
+[ext_resource type="Texture2D" uid="uid://dtlxk8jxawkil" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0004.png" id="57_7ooub"]
+[ext_resource type="Texture2D" uid="uid://crj6midf1ni0u" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0005.png" id="58_b4q27"]
+[ext_resource type="Texture2D" uid="uid://dvjs6j4foxab2" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0006.png" id="59_xojff"]
+[ext_resource type="Texture2D" uid="uid://df2307p065q5t" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0007.png" id="60_mylsc"]
+[ext_resource type="Texture2D" uid="uid://cdnt6ffos4r8u" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0008.png" id="61_yvyyc"]
+[ext_resource type="Texture2D" uid="uid://cmac3hv75mjff" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0009.png" id="62_phlug"]
+[ext_resource type="Texture2D" uid="uid://dsb4yqysdak5v" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0010.png" id="63_idbhd"]
+[ext_resource type="Texture2D" uid="uid://drgeh48d1kppe" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0011.png" id="64_jaca8"]
+[ext_resource type="Texture2D" uid="uid://c87om48bbeg3a" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0012.png" id="65_qs8y0"]
+[ext_resource type="Texture2D" uid="uid://15sex26rnt15" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0013.png" id="66_t62c1"]
+[ext_resource type="Texture2D" uid="uid://cq68dmulof1o0" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0014.png" id="67_cqclo"]
+[ext_resource type="Texture2D" uid="uid://ewqkkehhvmwp" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0015.png" id="68_onp1k"]
+[ext_resource type="Texture2D" uid="uid://dguwmsji13hs7" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/135/Death_135_0016.png" id="69_onj18"]
+[ext_resource type="Texture2D" uid="uid://brtu4opdt4mjc" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0001.png" id="70_nud2h"]
+[ext_resource type="Texture2D" uid="uid://dy8ondws52e0f" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0002.png" id="71_gv26n"]
+[ext_resource type="Texture2D" uid="uid://exsmv8pgko7b" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0003.png" id="72_0e44t"]
+[ext_resource type="Texture2D" uid="uid://cgfyu7xy2b8ve" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0004.png" id="73_g3osk"]
+[ext_resource type="Texture2D" uid="uid://ck1kyw2yim5uj" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0005.png" id="74_r2mkq"]
+[ext_resource type="Texture2D" uid="uid://cuovy468rcfv1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0006.png" id="75_nt5wh"]
+[ext_resource type="Texture2D" uid="uid://blhpn8tsgklfg" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0007.png" id="76_yi8yn"]
+[ext_resource type="Texture2D" uid="uid://dxopgygb1iuqh" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0008.png" id="77_qlihd"]
+[ext_resource type="Texture2D" uid="uid://dbr0of5jyvtfh" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0009.png" id="78_eersy"]
+[ext_resource type="Texture2D" uid="uid://6on0ho3ywm7" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0010.png" id="79_l7owt"]
+[ext_resource type="Texture2D" uid="uid://7o2rbiv2g2j8" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0011.png" id="80_wq75r"]
+[ext_resource type="Texture2D" uid="uid://cu5742njucp28" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0012.png" id="81_wjy3e"]
+[ext_resource type="Texture2D" uid="uid://bp7gh3xye7h2c" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0013.png" id="82_7towi"]
+[ext_resource type="Texture2D" uid="uid://iv1m80c46py0" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0014.png" id="83_d0xh3"]
+[ext_resource type="Texture2D" uid="uid://5ihbuxegxjk7" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0015.png" id="84_1e6wd"]
+[ext_resource type="Texture2D" uid="uid://cxgks6ng4j55u" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/180/Death_180_0016.png" id="85_bagay"]
+[ext_resource type="Texture2D" uid="uid://b58b81cifx7q6" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0001.png" id="86_im2gw"]
+[ext_resource type="Texture2D" uid="uid://rqrrg11ye3m1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0002.png" id="87_v0tsa"]
+[ext_resource type="Texture2D" uid="uid://bexj5df6jwvob" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0003.png" id="88_amchy"]
+[ext_resource type="Texture2D" uid="uid://cgxnm5j15ry0x" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0004.png" id="89_hdtec"]
+[ext_resource type="Texture2D" uid="uid://c26sp82mbgghw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0005.png" id="90_htyak"]
+[ext_resource type="Texture2D" uid="uid://b1djbjps3mhg7" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0006.png" id="91_ipv4q"]
+[ext_resource type="Texture2D" uid="uid://g7aaebkl8rsy" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0007.png" id="92_8gaks"]
+[ext_resource type="Texture2D" uid="uid://by8ndwtbg3m2l" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0008.png" id="93_sowjb"]
+[ext_resource type="Texture2D" uid="uid://b3hf1bwfkgvjl" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0009.png" id="94_psil1"]
+[ext_resource type="Texture2D" uid="uid://s616hcbqik21" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0010.png" id="95_l75px"]
+[ext_resource type="Texture2D" uid="uid://bhbc2bsv6301n" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0011.png" id="96_1v588"]
+[ext_resource type="Texture2D" uid="uid://pepxk8hrkgeh" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0012.png" id="97_hfb27"]
+[ext_resource type="Texture2D" uid="uid://dlukrdvekwrl0" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0013.png" id="98_nwjav"]
+[ext_resource type="Texture2D" uid="uid://d1x262mafjehh" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0014.png" id="99_a03hp"]
+[ext_resource type="Texture2D" uid="uid://bb0lddrpm7bq6" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0015.png" id="100_xocwy"]
+[ext_resource type="Texture2D" uid="uid://cdu5313755lo4" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/225/Death_225_0016.png" id="101_p3ufx"]
+[ext_resource type="Texture2D" uid="uid://cf3bm3mxdirrt" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0001.png" id="102_oill4"]
+[ext_resource type="Texture2D" uid="uid://c5rqnuln8di0x" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0002.png" id="103_qkefv"]
+[ext_resource type="Texture2D" uid="uid://d4fr1x6kmp5sb" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0003.png" id="104_scfmi"]
+[ext_resource type="Texture2D" uid="uid://b43euogae8aqu" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0004.png" id="105_dendn"]
+[ext_resource type="Texture2D" uid="uid://cw534ijann7v4" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0005.png" id="106_xlel1"]
+[ext_resource type="Texture2D" uid="uid://c3bxoqjlgue8a" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0006.png" id="107_4sffr"]
+[ext_resource type="Texture2D" uid="uid://dh3sj4kirisim" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0007.png" id="108_l0my1"]
+[ext_resource type="Texture2D" uid="uid://mnukcaqofsl" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0008.png" id="109_f3n67"]
+[ext_resource type="Texture2D" uid="uid://b2533p1xwhkd2" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0009.png" id="110_s0hr6"]
+[ext_resource type="Texture2D" uid="uid://c32xk4k85g5x5" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0010.png" id="111_ye4ih"]
+[ext_resource type="Texture2D" uid="uid://b6y1racljbsqv" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0011.png" id="112_wemeo"]
+[ext_resource type="Texture2D" uid="uid://bcm0g56xgf0bu" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0012.png" id="113_st16p"]
+[ext_resource type="Texture2D" uid="uid://1jvyq3dvropa" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0013.png" id="114_b3wcf"]
+[ext_resource type="Texture2D" uid="uid://fhdnnb5830rh" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0014.png" id="115_2cs0k"]
+[ext_resource type="Texture2D" uid="uid://cojpo2mcraeb" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0015.png" id="116_ncqoi"]
+[ext_resource type="Texture2D" uid="uid://cx74dsdy3quej" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/270/Death_270_0016.png" id="117_7c320"]
+[ext_resource type="Texture2D" uid="uid://ddh5nod37qkle" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0001.png" id="118_bbw1a"]
+[ext_resource type="Texture2D" uid="uid://dijmwsd2d8ky5" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0002.png" id="119_2ul5e"]
+[ext_resource type="Texture2D" uid="uid://1tpbhsd25wey" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0003.png" id="120_gosdu"]
+[ext_resource type="Texture2D" uid="uid://dggidomqqscau" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0004.png" id="121_aaih7"]
+[ext_resource type="Texture2D" uid="uid://bdql247vhdhom" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0005.png" id="122_4c36c"]
+[ext_resource type="Texture2D" uid="uid://bwbbnlpg8ldc" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0006.png" id="123_cl47j"]
+[ext_resource type="Texture2D" uid="uid://c7qxswnmv7tai" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0007.png" id="124_ylc0a"]
+[ext_resource type="Texture2D" uid="uid://caluyurtkwf4d" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0008.png" id="125_njtu3"]
+[ext_resource type="Texture2D" uid="uid://c8qls7q7406xq" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0009.png" id="126_crh4h"]
+[ext_resource type="Texture2D" uid="uid://boxdbliebqsli" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0010.png" id="127_b5auf"]
+[ext_resource type="Texture2D" uid="uid://n05gayb56v07" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0011.png" id="128_g6pyg"]
+[ext_resource type="Texture2D" uid="uid://cu8dy1q2u2whj" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0012.png" id="129_5kipx"]
+[ext_resource type="Texture2D" uid="uid://d2h7dbfxkkecs" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0013.png" id="130_hcrlh"]
+[ext_resource type="Texture2D" uid="uid://dbsaa5bknlupy" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0014.png" id="131_aitq0"]
+[ext_resource type="Texture2D" uid="uid://deonin6l6vkwv" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0015.png" id="132_e0oos"]
+[ext_resource type="Texture2D" uid="uid://tjgrewu8ehe8" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Death/315/Death_315_0016.png" id="133_2epgj"]
+[ext_resource type="Texture2D" uid="uid://bqseqqgpe5jto" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0001.png" id="134_cnseb"]
+[ext_resource type="Texture2D" uid="uid://dwxgie31j7fmq" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0002.png" id="135_se58o"]
+[ext_resource type="Texture2D" uid="uid://napwqc342qt5" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0003.png" id="136_lu4oe"]
+[ext_resource type="Texture2D" uid="uid://bwdj3lv72y213" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0004.png" id="137_pyl5d"]
+[ext_resource type="Texture2D" uid="uid://dcp8ufpg2tq0" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0005.png" id="138_n6nqf"]
+[ext_resource type="Texture2D" uid="uid://dkdoyxtsf46bt" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0006.png" id="139_iml7u"]
+[ext_resource type="Texture2D" uid="uid://b7alkbgkv3abp" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0007.png" id="140_kp4iw"]
+[ext_resource type="Texture2D" uid="uid://chfdo7mdmy35g" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0008.png" id="141_6mcq8"]
+[ext_resource type="Texture2D" uid="uid://ctwkmsokuh77b" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0009.png" id="142_hpu1i"]
+[ext_resource type="Texture2D" uid="uid://c0khn624onwk1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0010.png" id="143_73wqk"]
+[ext_resource type="Texture2D" uid="uid://b5wwg8skl8wj4" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0011.png" id="144_sikcf"]
+[ext_resource type="Texture2D" uid="uid://la1cm0gorn4q" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0012.png" id="145_xve83"]
+[ext_resource type="Texture2D" uid="uid://bhb1e3xn5vhis" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0013.png" id="146_usk8r"]
+[ext_resource type="Texture2D" uid="uid://d0mgsiufqhtd7" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0014.png" id="147_3cts3"]
+[ext_resource type="Texture2D" uid="uid://bf7eltcx2jw16" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0015.png" id="148_af40q"]
+[ext_resource type="Texture2D" uid="uid://bq5r5ow6rdb2t" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0016.png" id="149_rutgt"]
+[ext_resource type="Texture2D" uid="uid://bqw4m1wmwradr" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0017.png" id="150_s8y4h"]
+[ext_resource type="Texture2D" uid="uid://b0yai80ef8oiq" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0018.png" id="151_c27ja"]
+[ext_resource type="Texture2D" uid="uid://dem6fa013a5gi" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0019.png" id="152_klm20"]
+[ext_resource type="Texture2D" uid="uid://dit5fb7sy5usd" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0020.png" id="153_dpmt7"]
+[ext_resource type="Texture2D" uid="uid://c14s0lsxu8vfy" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0021.png" id="154_baiqv"]
+[ext_resource type="Texture2D" uid="uid://532e16fuqkip" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0022.png" id="155_kq4cr"]
+[ext_resource type="Texture2D" uid="uid://cauaybnlh1jl2" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0023.png" id="156_ww4yw"]
+[ext_resource type="Texture2D" uid="uid://cffoov0roqywo" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/000/Hit_000_0024.png" id="157_e6fby"]
+[ext_resource type="Texture2D" uid="uid://cknftp1gd15lw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0001.png" id="158_ndhdi"]
+[ext_resource type="Texture2D" uid="uid://beh8ef32mh6i1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0002.png" id="159_tegxf"]
+[ext_resource type="Texture2D" uid="uid://n60yr0js7281" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0003.png" id="160_esh24"]
+[ext_resource type="Texture2D" uid="uid://bcuk4egieyfd3" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0004.png" id="161_7j8yh"]
+[ext_resource type="Texture2D" uid="uid://dd1i517xqrlm6" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0005.png" id="162_xob7p"]
+[ext_resource type="Texture2D" uid="uid://cwy0xhfl3tcxr" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0006.png" id="163_4qnxa"]
+[ext_resource type="Texture2D" uid="uid://drsr7p8y7besw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0007.png" id="164_ajc34"]
+[ext_resource type="Texture2D" uid="uid://dbs7b7awwtson" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0008.png" id="165_vq0ql"]
+[ext_resource type="Texture2D" uid="uid://cq4hfrih0fatb" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0009.png" id="166_hrexc"]
+[ext_resource type="Texture2D" uid="uid://bpnl2xv0uxltb" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0010.png" id="167_ijfw3"]
+[ext_resource type="Texture2D" uid="uid://d3fa6w0vuwhvw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0011.png" id="168_eyx72"]
+[ext_resource type="Texture2D" uid="uid://0fwv6b3ea0e3" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0012.png" id="169_dxssw"]
+[ext_resource type="Texture2D" uid="uid://d3b3pfg80s4yw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0013.png" id="170_rwlqq"]
+[ext_resource type="Texture2D" uid="uid://bbwslhdsda8jt" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0014.png" id="171_dm26s"]
+[ext_resource type="Texture2D" uid="uid://dvpfh0im5s0t7" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0015.png" id="172_tvvom"]
+[ext_resource type="Texture2D" uid="uid://dgitf34byf428" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0016.png" id="173_tf8xy"]
+[ext_resource type="Texture2D" uid="uid://blmnmt75we14t" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0017.png" id="174_4s1kx"]
+[ext_resource type="Texture2D" uid="uid://bj68iygprx3qu" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0018.png" id="175_a3nws"]
+[ext_resource type="Texture2D" uid="uid://b6fu7njglbyuj" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0019.png" id="176_8ks8f"]
+[ext_resource type="Texture2D" uid="uid://du1pbchilahaj" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0020.png" id="177_60mds"]
+[ext_resource type="Texture2D" uid="uid://bk5383085it4i" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0021.png" id="178_j7ddx"]
+[ext_resource type="Texture2D" uid="uid://qhbwkxhkvafm" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0022.png" id="179_yki1n"]
+[ext_resource type="Texture2D" uid="uid://dc066bm8gorqg" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0023.png" id="180_kpirj"]
+[ext_resource type="Texture2D" uid="uid://bmjwgrofmnqbj" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/045/Hit_045_0024.png" id="181_owf1p"]
+[ext_resource type="Texture2D" uid="uid://3ko843c2sk0w" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0001.png" id="182_v5uip"]
+[ext_resource type="Texture2D" uid="uid://yd0b2vi48n1q" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0002.png" id="183_ejxnv"]
+[ext_resource type="Texture2D" uid="uid://duvc5gf3rki0n" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0003.png" id="184_bw56a"]
+[ext_resource type="Texture2D" uid="uid://bd3oxbfx7cplw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0004.png" id="185_opgeu"]
+[ext_resource type="Texture2D" uid="uid://dh13c7riisya1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0005.png" id="186_ufhh7"]
+[ext_resource type="Texture2D" uid="uid://ggeos2dhyou1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0006.png" id="187_o5e10"]
+[ext_resource type="Texture2D" uid="uid://xe6dqvfu00gh" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0007.png" id="188_j6gm8"]
+[ext_resource type="Texture2D" uid="uid://lohwyitienil" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0008.png" id="189_tt1p2"]
+[ext_resource type="Texture2D" uid="uid://bofkr4iq8oqi1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0009.png" id="190_p61ny"]
+[ext_resource type="Texture2D" uid="uid://b213oq5m5ul18" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0010.png" id="191_tpb6j"]
+[ext_resource type="Texture2D" uid="uid://be055hxcv453c" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0011.png" id="192_aihen"]
+[ext_resource type="Texture2D" uid="uid://cjm6lji2fltle" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0012.png" id="193_e2cy4"]
+[ext_resource type="Texture2D" uid="uid://ddpcn6brjqwwv" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0013.png" id="194_84yg0"]
+[ext_resource type="Texture2D" uid="uid://c76nsbydh5muh" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0014.png" id="195_pbfng"]
+[ext_resource type="Texture2D" uid="uid://b4uouevn63ut5" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0015.png" id="196_5tmkr"]
+[ext_resource type="Texture2D" uid="uid://dneuq4ryeo78u" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0016.png" id="197_334qx"]
+[ext_resource type="Texture2D" uid="uid://bpnkwg7w1xwlj" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0017.png" id="198_m01hr"]
+[ext_resource type="Texture2D" uid="uid://cmdoh3mjwfrt3" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0018.png" id="199_ghvqi"]
+[ext_resource type="Texture2D" uid="uid://dw3lsl60lc28u" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0019.png" id="200_roa8v"]
+[ext_resource type="Texture2D" uid="uid://cj2jllbijwkg8" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0020.png" id="201_8vkw3"]
+[ext_resource type="Texture2D" uid="uid://h43k287obc67" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0021.png" id="202_a8kf4"]
+[ext_resource type="Texture2D" uid="uid://bb4eb0l3bf0nl" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0022.png" id="203_04w3k"]
+[ext_resource type="Texture2D" uid="uid://1s2dkfyeqgmf" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0023.png" id="204_rcdvi"]
+[ext_resource type="Texture2D" uid="uid://dfqq3ibpd5mka" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/090/Hit_090_0024.png" id="205_fra1m"]
+[ext_resource type="Texture2D" uid="uid://bd5dm3yuu08ig" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0001.png" id="206_3yi10"]
+[ext_resource type="Texture2D" uid="uid://copud1sob3agr" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0002.png" id="207_k15wx"]
+[ext_resource type="Texture2D" uid="uid://cwwgg27geb8cr" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0003.png" id="208_mquec"]
+[ext_resource type="Texture2D" uid="uid://s6yysa33iyuk" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0004.png" id="209_htmjr"]
+[ext_resource type="Texture2D" uid="uid://o7kr06gvsbdw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0005.png" id="210_n0mno"]
+[ext_resource type="Texture2D" uid="uid://b6e4fwkby6v01" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0006.png" id="211_yaxrs"]
+[ext_resource type="Texture2D" uid="uid://dsswwsr1i8uq6" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0007.png" id="212_dmtmo"]
+[ext_resource type="Texture2D" uid="uid://c61as0skya0si" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0008.png" id="213_yrm7u"]
+[ext_resource type="Texture2D" uid="uid://coc3occ6chhrb" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0009.png" id="214_37ddp"]
+[ext_resource type="Texture2D" uid="uid://ii7gaiujry06" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0010.png" id="215_v764w"]
+[ext_resource type="Texture2D" uid="uid://bj1qqmpabqwnc" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0011.png" id="216_62iwc"]
+[ext_resource type="Texture2D" uid="uid://cjd0h84gp7h8h" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0012.png" id="217_hu4dq"]
+[ext_resource type="Texture2D" uid="uid://bcixglserulkm" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0013.png" id="218_pwsvf"]
+[ext_resource type="Texture2D" uid="uid://b0t5lecgreko6" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0014.png" id="219_tl5up"]
+[ext_resource type="Texture2D" uid="uid://67cfsm3vsrxm" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0015.png" id="220_dsm3u"]
+[ext_resource type="Texture2D" uid="uid://bijpiqp0crtts" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0016.png" id="221_js43v"]
+[ext_resource type="Texture2D" uid="uid://car3skmlscxlk" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0017.png" id="222_xlosm"]
+[ext_resource type="Texture2D" uid="uid://dieewmcothd5w" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0018.png" id="223_ynpcn"]
+[ext_resource type="Texture2D" uid="uid://n203bh4ln2r1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0019.png" id="224_1aeob"]
+[ext_resource type="Texture2D" uid="uid://01ao87k60pms" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0020.png" id="225_1vfme"]
+[ext_resource type="Texture2D" uid="uid://bpnx8ije6jqes" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0021.png" id="226_o1s5x"]
+[ext_resource type="Texture2D" uid="uid://cpyjox45nqq34" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0022.png" id="227_d7s5k"]
+[ext_resource type="Texture2D" uid="uid://d25r4kk4irjin" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0023.png" id="228_bem1p"]
+[ext_resource type="Texture2D" uid="uid://coswcg6omgove" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/135/Hit_135_0024.png" id="229_osg5t"]
+[ext_resource type="Texture2D" uid="uid://2ptvtpqqw8fr" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0001.png" id="230_xvxe8"]
+[ext_resource type="Texture2D" uid="uid://c30tmehiudgkq" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0002.png" id="231_kjdsa"]
+[ext_resource type="Texture2D" uid="uid://c2hkmjv1b1lnw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0003.png" id="232_7fla6"]
+[ext_resource type="Texture2D" uid="uid://bi071t1yldn55" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0004.png" id="233_wevmx"]
+[ext_resource type="Texture2D" uid="uid://binmgo6txwrse" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0005.png" id="234_dpktb"]
+[ext_resource type="Texture2D" uid="uid://shnfsn3onsbk" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0006.png" id="235_srp83"]
+[ext_resource type="Texture2D" uid="uid://djq3w5gpahr8i" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0007.png" id="236_fr387"]
+[ext_resource type="Texture2D" uid="uid://c8565yktlwc5h" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0008.png" id="237_scu1b"]
+[ext_resource type="Texture2D" uid="uid://c3ohmhsfkmjir" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0009.png" id="238_c5nji"]
+[ext_resource type="Texture2D" uid="uid://kqh1b3db14h1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0010.png" id="239_1sfd8"]
+[ext_resource type="Texture2D" uid="uid://calrw25v4ff2c" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0011.png" id="240_ofku0"]
+[ext_resource type="Texture2D" uid="uid://bpcicgebm84cu" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0012.png" id="241_4e773"]
+[ext_resource type="Texture2D" uid="uid://bd6b57s21iqo2" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0013.png" id="242_eif22"]
+[ext_resource type="Texture2D" uid="uid://c3ow5rpabeoax" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0014.png" id="243_yo4ed"]
+[ext_resource type="Texture2D" uid="uid://btucul4dn8xcn" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0015.png" id="244_7abtt"]
+[ext_resource type="Texture2D" uid="uid://d3ldby3ddd34c" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0016.png" id="245_iw2sy"]
+[ext_resource type="Texture2D" uid="uid://cqy6j4w3643t" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0017.png" id="246_ycumc"]
+[ext_resource type="Texture2D" uid="uid://5ug0t75xo4ii" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0018.png" id="247_uc2l2"]
+[ext_resource type="Texture2D" uid="uid://jqc7uyq3ybhw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0019.png" id="248_r184g"]
+[ext_resource type="Texture2D" uid="uid://tbihs5853edp" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0020.png" id="249_kb160"]
+[ext_resource type="Texture2D" uid="uid://b5q4p4wfv0gsg" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0021.png" id="250_gr4co"]
+[ext_resource type="Texture2D" uid="uid://ks4aysc0fs8" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0022.png" id="251_fscvy"]
+[ext_resource type="Texture2D" uid="uid://2mbt1kuqgtx1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0023.png" id="252_boojb"]
+[ext_resource type="Texture2D" uid="uid://c3kienagtce5v" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/180/Hit_180_0024.png" id="253_n1ylw"]
+[ext_resource type="Texture2D" uid="uid://d4ld1typvudg8" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0001.png" id="254_ytwul"]
+[ext_resource type="Texture2D" uid="uid://b83w40vsd7bpr" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0002.png" id="255_88oh0"]
+[ext_resource type="Texture2D" uid="uid://b78ohanf3xea4" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0003.png" id="256_t455k"]
+[ext_resource type="Texture2D" uid="uid://oul5nrx4ohtr" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0004.png" id="257_avlx3"]
+[ext_resource type="Texture2D" uid="uid://c2vfyiwbo26wm" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0005.png" id="258_1lsdt"]
+[ext_resource type="Texture2D" uid="uid://ceo61v85b8rkk" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0006.png" id="259_ykesq"]
+[ext_resource type="Texture2D" uid="uid://b4m5box5gej26" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0007.png" id="260_0xrid"]
+[ext_resource type="Texture2D" uid="uid://c2p4o1c15essa" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0008.png" id="261_loqw7"]
+[ext_resource type="Texture2D" uid="uid://u7lhlx7tcpy1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0009.png" id="262_q63g8"]
+[ext_resource type="Texture2D" uid="uid://d1tgr40ela55d" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0010.png" id="263_fnstx"]
+[ext_resource type="Texture2D" uid="uid://dt8jqkkl7l85r" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0011.png" id="264_qhgpv"]
+[ext_resource type="Texture2D" uid="uid://6o2jnpgf11ku" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0012.png" id="265_y3jj2"]
+[ext_resource type="Texture2D" uid="uid://csuc4vr21tkta" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0013.png" id="266_arnit"]
+[ext_resource type="Texture2D" uid="uid://vh46rwijay7v" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0014.png" id="267_sv1ud"]
+[ext_resource type="Texture2D" uid="uid://j2nvq1r1bewk" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0015.png" id="268_1ga54"]
+[ext_resource type="Texture2D" uid="uid://c3j7qbfkf8uql" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0016.png" id="269_vq6c3"]
+[ext_resource type="Texture2D" uid="uid://cu57r6vkwf2b7" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0017.png" id="270_lmcyn"]
+[ext_resource type="Texture2D" uid="uid://c4x2mvs406wg6" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0018.png" id="271_pn76l"]
+[ext_resource type="Texture2D" uid="uid://deav8vf07vu2r" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0019.png" id="272_l5wk4"]
+[ext_resource type="Texture2D" uid="uid://b4pv41aipoycn" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0020.png" id="273_7dhyi"]
+[ext_resource type="Texture2D" uid="uid://cpn0xhgjeyswg" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0021.png" id="274_dp3di"]
+[ext_resource type="Texture2D" uid="uid://cy35qviejugl2" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0022.png" id="275_nhhgb"]
+[ext_resource type="Texture2D" uid="uid://becigdxs53jid" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0023.png" id="276_ofnhl"]
+[ext_resource type="Texture2D" uid="uid://cy8xtwnatmt8q" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/225/Hit_225_0024.png" id="277_6pdyi"]
+[ext_resource type="Texture2D" uid="uid://b7ljauoi3qhns" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0001.png" id="278_e00dq"]
+[ext_resource type="Texture2D" uid="uid://x6cxrosskrtw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0002.png" id="279_d3ylh"]
+[ext_resource type="Texture2D" uid="uid://c56osdk2q2pac" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0003.png" id="280_nm641"]
+[ext_resource type="Texture2D" uid="uid://bme5qydjqegck" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0004.png" id="281_ooiuo"]
+[ext_resource type="Texture2D" uid="uid://cineq4yle3ncb" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0005.png" id="282_3p578"]
+[ext_resource type="Texture2D" uid="uid://blgch6kwbe6su" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0006.png" id="283_f8uhf"]
+[ext_resource type="Texture2D" uid="uid://y5joqa643hrm" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0007.png" id="284_xo60m"]
+[ext_resource type="Texture2D" uid="uid://bgjkb713qqe62" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0008.png" id="285_m0j5j"]
+[ext_resource type="Texture2D" uid="uid://bsxmpjchmtsiv" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0009.png" id="286_xbx81"]
+[ext_resource type="Texture2D" uid="uid://c1jxvpb5nb2ta" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0010.png" id="287_hnefc"]
+[ext_resource type="Texture2D" uid="uid://dq61ndthie66u" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0011.png" id="288_olb6t"]
+[ext_resource type="Texture2D" uid="uid://f6rin8wvv55n" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0012.png" id="289_jepyc"]
+[ext_resource type="Texture2D" uid="uid://dgra8hl0rnc1a" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0013.png" id="290_bdvdu"]
+[ext_resource type="Texture2D" uid="uid://cue0freu1mjce" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0014.png" id="291_0i1wb"]
+[ext_resource type="Texture2D" uid="uid://cpt45ktacndw4" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0015.png" id="292_8e3ld"]
+[ext_resource type="Texture2D" uid="uid://cgdpjvaudnefb" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0016.png" id="293_n4i3u"]
+[ext_resource type="Texture2D" uid="uid://bhcwmcq8shbd1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0017.png" id="294_1mqks"]
+[ext_resource type="Texture2D" uid="uid://dv572s3pf8o7o" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0018.png" id="295_2q31v"]
+[ext_resource type="Texture2D" uid="uid://b26rjcegpe5mm" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0019.png" id="296_443ug"]
+[ext_resource type="Texture2D" uid="uid://drkk2axcm7q0u" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0020.png" id="297_26hfy"]
+[ext_resource type="Texture2D" uid="uid://svg8awtgfo76" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0021.png" id="298_souud"]
+[ext_resource type="Texture2D" uid="uid://dcg0wq4kbauau" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0022.png" id="299_k47hp"]
+[ext_resource type="Texture2D" uid="uid://cct0o0686csg3" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0023.png" id="300_oj66d"]
+[ext_resource type="Texture2D" uid="uid://dac0h8u42o8sj" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/270/Hit_270_0024.png" id="301_mn2id"]
+[ext_resource type="Texture2D" uid="uid://cj2x7ybnv5ahx" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0001.png" id="302_qxorm"]
+[ext_resource type="Texture2D" uid="uid://btjoe3pq005mj" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0002.png" id="303_bf8jo"]
+[ext_resource type="Texture2D" uid="uid://6wuhjhid0n0y" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0003.png" id="304_bplrg"]
+[ext_resource type="Texture2D" uid="uid://dblthxfvqvxt6" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0004.png" id="305_l20vo"]
+[ext_resource type="Texture2D" uid="uid://cwqhxbp2udxin" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0005.png" id="306_3ww8a"]
+[ext_resource type="Texture2D" uid="uid://cd1uhie8dtkxd" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0006.png" id="307_fhu42"]
+[ext_resource type="Texture2D" uid="uid://bedgrtb7t477i" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0007.png" id="308_d2m4c"]
+[ext_resource type="Texture2D" uid="uid://bydebvwpd25n2" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0008.png" id="309_7uoqr"]
+[ext_resource type="Texture2D" uid="uid://dow45xgiih5sy" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0009.png" id="310_dqu1q"]
+[ext_resource type="Texture2D" uid="uid://6m6yhwg1476q" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0010.png" id="311_iyhaa"]
+[ext_resource type="Texture2D" uid="uid://d2hrhqexd2qv5" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0011.png" id="312_77jlm"]
+[ext_resource type="Texture2D" uid="uid://d1xocwg8p5mbw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0012.png" id="313_dxc78"]
+[ext_resource type="Texture2D" uid="uid://dpf2scgxlawf7" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0013.png" id="314_xmsjn"]
+[ext_resource type="Texture2D" uid="uid://dc2sv3vvx15ij" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0014.png" id="315_1wpio"]
+[ext_resource type="Texture2D" uid="uid://dxp70qt878fll" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0015.png" id="316_hodye"]
+[ext_resource type="Texture2D" uid="uid://bmlb5wqmddmrc" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0016.png" id="317_j2b2t"]
+[ext_resource type="Texture2D" uid="uid://dbux7pvblxovn" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0017.png" id="318_rl26m"]
+[ext_resource type="Texture2D" uid="uid://5t1nty1ifmxn" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0018.png" id="319_s87oj"]
+[ext_resource type="Texture2D" uid="uid://cbrmulf7ss317" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0019.png" id="320_s4alg"]
+[ext_resource type="Texture2D" uid="uid://dk5s2igyjgeou" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0020.png" id="321_08tg8"]
+[ext_resource type="Texture2D" uid="uid://dxmw5v5jsfq3e" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0021.png" id="322_tjlno"]
+[ext_resource type="Texture2D" uid="uid://d4lbng10po1id" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0022.png" id="323_7n0ld"]
+[ext_resource type="Texture2D" uid="uid://cnq1k3bthbj6h" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0023.png" id="324_ooodo"]
+[ext_resource type="Texture2D" uid="uid://c2u8m3i6cy4so" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Hurt/315/Hit_315_0024.png" id="325_0f0de"]
+[ext_resource type="Texture2D" uid="uid://jfy45kqyvrkd" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0001.png" id="326_i4ms4"]
+[ext_resource type="Texture2D" uid="uid://cu1nawihge3xx" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0002.png" id="327_pc7xi"]
+[ext_resource type="Texture2D" uid="uid://b5crds81loge3" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0003.png" id="328_iyhab"]
+[ext_resource type="Texture2D" uid="uid://dr6lk1c1qyhfb" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0004.png" id="329_a7jv7"]
+[ext_resource type="Texture2D" uid="uid://bm507g5w5g3ox" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0005.png" id="330_074bq"]
+[ext_resource type="Texture2D" uid="uid://d4a731qidfkjw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0006.png" id="331_h2by6"]
+[ext_resource type="Texture2D" uid="uid://q183usssex12" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0007.png" id="332_vsd5y"]
+[ext_resource type="Texture2D" uid="uid://ctb2idoflum06" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0008.png" id="333_pfpsb"]
+[ext_resource type="Texture2D" uid="uid://dw6lqvnbf137" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0009.png" id="334_jex4x"]
+[ext_resource type="Texture2D" uid="uid://d3h8lsee680hc" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0010.png" id="335_qvrko"]
+[ext_resource type="Texture2D" uid="uid://dxohgxfsqy4jp" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0011.png" id="336_28o3g"]
+[ext_resource type="Texture2D" uid="uid://ndsjdtida55l" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0012.png" id="337_4coeh"]
+[ext_resource type="Texture2D" uid="uid://d06jt5wlnljq5" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0013.png" id="338_ia0bn"]
+[ext_resource type="Texture2D" uid="uid://bfnt38t64ooaf" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0014.png" id="339_acce0"]
+[ext_resource type="Texture2D" uid="uid://dagnamapqri6n" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0015.png" id="340_bg0kk"]
+[ext_resource type="Texture2D" uid="uid://c1rq6x6g3x0g8" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/000/Run_000_0016.png" id="341_vtkgl"]
+[ext_resource type="Texture2D" uid="uid://cufh4e81msnil" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0001.png" id="342_6usiw"]
+[ext_resource type="Texture2D" uid="uid://cqbxpsryjtf56" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0002.png" id="343_d5qym"]
+[ext_resource type="Texture2D" uid="uid://ceh45u5nnibi4" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0003.png" id="344_b8ibu"]
+[ext_resource type="Texture2D" uid="uid://cbbrfvbu8j1ih" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0004.png" id="345_54w7r"]
+[ext_resource type="Texture2D" uid="uid://cwdjuveubmuvo" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0005.png" id="346_ua2cv"]
+[ext_resource type="Texture2D" uid="uid://bnjufk87k7swx" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0006.png" id="347_i3gad"]
+[ext_resource type="Texture2D" uid="uid://bdqoa0d8fv2wd" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0007.png" id="348_btnwq"]
+[ext_resource type="Texture2D" uid="uid://37j1xl2ybl4r" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0008.png" id="349_t1ngn"]
+[ext_resource type="Texture2D" uid="uid://cj6pyonv0f5bf" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0009.png" id="350_7fjje"]
+[ext_resource type="Texture2D" uid="uid://bmeyh3nymv1l4" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0010.png" id="351_trfrg"]
+[ext_resource type="Texture2D" uid="uid://blx3m7anw4n2q" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0011.png" id="352_m4v7a"]
+[ext_resource type="Texture2D" uid="uid://bh63qajmbustn" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0012.png" id="353_6jfbs"]
+[ext_resource type="Texture2D" uid="uid://om6qtknrhiv2" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0013.png" id="354_j1uuu"]
+[ext_resource type="Texture2D" uid="uid://d2vdxrbxh0rbg" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0014.png" id="355_ddnbm"]
+[ext_resource type="Texture2D" uid="uid://dm5b74ohrqpbm" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0015.png" id="356_x68oo"]
+[ext_resource type="Texture2D" uid="uid://toxd45k78444" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/045/Run_045_0016.png" id="357_8swef"]
+[ext_resource type="Texture2D" uid="uid://dmih8bw6kn8mv" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0001.png" id="358_n2xeq"]
+[ext_resource type="Texture2D" uid="uid://b6515k4ixn1oc" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0002.png" id="359_2dyeb"]
+[ext_resource type="Texture2D" uid="uid://cqyh0imaf0bpo" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0003.png" id="360_mkoky"]
+[ext_resource type="Texture2D" uid="uid://8hlfxsjvrngb" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0004.png" id="361_3ju0n"]
+[ext_resource type="Texture2D" uid="uid://dmy1l6p5cdxox" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0005.png" id="362_w51vt"]
+[ext_resource type="Texture2D" uid="uid://5u8nju6w4vgf" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0006.png" id="363_pdmfd"]
+[ext_resource type="Texture2D" uid="uid://bsxt8rk32bbrg" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0007.png" id="364_kwo4f"]
+[ext_resource type="Texture2D" uid="uid://ccmb62rirlkcg" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0008.png" id="365_hmimr"]
+[ext_resource type="Texture2D" uid="uid://c016fmwpaxt02" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0009.png" id="366_ie2e4"]
+[ext_resource type="Texture2D" uid="uid://pyyhk65ry3dy" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0010.png" id="367_alssu"]
+[ext_resource type="Texture2D" uid="uid://kjp5fkua8qo7" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0011.png" id="368_58phv"]
+[ext_resource type="Texture2D" uid="uid://bas33y8vweoix" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0012.png" id="369_bpyhf"]
+[ext_resource type="Texture2D" uid="uid://2yah2lk35j8n" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0013.png" id="370_kcshq"]
+[ext_resource type="Texture2D" uid="uid://ow2civjgyy4o" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0014.png" id="371_egtk4"]
+[ext_resource type="Texture2D" uid="uid://bifdsijw0m1df" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0015.png" id="372_a3dx6"]
+[ext_resource type="Texture2D" uid="uid://drbnw5r20iqji" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/090/Run_090_0016.png" id="373_qyii7"]
+[ext_resource type="Texture2D" uid="uid://doaosvl3sc065" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0001.png" id="374_nb06h"]
+[ext_resource type="Texture2D" uid="uid://ly7yxpml7ni6" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0002.png" id="375_u8hm1"]
+[ext_resource type="Texture2D" uid="uid://dv6pt14urlttt" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0003.png" id="376_30lvw"]
+[ext_resource type="Texture2D" uid="uid://d2kexdxhvthqu" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0004.png" id="377_h87cv"]
+[ext_resource type="Texture2D" uid="uid://dfbidhr46uo2i" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0005.png" id="378_h5r1p"]
+[ext_resource type="Texture2D" uid="uid://gjiysrdah6jg" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0006.png" id="379_pbq28"]
+[ext_resource type="Texture2D" uid="uid://6pm5hpw3n2k5" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0007.png" id="380_ikg3p"]
+[ext_resource type="Texture2D" uid="uid://nwob287lkb8q" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0008.png" id="381_iwif1"]
+[ext_resource type="Texture2D" uid="uid://cw8418oaw0e52" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0009.png" id="382_eshqp"]
+[ext_resource type="Texture2D" uid="uid://cfd8wqkweh58b" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0010.png" id="383_x7sgb"]
+[ext_resource type="Texture2D" uid="uid://7rcdt8jfnpu7" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0011.png" id="384_rxd82"]
+[ext_resource type="Texture2D" uid="uid://ewgr2gmwkxa6" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0012.png" id="385_x15rt"]
+[ext_resource type="Texture2D" uid="uid://dobhtpcu1ep7i" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0013.png" id="386_nott7"]
+[ext_resource type="Texture2D" uid="uid://cj2ruq31qx53a" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0014.png" id="387_cwrbl"]
+[ext_resource type="Texture2D" uid="uid://cdxpm7qk5vbob" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0015.png" id="388_fxdj2"]
+[ext_resource type="Texture2D" uid="uid://25xdnea3aiic" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/135/Run_135_0016.png" id="389_ablec"]
+[ext_resource type="Texture2D" uid="uid://cyvuushyrvdc0" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0001.png" id="390_5nv7a"]
+[ext_resource type="Texture2D" uid="uid://dt2co886tl2qy" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0002.png" id="391_geh2y"]
+[ext_resource type="Texture2D" uid="uid://wamn5b3opjg5" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0003.png" id="392_lkxyq"]
+[ext_resource type="Texture2D" uid="uid://b7fhk0la2kti8" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0004.png" id="393_1fhgc"]
+[ext_resource type="Texture2D" uid="uid://dbw87drjpd75f" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0005.png" id="394_1p418"]
+[ext_resource type="Texture2D" uid="uid://wr2qbbdefi5u" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0006.png" id="395_ts5ef"]
+[ext_resource type="Texture2D" uid="uid://cg0xstvc1w0mx" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0007.png" id="396_nv8fn"]
+[ext_resource type="Texture2D" uid="uid://bfe2degxnm2qm" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0008.png" id="397_wsj0b"]
+[ext_resource type="Texture2D" uid="uid://p6vlf4or70ju" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0009.png" id="398_ad1mf"]
+[ext_resource type="Texture2D" uid="uid://cyv3r58n3khv5" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0010.png" id="399_elat1"]
+[ext_resource type="Texture2D" uid="uid://cru1i601f28cq" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0011.png" id="400_ye3eu"]
+[ext_resource type="Texture2D" uid="uid://dtnjq6pqpain" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0012.png" id="401_dse1u"]
+[ext_resource type="Texture2D" uid="uid://f602lodslovt" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0013.png" id="402_fi3jw"]
+[ext_resource type="Texture2D" uid="uid://cuto8t4av5y2t" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0014.png" id="403_y0ya3"]
+[ext_resource type="Texture2D" uid="uid://defe8ijcxap1d" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0015.png" id="404_2dks2"]
+[ext_resource type="Texture2D" uid="uid://bl30l2bmym6ex" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/180/Run_180_0016.png" id="405_2mgc0"]
+[ext_resource type="Texture2D" uid="uid://72biib7ymvi3" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0001.png" id="406_oc0m7"]
+[ext_resource type="Texture2D" uid="uid://b02g0gna5hon1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0002.png" id="407_pd2t7"]
+[ext_resource type="Texture2D" uid="uid://bpoyjarjdo1sx" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0003.png" id="408_cab00"]
+[ext_resource type="Texture2D" uid="uid://bg64l1mecwpn3" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0004.png" id="409_1ehs6"]
+[ext_resource type="Texture2D" uid="uid://dei5dtkspapvq" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0005.png" id="410_tup2t"]
+[ext_resource type="Texture2D" uid="uid://b0dyp4j5cquyl" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0006.png" id="411_lp5dw"]
+[ext_resource type="Texture2D" uid="uid://bv4w3cbu3xga0" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0007.png" id="412_w8yn4"]
+[ext_resource type="Texture2D" uid="uid://bbigy8uf64244" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0008.png" id="413_k2g2b"]
+[ext_resource type="Texture2D" uid="uid://bam4psiobahbg" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0009.png" id="414_f6me2"]
+[ext_resource type="Texture2D" uid="uid://kar7vxjabuk3" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0010.png" id="415_xeeed"]
+[ext_resource type="Texture2D" uid="uid://ydaha0q6iw55" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0011.png" id="416_lh675"]
+[ext_resource type="Texture2D" uid="uid://botwijt38u70m" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0012.png" id="417_257ls"]
+[ext_resource type="Texture2D" uid="uid://cp00c1ip2igib" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0013.png" id="418_mwijc"]
+[ext_resource type="Texture2D" uid="uid://fomv6ma8000x" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0014.png" id="419_cif4v"]
+[ext_resource type="Texture2D" uid="uid://l6friwyad628" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0015.png" id="420_gbh7n"]
+[ext_resource type="Texture2D" uid="uid://c2erc4id4yjv6" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/225/Run_225_0016.png" id="421_arf8y"]
+[ext_resource type="PackedScene" uid="uid://bg4805gow586o" path="res://scenes/components/EnemySFXPlayer.tscn" id="422_1f46h"]
+[ext_resource type="Texture2D" uid="uid://dsnahalj8ry1j" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0001.png" id="422_wnctr"]
+[ext_resource type="Texture2D" uid="uid://cniu3xelltll" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0002.png" id="423_f6dwb"]
+[ext_resource type="Texture2D" uid="uid://bdj34x1rmkdrd" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0003.png" id="424_aj216"]
+[ext_resource type="Texture2D" uid="uid://boopyca0sfwfd" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0004.png" id="425_u0xu2"]
+[ext_resource type="Texture2D" uid="uid://da0n3wu8mc01h" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0005.png" id="426_nbwgm"]
+[ext_resource type="Texture2D" uid="uid://bvp3tiy40ew45" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0006.png" id="427_kfo8a"]
+[ext_resource type="Texture2D" uid="uid://c3dg4qj6r4pnt" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0007.png" id="428_akbbs"]
+[ext_resource type="Texture2D" uid="uid://de7rgfx7bs6ug" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0008.png" id="429_fei8y"]
+[ext_resource type="Texture2D" uid="uid://bl51sbdmt5kls" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0009.png" id="430_f6xqf"]
+[ext_resource type="Texture2D" uid="uid://d4g28ajn348rm" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0010.png" id="431_n7n57"]
+[ext_resource type="Texture2D" uid="uid://c18j0e7be0eff" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0011.png" id="432_j2vxr"]
+[ext_resource type="Texture2D" uid="uid://cc5juf2si3fkw" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0012.png" id="433_natnv"]
+[ext_resource type="Texture2D" uid="uid://dfra00sinigjs" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0013.png" id="434_pmugy"]
+[ext_resource type="Texture2D" uid="uid://df8b3s6525omm" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0014.png" id="435_wbd3g"]
+[ext_resource type="Texture2D" uid="uid://dqsqidhdkrq1t" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0015.png" id="436_v8duu"]
+[ext_resource type="Texture2D" uid="uid://bo1yw5uikib41" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/270/Run_270_0016.png" id="437_32qte"]
+[ext_resource type="Texture2D" uid="uid://chk5bbj3if28r" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0001.png" id="438_o4c6r"]
+[ext_resource type="Texture2D" uid="uid://qrprg42nvte5" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0002.png" id="439_5ofrn"]
+[ext_resource type="Texture2D" uid="uid://b4ruui3r311de" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0003.png" id="440_2hyoi"]
+[ext_resource type="Texture2D" uid="uid://ckpcffnvbhari" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0004.png" id="441_gkcci"]
+[ext_resource type="Texture2D" uid="uid://k4kfldf4gkhm" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0005.png" id="442_pd20y"]
+[ext_resource type="Texture2D" uid="uid://dlyryb52jjhqv" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0006.png" id="443_6oqo4"]
+[ext_resource type="Texture2D" uid="uid://cu8sq35bqpu3e" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0007.png" id="444_2qqce"]
+[ext_resource type="Texture2D" uid="uid://cp57s2wxy4prt" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0008.png" id="445_176ee"]
+[ext_resource type="Texture2D" uid="uid://dxpx7hrjkfs3m" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0009.png" id="446_mvw50"]
+[ext_resource type="Texture2D" uid="uid://dm0ismpnnfrud" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0010.png" id="447_iarud"]
+[ext_resource type="Texture2D" uid="uid://g1k0ptf741v2" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0011.png" id="448_toa8d"]
+[ext_resource type="Texture2D" uid="uid://ba4yh20ltl5ec" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0012.png" id="449_q35ke"]
+[ext_resource type="Texture2D" uid="uid://b630m7400nyy1" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0013.png" id="450_qb5ni"]
+[ext_resource type="Texture2D" uid="uid://jqyoje7nq5jc" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0014.png" id="451_uhfxo"]
+[ext_resource type="Texture2D" uid="uid://bjt2p4cxqx3oa" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0015.png" id="452_igyrx"]
+[ext_resource type="Texture2D" uid="uid://c1qmk6lymas5a" path="res://scenes/entities/enemies/basic/reptile_warrior/assets/animations/Run/315/Run_315_0016.png" id="453_akndg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_acjdx"]
+radius = 54.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_vfblx"]
+radius = 44.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pe1c3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_t3cby")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_s8nnq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_bsmxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_h0rlb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_cyfow")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_buxgl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_s3sx7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_m3qjw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_1v2wi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_5w685")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_kv3ka")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_onbrw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_i0ifm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_6rip5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_cl22t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_m43y0")
+}],
+"loop": false,
+"name": &"dead_0",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("22_ctpf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_3pge6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_w60et")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_4djge")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_anmw1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_vi48j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_k6lpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_u2uup")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_lib1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_7palr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_2jmf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_rllhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_ch3ay")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_stj6v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_8kur4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_mi1ea")
+}],
+"loop": false,
+"name": &"dead_1",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("38_c2qpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_nc7p2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_iu8xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_n6psu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_x47kb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_oalt6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_o74li")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_fms12")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_bsfue")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_65v1o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_gk47a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_4e6ok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_tekfh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_dndar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_0vvvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_3ra71")
+}],
+"loop": false,
+"name": &"dead_2",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("54_x8ms6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_iponh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_wes1c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_7ooub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_b4q27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_xojff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_mylsc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_yvyyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_phlug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_idbhd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_jaca8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_qs8y0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_t62c1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_cqclo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_onp1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_onj18")
+}],
+"loop": false,
+"name": &"dead_3",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("70_nud2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_gv26n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_0e44t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_g3osk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_r2mkq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_nt5wh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_yi8yn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_qlihd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_eersy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_l7owt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_wq75r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_wjy3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_7towi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_d0xh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_1e6wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_bagay")
+}],
+"loop": false,
+"name": &"dead_4",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("86_im2gw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_v0tsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_amchy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_hdtec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_htyak")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_ipv4q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_8gaks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_sowjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_psil1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_l75px")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_1v588")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_hfb27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_nwjav")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_a03hp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_xocwy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_p3ufx")
+}],
+"loop": false,
+"name": &"dead_5",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("102_oill4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_qkefv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_scfmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_dendn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_xlel1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_4sffr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_l0my1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_f3n67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_s0hr6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_ye4ih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_wemeo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_st16p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_b3wcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_2cs0k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_ncqoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_7c320")
+}],
+"loop": false,
+"name": &"dead_6",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("118_bbw1a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_2ul5e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_gosdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_aaih7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_4c36c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_cl47j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_ylc0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_njtu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_crh4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_b5auf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_g6pyg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_5kipx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_hcrlh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_aitq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_e0oos")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_2epgj")
+}],
+"loop": false,
+"name": &"dead_7",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("134_cnseb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_se58o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_lu4oe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_pyl5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_n6nqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_iml7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_kp4iw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_6mcq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_hpu1i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_73wqk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_sikcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_xve83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_usk8r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_3cts3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_af40q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_rutgt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_s8y4h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_c27ja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_klm20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_dpmt7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_baiqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_kq4cr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_ww4yw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_e6fby")
+}],
+"loop": false,
+"name": &"hurt_0",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("158_ndhdi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_tegxf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_esh24")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_7j8yh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_xob7p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_4qnxa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_ajc34")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_vq0ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_hrexc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_ijfw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_eyx72")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_dxssw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_rwlqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_dm26s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_tvvom")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_tf8xy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_4s1kx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_a3nws")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_8ks8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_60mds")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_j7ddx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_yki1n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_kpirj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_owf1p")
+}],
+"loop": false,
+"name": &"hurt_1",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("182_v5uip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_ejxnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_bw56a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_opgeu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_ufhh7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_o5e10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_j6gm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_tt1p2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_p61ny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_tpb6j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_aihen")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_e2cy4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_84yg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_pbfng")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_5tmkr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_334qx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_m01hr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_ghvqi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_roa8v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_8vkw3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_a8kf4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_04w3k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_rcdvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_fra1m")
+}],
+"loop": false,
+"name": &"hurt_2",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("206_3yi10")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_k15wx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_mquec")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_htmjr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_n0mno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_yaxrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_dmtmo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_yrm7u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_37ddp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_v764w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_62iwc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_hu4dq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_pwsvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_tl5up")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_dsm3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_js43v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_xlosm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_ynpcn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_1aeob")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_1vfme")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_o1s5x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_d7s5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_bem1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_osg5t")
+}],
+"loop": false,
+"name": &"hurt_3",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("230_xvxe8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_kjdsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_7fla6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_wevmx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_dpktb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_srp83")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_fr387")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_scu1b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_c5nji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_1sfd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_ofku0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_4e773")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_eif22")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_yo4ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_7abtt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_iw2sy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_ycumc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_uc2l2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("248_r184g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("249_kb160")
+}, {
+"duration": 1.0,
+"texture": ExtResource("250_gr4co")
+}, {
+"duration": 1.0,
+"texture": ExtResource("251_fscvy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("252_boojb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("253_n1ylw")
+}],
+"loop": false,
+"name": &"hurt_4",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("254_ytwul")
+}, {
+"duration": 1.0,
+"texture": ExtResource("255_88oh0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("256_t455k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("257_avlx3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("258_1lsdt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("259_ykesq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("260_0xrid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("261_loqw7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("262_q63g8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("263_fnstx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("264_qhgpv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("265_y3jj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("266_arnit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("267_sv1ud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("268_1ga54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("269_vq6c3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("270_lmcyn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("271_pn76l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("272_l5wk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("273_7dhyi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("274_dp3di")
+}, {
+"duration": 1.0,
+"texture": ExtResource("275_nhhgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("276_ofnhl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("277_6pdyi")
+}],
+"loop": false,
+"name": &"hurt_5",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("278_e00dq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("279_d3ylh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("280_nm641")
+}, {
+"duration": 1.0,
+"texture": ExtResource("281_ooiuo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("282_3p578")
+}, {
+"duration": 1.0,
+"texture": ExtResource("283_f8uhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("284_xo60m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("285_m0j5j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("286_xbx81")
+}, {
+"duration": 1.0,
+"texture": ExtResource("287_hnefc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("288_olb6t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("289_jepyc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("290_bdvdu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("291_0i1wb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("292_8e3ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("293_n4i3u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("294_1mqks")
+}, {
+"duration": 1.0,
+"texture": ExtResource("295_2q31v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("296_443ug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("297_26hfy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("298_souud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("299_k47hp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("300_oj66d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("301_mn2id")
+}],
+"loop": false,
+"name": &"hurt_6",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("302_qxorm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("303_bf8jo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("304_bplrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("305_l20vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("306_3ww8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("307_fhu42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("308_d2m4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("309_7uoqr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("310_dqu1q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_iyhaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("312_77jlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("313_dxc78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("314_xmsjn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("315_1wpio")
+}, {
+"duration": 1.0,
+"texture": ExtResource("316_hodye")
+}, {
+"duration": 1.0,
+"texture": ExtResource("317_j2b2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("318_rl26m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("319_s87oj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("320_s4alg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("321_08tg8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("322_tjlno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("323_7n0ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("324_ooodo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("325_0f0de")
+}],
+"loop": false,
+"name": &"hurt_7",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("326_i4ms4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("327_pc7xi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("328_iyhab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("329_a7jv7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("330_074bq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("331_h2by6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("332_vsd5y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("333_pfpsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("334_jex4x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("335_qvrko")
+}, {
+"duration": 1.0,
+"texture": ExtResource("336_28o3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("337_4coeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("338_ia0bn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("339_acce0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("340_bg0kk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("341_vtkgl")
+}],
+"loop": true,
+"name": &"run_0",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("342_6usiw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("343_d5qym")
+}, {
+"duration": 1.0,
+"texture": ExtResource("344_b8ibu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("345_54w7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("346_ua2cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("347_i3gad")
+}, {
+"duration": 1.0,
+"texture": ExtResource("348_btnwq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("349_t1ngn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("350_7fjje")
+}, {
+"duration": 1.0,
+"texture": ExtResource("351_trfrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("352_m4v7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("353_6jfbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("354_j1uuu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("355_ddnbm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("356_x68oo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("357_8swef")
+}],
+"loop": true,
+"name": &"run_1",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("358_n2xeq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("359_2dyeb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("360_mkoky")
+}, {
+"duration": 1.0,
+"texture": ExtResource("361_3ju0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("362_w51vt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("363_pdmfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("364_kwo4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("365_hmimr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("366_ie2e4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("367_alssu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("368_58phv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("369_bpyhf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("370_kcshq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("371_egtk4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("372_a3dx6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("373_qyii7")
+}],
+"loop": true,
+"name": &"run_2",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("374_nb06h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("375_u8hm1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("376_30lvw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("377_h87cv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("378_h5r1p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("379_pbq28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("380_ikg3p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("381_iwif1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("382_eshqp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("383_x7sgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("384_rxd82")
+}, {
+"duration": 1.0,
+"texture": ExtResource("385_x15rt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("386_nott7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("387_cwrbl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("388_fxdj2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("389_ablec")
+}],
+"loop": true,
+"name": &"run_3",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("390_5nv7a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("391_geh2y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("392_lkxyq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("393_1fhgc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("394_1p418")
+}, {
+"duration": 1.0,
+"texture": ExtResource("395_ts5ef")
+}, {
+"duration": 1.0,
+"texture": ExtResource("396_nv8fn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("397_wsj0b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("398_ad1mf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("399_elat1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("400_ye3eu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("401_dse1u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("402_fi3jw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("403_y0ya3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("404_2dks2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("405_2mgc0")
+}],
+"loop": true,
+"name": &"run_4",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("406_oc0m7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("407_pd2t7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("408_cab00")
+}, {
+"duration": 1.0,
+"texture": ExtResource("409_1ehs6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("410_tup2t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("411_lp5dw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("412_w8yn4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("413_k2g2b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("414_f6me2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("415_xeeed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("416_lh675")
+}, {
+"duration": 1.0,
+"texture": ExtResource("417_257ls")
+}, {
+"duration": 1.0,
+"texture": ExtResource("418_mwijc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("419_cif4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("420_gbh7n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("421_arf8y")
+}],
+"loop": true,
+"name": &"run_5",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("422_wnctr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("423_f6dwb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("424_aj216")
+}, {
+"duration": 1.0,
+"texture": ExtResource("425_u0xu2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("426_nbwgm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("427_kfo8a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("428_akbbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("429_fei8y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("430_f6xqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("431_n7n57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("432_j2vxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("433_natnv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("434_pmugy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("435_wbd3g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("436_v8duu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("437_32qte")
+}],
+"loop": true,
+"name": &"run_6",
+"speed": 16.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("438_o4c6r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("439_5ofrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("440_2hyoi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("441_gkcci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("442_pd20y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("443_6oqo4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("444_2qqce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("445_176ee")
+}, {
+"duration": 1.0,
+"texture": ExtResource("446_mvw50")
+}, {
+"duration": 1.0,
+"texture": ExtResource("447_iarud")
+}, {
+"duration": 1.0,
+"texture": ExtResource("448_toa8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("449_q35ke")
+}, {
+"duration": 1.0,
+"texture": ExtResource("450_qb5ni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("451_uhfxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("452_igyrx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("453_akndg")
+}],
+"loop": true,
+"name": &"run_7",
+"speed": 16.0
+}]
+
+[node name="ReptileWarrior" type="CharacterBody2D" groups=["Enemies Group"]]
+z_index = 2
+scale = Vector2(0.75, 0.75)
+collision_layer = 8
+collision_mask = 9
+motion_mode = 1
+script = ExtResource("1_v8wkd")
+
+[node name="HealthComponent" parent="." instance=ExtResource("2_2jwsu")]
+
+[node name="ExperienceOrbDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_b63ca")]
+health_component = NodePath("../HealthComponent")
+exp_vial_scene = ExtResource("4_agwqw")
+
+[node name="HurtboxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("5_y5ioh")]
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtboxComponent"]
+position = Vector2(1.33333, 22.6667)
+shape = SubResource("CircleShape2D_acjdx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 25.3333)
+shape = SubResource("CircleShape2D_vfblx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_pe1c3")
+animation = &"run_7"
+frame_progress = 0.668654
+
+[node name="EnemySFXPlayer" parent="." instance=ExtResource("422_1f46h")]

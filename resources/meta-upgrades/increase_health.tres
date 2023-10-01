@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="MetaUpgrade" load_steps=2 format=3 uid="uid://bfd7cnwewy380"]
+
+[ext_resource type="Script" path="res://resources/meta-upgrades/meta-upgrade.gd" id="1_uvxb1"]
+
+[resource]
+script = ExtResource("1_uvxb1")
+id = "increase_health"
+max_quantity = 10
+initial_upgrade_cost = 100
+upgrade_cost_increment = 100
+title = "Golden Caduceus"
+description = "Each upgrade will increases your max health by 10%."
+texture = "res://resources/meta-upgrades/assets/caduceus-min.png"

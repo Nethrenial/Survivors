@@ -1811,7 +1811,6 @@ script = ExtResource("1_x5p7d")
 [node name="HealthComponent" parent="." instance=ExtResource("2_giei6")]
 
 [node name="ExperienceOrbDropComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("3_23ugw")]
-drop_percent = 1.0
 health_component = NodePath("../HealthComponent")
 exp_vial_scene = ExtResource("4_1i2fo")
 
@@ -1827,6 +1826,6 @@ shape = SubResource("CircleShape2D_vfblx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_pe1c3")
-animation = &"run_2"
+animation = &"dead_0"
 
 [node name="EnemySFXPlayer" parent="." instance=ExtResource("422_f6iyp")]

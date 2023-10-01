@@ -1226,7 +1226,7 @@ _data = {
 }
 
 [node name="Player_1" type="CharacterBody2D" groups=["Player Group"]]
-scale = Vector2(0.75, 0.75)
+scale = Vector2(0.5, 0.5)
 collision_layer = 0
 motion_mode = 1
 script = ExtResource("1_0v13h")
